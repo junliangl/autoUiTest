@@ -12,7 +12,7 @@ register_init_button_element = (By.XPATH,
                                 '/html/body/app-root/app-login/div/form/nz-form-item[4]/nz-form-control/div/div/div/a[contains(text(),"注册新账号")]')
 
 
-
+class Test_Register(unittest.TestCase):
     """
     测试注册模块
     """
