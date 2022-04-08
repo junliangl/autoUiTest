@@ -1,0 +1,1074 @@
+1646820765686	geckodriver	INFO	Listening on 127.0.0.1:62046
+1646820768774	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62047" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofiles9CirE"
+1646820769419	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofiles9CirE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62047/devtools/browser/b3b5c27c-8524-41e3-bf28-d2ae9a47884d
+1646820771091	Marionette	INFO	Listening on port 62052
+1646820771463	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+JavaScript error: https://sp1.baidu.com/5b11fzupBgM18t7jm9iCKT-xh_/sensearch?wd=python&cb=bd_cb_dict3_1646820777533&callback=bd_cb_dict3_1646820777533&_=1646820777416, line 1: SyntaxError: expected expression, got '<'
+[Child 27256, MediaDecoderStateMachine #1] WARNING: 1e26ead1e40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:375
+1646820778627	Marionette	INFO	Stopped listening on port 62052
+1646820779479	geckodriver	INFO	Listening on 127.0.0.1:62225
+1646820782557	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62226" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilelaSX1L"
+1646820785423	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilelaSX1L\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62226/devtools/browser/c0b30eae-0258-4d11-96c7-9970fa88b8e2
+1646820787074	Marionette	INFO	Listening on port 62232
+1646820787385	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1646820789290	Marionette	INFO	Stopped listening on port 62232
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1646821303388	geckodriver	INFO	Listening on 127.0.0.1:62546
+1646821306498	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62547" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilej9z9NI"
+1646821307229	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilej9z9NI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62547/devtools/browser/14a25a6a-deeb-4422-a13e-e5100aed6971
+1646821308920	Marionette	INFO	Listening on port 62555
+1646821309177	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+JavaScript error: https://sp1.baidu.com/5b11fzupBgM18t7jm9iCKT-xh_/sensearch?wd=python&cb=bd_cb_dict3_1646821315522&callback=bd_cb_dict3_1646821315522&_=1646821315256, line 1: SyntaxError: expected expression, got '<'
+1646821316698	Marionette	INFO	Stopped listening on port 62555
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1646821318353	geckodriver	INFO	Listening on 127.0.0.1:62711
+1646821321361	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62712" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileMWHOga"
+1646821321843	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileMWHOga\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62712/devtools/browser/00e1418f-13b2-46fe-a17d-3923444248fd
+1646821323306	Marionette	INFO	Listening on port 62717
+1646821323424	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1646821324965	Marionette	INFO	Stopped listening on port 62717
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1646821867117	geckodriver	INFO	Listening on 127.0.0.1:63293
+1646821870237	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63294" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilebnIX7Q"
+1646821870906	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilebnIX7Q\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63294/devtools/browser/bfb7e1ab-a651-4c66-b57c-9d9a99b753b0
+1646821872378	Marionette	INFO	Listening on port 63299
+1646821872416	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+1646821879134	Marionette	INFO	Stopped listening on port 63299
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1646821879855	geckodriver	INFO	Listening on 127.0.0.1:63447
+1646821882940	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63448" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilehRnnY1"
+1646821885169	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilehRnnY1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63448/devtools/browser/85491c7e-8292-4e36-82ea-ea4cfe3e0920
+1646821886775	Marionette	INFO	Listening on port 63453
+1646821887152	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1646821888828	Marionette	INFO	Stopped listening on port 63453
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1646890696946	geckodriver	INFO	Listening on 127.0.0.1:51604
+1646890699987	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51605" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileBRdnB6"
+1646890708771	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileBRdnB6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51605/devtools/browser/1d4a26d7-d3a8-411a-ba35-76a6dbc73cf5
+1646890711176	Marionette	INFO	Listening on port 51610
+1646890711546	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+[Child 48140, MediaDecoderStateMachine #1] WARNING: 25b187174a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:375
+1646890719685	Marionette	INFO	Stopped listening on port 51610
+1646890721470	geckodriver	INFO	Listening on 127.0.0.1:51795
+1646890724779	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51796" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileGYUbEK"
+1646890729119	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)
+[GFX1-]: RcANGLE(no compositor device for EGLDisplay)(Create)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileGYUbEK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51796/devtools/browser/48f1de12-f096-4b14-b52a-90d7a4311dbf
+1646890731491	Marionette	INFO	Listening on port 51801
+1646890731915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1646890733958	Marionette	INFO	Stopped listening on port 51801
+1646991124618	geckodriver	INFO	Listening on 127.0.0.1:64908
+1646991127682	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64909" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileQbLoI7"
+1646991127921	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileQbLoI7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64909/devtools/browser/009f3dd5-2e4c-49b9-97b9-06b9069f9d26
+1646991129505	Marionette	INFO	Listening on port 64914
+1646991129742	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1646992053618	Marionette	INFO	Stopped listening on port 64914
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1646998454624	geckodriver	INFO	Listening on 127.0.0.1:51398
+1646998457709	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51399" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofile6qo56F"
+1646998457958	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile6qo56F\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51399/devtools/browser/cd3f3858-8183-4d5d-a98a-37d1a5e9c145
+1646998459773	Marionette	INFO	Listening on port 51405
+1646998459884	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647123082411	Marionette	INFO	Stopped listening on port 51405
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1647582411417	geckodriver	INFO	Listening on 127.0.0.1:50745
+1647582414498	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50746" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofile6sPI1S"
+1647582414756	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile6sPI1S\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50746/devtools/browser/617e2188-4254-43c0-8d4c-eceb0c0ede8e
+1647582416415	Marionette	INFO	Listening on port 50805
+1647582416568	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647582704044	Marionette	INFO	Stopped listening on port 50805
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile2SyuGB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50889/devtools/browser/25e73431-a32e-49f6-afef-2874384ab402
+1647582442317	Marionette	INFO	Listening on port 50894
+1647582442432	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647582561925	Marionette	INFO	Stopped listening on port 50894
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1647585229179	geckodriver	INFO	Listening on 127.0.0.1:51394
+1647585232227	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51395" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilepb3DRr"
+1647585232506	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilepb3DRr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51395/devtools/browser/6b6ed364-42a6-43b8-85a9-b3817013e7d8
+1647585234268	Marionette	INFO	Listening on port 51400
+1647585234291	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647585565355	Marionette	INFO	Stopped listening on port 51400
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PSessionStorageObserver::Msg_Observe) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+\junliangl\\AppData\\Local\\Temp\\rust_mozprofileA74ID0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51485/devtools/browser/5d42de95-61e8-42c5-838f-836a0de64deb
+1647585260203	Marionette	INFO	Listening on port 51490
+1647585260241	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647585563582	Marionette	INFO	Stopped listening on port 51491647585564241	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51688" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileONTtyT"
+1647585564667	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileONTtyT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51688/devtools/browser/626e5cb1-704b-4568-852a-7ce7f293d937
+1647585566356	Marionette	INFO	Listening on port 51695
+1647585566419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647586398345	Marionette	INFO	Stopped listening on port 51695
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileDFlg12\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51786/devtools/browser/e4022709-c754-4716-9c06-cb28214fef86
+1647585591872	Marionette	INFO	Listening on port 51791
+1647585592127	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647586398377	Marionette	INFO	Stopped listening on port 51791
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\junliangl\AppData\Local\Temp\rust_mconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilePf582N\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52164/devtools/browser/332c800a-b001-49dc-858b-cbaf3f9f2b05
+1647586400273	Marionette	INFO	Listening on port 52169
+1647586400395	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647592713396	Marionette	INFO	Stopped listening on port 52169
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\junliangl\AppData\Local\Temp\rust_mozprofilePf582N\protections.sqlite
+FoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilex7lfnh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61047/devtools/browser/60be70e6-9f89-4f7f-b3b8-e0b50f2be2ac
+1647586425832	Marionette	INFO	Listening on port 61052
+1647586426147	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647588343150	Marionette	INFO	Stopped listening on port 61052
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1647593073400	geckodriver	INFO	Listening on 127.0.0.1:61398
+1647593076502	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61399" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofiledVzJgj"
+1647593076775	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofiledVzJgj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61399/devtools/browser/35143398-22bf-4e25-8b37-115fc837ab52
+1647593078419	Marionette	INFO	Listening on port 61406
+1647593078562	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647828025101	Marionette	INFO	Stopped listening on port 61406
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "61512" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileW60oXz"
+1647593127359	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileW60oXz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61512/devtools/browser/d504d435-3f81-46e5-b0c1-264dc4d12617
+1647593128856	Marionette	INFO	Listening on port 61518
+1647593129170	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647595399192	Marionette	INFO	Stopped listening on port 61518
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ertificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1647828027724	Marionette	INFO	Stopped listening on port 55923
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+w profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileDLytoz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56058/devtools/browser/aaea0252-a077-4633-bc7a-1aad0a83af50
+1647594887585	Marionette	INFO	Listening on port 56063
+1647594887647	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1647828026824	Marionette	INFO	Stopped listening on port 56063
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+w profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileiirRgb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62087/devtools/browser/21e02117-1fba-4996-9b0f-6b52d7d6de0b
+1647597382917	Marionette	INFO	Listening on port 62092
+1647597383258	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+1647597388844	geckodriver	INFO	Listening on 127.0.0.1:62175
+1647597391894	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62176" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofiledZaaIW"
+1647597392376	Marionette	INFO	Marionette enabled
+1647841546077	geckodriver	INFO	Listening on 127.0.0.1:61374
+1647841549153	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61375" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileLiLM6Z"
+1647841549504	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileLiLM6Z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61375/devtools/browser/70e082ae-39b6-4318-bfda-58f23eeaafee
+1647841551210	Marionette	INFO	Listening on port 61380
+1647841551322	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647841571120	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647841576983	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647841582893	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647841588802	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647841594681	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647841600690	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647841745168	Marionette	INFO	Stopped listening on port 61380
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileDMoao7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61465/devtools/browser/7b9253ba-2c30-44fc-babd-141265afa2f4
+1647841605976	Marionette	INFO	Listening on port 61470
+1647841606050	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647841743529	Marionette	INFO	Stopped listening on port 61470
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofiles63Goz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61541/devtools/browser/f118441d-8940-4708-bfe0-6f796eb4e6da
+1647841689533	Marionette	INFO	Listening on port 61546
+1647841689755	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647841719414	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647841725279	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647841746188	Marionette	INFO	Stopped listening on port 61546
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilexkErVh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61692/devtools/browser/0070fc31-6174-49db-9b79-70b3d8dcb4e5
+1647841741631	Marionette	INFO	Listening on port 61697
+1647841741682	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647841993942	Marionette	INFO	Stopped listening on port 61697
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1647858333173	geckodriver	INFO	Listening on 127.0.0.1:58243
+1647858336281	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58244" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileKa19Zx"
+1647858336549	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileKa19Zx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58244/devtools/browser/de0f19f5-4512-4149-84b2-4e872019be68
+1647858338277	Marionette	INFO	Listening on port 58253
+1647858338358	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647858347230	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647858949880	geckodriver	INFO	Listening on 127.0.0.1:58459
+1647858952960	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58460" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileUn58RZ"
+1647858953209	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileUn58RZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58460/devtools/browser/269c1653-8100-482a-9348-feda31a163a5
+1647858954679	Marionette	INFO	Listening on port 58465
+1647858955032	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1647858976750	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647858989125	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647858996493	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647859005580	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647859014603	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1647859137721	geckodriver	INFO	Listening on 127.0.0.1:58569
+1647859140805	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58570" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileZokTL6"
+1647859141073	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileZokTL6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58570/devtools/browser/df0af321-a400-404d-b6a3-b657e0832527
+1647859142550	Marionette	INFO	Listening on port 58575
+1647859142873	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a s1647859158343	mozrunner::runner	INFO	Running comma1647916758993	Marionette	INFO	Stopped listening on port 58575
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+filePsGR6V"
+1647859158588	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilePsGR6V\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58660/devtools/browser/fcc095d8-4353-458b-b6fa-c1e68889a710
+1647859160218	Marionette	INFO	Listening on port 58665
+1647859160398	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1647859189397	Marionette	INFO	Stopped listening on port 58665
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648456741128	geckodriver	INFO	Listening on 127.0.0.1:52490
+1648456744203	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52491" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileP9WdeP"
+1648456744478	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileP9WdeP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52491/devtools/browser/2730dbab-bae3-4676-8b78-517828f6f766
+1648456746145	Marionette	INFO	Listening on port 52496
+1648456746258	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1648456790213	Marionette	INFO	Stopped listening on port 52496
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "52578" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileYakyua"
+1648456755342	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileYakyua\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52578/devtools/browser/c3879d42-d929-4cd9-a35a-972b38867747
+1648456757020	Marionette	INFO	Listening on port 52583
+1648456757148	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://10.1.1.80:7001/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://10.1.1.80:7001"
+1648456789456	Marionette	INFO	Stopped listening on port 52583
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "52688" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileJA8TB7"
+1648456774881	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileJA8TB7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52688/devtools/browser/7d77bc80-1255-47e9-8ce1-e30136e1a019
+1648456776607	Marionette	INFO	Listening on port 52693
+1648456776682	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://libs.baidu.com/jquery/2.0.0/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1648456788098	Marionette	INFO	Stopped listening on port 52693
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 9076, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 9076, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648533965213	geckodriver	INFO	Listening on 127.0.0.1:58294
+1648533968312	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58295" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileSavIBx"
+1648533968555	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileSavIBx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58295/devtools/browser/177bd3ef-9c68-4b46-9550-9ccdc0aa3e3c
+1648533970169	Marionette	INFO	Listening on port 58300
+1648533970364	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648534278144	Marionette	INFO	Stopped listening on port 58300
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileOXIc20\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58438/devtools/browser/53606fd2-77c0-4c10-8b2f-46247a63d1ee
+1648533981513	Marionette	INFO	Listening on port 58443
+1648533981742	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648533995341	Marionette	INFO	Stopped listening on port 58443
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648534869551	geckodriver	INFO	Listening on 127.0.0.1:52342
+1648534872618	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52343" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilelOP4T3"
+1648534872880	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilelOP4T3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52343/devtools/browser/5a5be449-7560-4880-acb2-cefcfcec7607
+1648534874430	Marionette	INFO	Listening on port 52348
+1648534874681	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648535619273	Marionette	INFO	Stopped listening on port 52348
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\junliangl\AppData\Local\Temp\rust_mozprofilelOP4T3\protections.sqlite
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+INFO	Listening on port 52513
+1648534885823	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648535619274	Marionette	INFO	Stopped listening on port 52513
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\junliangl\AppData\Local\Temp\rust_mozprofileFxNAFJ\protections.sqlite
+No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile5k75IV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64742/devtools/browser/0580c759-2e74-4405-86dc-6385fb6045d8
+1648535078005	Marionette	INFO	Listening on port 64747
+1648535078253	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648535619250	Marionette	INFO	Stopped listening on port 64747
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\junliangl\AppData\Local\Temp\rust_mozprofile5k75IV\protections.sqlite
+No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile383EtQ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59083/devtools/browser/04b3f9c2-f5c1-4277-b411-adab92e77d32
+1648535088996	Marionette	INFO	Listening on port 59092
+1648535089160	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648535153224	Marionette	INFO	Stopped listening on port 59092
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648535321038	geckodriver	INFO	Listening on 127.0.0.1:61488
+1648535324129	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61489" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileNx1Y9T"
+1648535324391	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileNx1Y9T\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61489/devtools/browser/6c52810c-7288-4f28-9ae0-83a981599d62
+1648535325931	Marionette	INFO	Listening on port 63629
+1648535326190	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648535619185	Marionette	INFO	Stopped listening on port 63629
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\junliangl\AppData\Local\Temp\rust_mozprofileNx1Y9T\protections.sqlite
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+FoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileXs8LID\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63817/devtools/browser/58adc378-02db-474f-b704-995b64aeb45c
+1648535337031	Marionette	INFO	Listening on port 63822
+1648535337067	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648535619140	Marionette	INFO	Stopped listening on port 63822
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "63977" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilernVtWr"
+1648535381671	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilernVtWr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63977/devtools/browser/dcdfec2b-c873-4f6d-b7c1-f3d7446ea7bc
+1648535383440	Marionette	INFO	Listening on port 63984
+1648535383478	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648535619138	Marionette	INFO	Stopped listening on port 63984
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileIcF2d0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62226/devtools/browser/42fca461-0ecf-4f04-89dc-decf3b955dd1
+1648535394640	Marionette	INFO	Listening on port 62247
+1648535394796	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648535405342	Marionette	INFO	Stopped listening on port 62247
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+1648608302310	geckodriver	INFO	Listening on 127.0.0.1:49299
+1648608305395	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49300" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileOiTgvW"
+1648608305636	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileOiTgvW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49300/devtools/browser/8252df02-0f8e-4a8a-badc-8682cd8a705a
+1648608307182	Marionette	INFO	Listening on port 49306
+1648608307451	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648610276067	Marionette	INFO	Stopped listening on port 49306
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileK3HJJa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49343/devtools/browser/1b8c3f39-578c-45f3-9ecc-623e0f4cbca2
+1648608317453	Marionette	INFO	Listening on port 49352
+1648608317570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648610274299	Marionette	INFO	Stopped listening on port 49352
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648618464185	geckodriver	INFO	Listening on 127.0.0.1:51876
+1648618467260	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51877" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilevAD2qv"
+1648618467523	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilevAD2qv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51877/devtools/browser/335cd3b0-002a-4f60-9d5d-54adf98bed18
+1648618469229	Marionette	INFO	Listening on port 51931
+1648618469315	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648619660173	Marionette	INFO	Stopped listening on port 51931
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "52059" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilemwIK8M"
+1648618478788	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilemwIK8M\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52059/devtools/browser/38d77b88-9f78-46b8-af3d-c0371c582617
+1648618480372	Marionette	INFO	Listening on port 52064
+1648618480598	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648619659232	Marionette	INFO	Stopped listening on port 52064
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileXbBTIN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52235/devtools/browser/ace1954d-1b0e-41b8-9d52-0cd595c8db42
+1648618664756	Marionette	INFO	Listening on port 52244
+1648618664913	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648619658567	Marionette	INFO	Stopped listening on port 52244
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "52372" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileGyYgdA"
+1648618674390	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileGyYgdA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52372/devtools/browser/af4a5f12-63fe-4e6a-b018-e10ed22ff4b2
+1648618675898	Marionette	INFO	Listening on port 52377
+1648618676204	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648619669740	Marionette	INFO	Stopped listening on port 52377
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648622610958	geckodriver	INFO	Listening on 127.0.0.1:50583
+1648622614012	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50584" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileZKSbEa"
+1648622614268	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileZKSbEa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50584/devtools/browser/5300bf21-0493-4903-b063-1179cdd4a38f
+1648622615833	Marionette	INFO	Listening on port 50589
+1648622616070	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648630059803	Marionette	INFO	Stopped listening on port 50589
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilePHlAKA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50717/devtools/browser/5f4cf8e7-414d-422a-a380-5a713a67eb04
+1648622626801	Marionette	INFO	Listening on port 50724
+1648622626920	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648622660135	Marionette	INFO	Stopped listening on port 50724
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648622929747	geckodriver	INFO	Listening on 127.0.0.1:50951
+1648622932835	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50952" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileMeJeiq"
+1648622933087	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileMeJeiq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50952/devtools/browser/d8994bf3-5d53-424c-bd45-8f01d7669468
+1648622934687	Marionette	INFO	Listening on port 50957
+1648622934889	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648622962609	Marionette	INFO	Stopped listening on port 50957
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "51091" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofile8RReB2"
+1648622944000	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile8RReB2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51091/devtools/browser/e8c2d870-b0e6-4943-ac36-7c9dd09c013a
+1648622945643	Marionette	INFO	Listening on port 51096
+1648622945830	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648622961044	Marionette	INFO	Stopped listening on port 51096
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648630744312	geckodriver	INFO	Listening on 127.0.0.1:55104
+1648630747392	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55105" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofile1giTcK"
+1648630747649	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile1giTcK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55105/devtools/browser/491f1580-0b5c-4f8d-b3a5-41ff68195648
+1648630749340	Marionette	INFO	Listening on port 55112
+1648630749458	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+1648630755286	Marionette	INFO	Stopped listening on port 55112
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648633729821	geckodriver	INFO	Listening on 127.0.0.1:59959
+1648633732905	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59960" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilescBILK"
+1648633733351	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilescBILK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59960/devtools/browser/281f84b9-c86c-43f3-81d3-9fbdfdcb0f19
+1648633735271	Marionette	INFO	Listening on port 59966
+1648633735585	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648633739643	Marionette	INFO	Stopped listening on port 59966
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648633765499	geckodriver	INFO	Listening on 127.0.0.1:58368
+1648633768579	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58369" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilepclOKT"
+1648633768832	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilepclOKT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58369/devtools/browser/9438ebb4-5134-4dc2-91cf-b7cbb5710051
+1648633770483	Marionette	INFO	Listening on port 58374
+1648633770625	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+1648633785296	Marionette	INFO	Stopped listening on port 58374
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+tte	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileiffPMY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58481/devtools/browser/793d9764-2880-4624-8f4e-4acd949b359c
+1648633778499	Marionette	INFO	Listening on port 58501
+1648633778659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648633784798	Marionette	INFO	Stopped listening on port 58501
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1648636011074	geckodriver	INFO	Listening on 127.0.0.1:61378
+1648636014156	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61379" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofile4Fzbjc"
+1648636014403	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofile4Fzbjc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61379/devtools/browser/80326049-a1e4-4a0c-9768-36e8502571e6
+1648636016037	Marionette	INFO	Listening on port 61385
+1648636016222	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+1648636866359	Marionette	INFO	Stopped listening on port 61385
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "61507" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofilevWDyW5"
+1648636027160	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofilevWDyW5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61507/devtools/browser/2b8eeda9-ec27-417e-8f83-a43e5f4161f5
+1648636028827	Marionette	INFO	Listening on port 61513
+1648636028968	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648636866365	Marionette	INFO	Stopped listening on port 61513
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648697055635	geckodriver	INFO	Listening on 127.0.0.1:58009
+1648697058709	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58010" "-no-remote" "-profile" "C:\\Users\\JUNLIA~1\\AppData\\Local\\Temp\\rust_mozprofileJMMfCL"
+1648697058963	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\junliangl\\AppData\\Local\\Temp\\rust_mozprofileJMMfCL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58010/devtools/browser/616040d3-9da4-4024-9b00-b20cc5111f97
+1648697060765	Marionette	INFO	Listening on port 58015
+1648697060876	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+1648697077304	Marionette	INFO	Stopped listening on port 58015
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+)
+DevTools listening on ws://localhost:58144/devtools/browser/0283e846-0b1d-4631-8bb4-ecbbbade50bb
+1648697071315	Marionette	INFO	Listening on port 58157
+1648697071467	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://staging.test.frontend.moqi.com.cn/matomo/piwik.js, line 1: SyntaxError: expected expression, got '<'
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://staging.test.frontend.moqi.com.cn"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1648697076353	Marionette	INFO	Stopped listening on port 58157
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
