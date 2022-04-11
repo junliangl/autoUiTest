@@ -33,7 +33,7 @@ if __name__ == '__main__':
         runner.run(suites)
 
 
-# 测试结束后自动打开测试报告且不让他关闭
+# 测试结束后自动打开测试报告且不让它关闭
 def open_report_html():
     global driver
     driver = webdriver.Chrome()
