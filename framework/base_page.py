@@ -34,10 +34,10 @@ class BasePage(object):
         浏览器截图操作
         在这里我们把file_path这个参数写死，直接保存到我们项目根目录的一个文件夹./screenshots下
         """
-        file_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/screenshots/'
-        rq = time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime(time.time()))
-        screen_name = file_path + rq + '.png'
         try:
+            file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'screenshots')
+            rq = time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime(time.time()))
+            screen_name = os.path.join(file_path, rq + '.png')
             self.driver.get_screenshot_as_file(screen_name)
             logger.info(f"已经成功截图并保存在 : {screen_name}")
         except NameError as e:
@@ -144,9 +144,9 @@ class BasePage(object):
         输入框输入信息
         """
         self.forced_wait(*selector)
-        element = self.driver.find_element(*selector)
-        element.clear()
         try:
+            element = self.driver.find_element(*selector)
+            element.clear()
             element.send_keys(text)
             logger.info(f"输入 {text} 成功")
         except NameError as e:
@@ -157,8 +157,9 @@ class BasePage(object):
         """
         清除文本框
         """
-        element = self.driver.find_element(*selector)
+        self.forced_wait(*selector)
         try:
+            element = self.driver.find_element(*selector)
             element.clear()
             logger.info("清除了输入框.")
         except NameError as e:
@@ -170,8 +171,8 @@ class BasePage(object):
         点击元素
         """
         self.forced_wait(*selector)  # 每次点击前都需要显式等待一下
-        element = self.driver.find_element(*selector)
         try:
+            element = self.driver.find_element(*selector)
             element_name = self.get_element(*selector)
             element.click()
             logger.info(f"按钮 {element_name} 已被点击.")
@@ -184,8 +185,8 @@ class BasePage(object):
         移动鼠标点击
         """
         self.forced_wait(*selector)
-        element = self.driver.find_element(*selector)
         try:
+            element = self.driver.find_element(*selector)
             element_name = self.get_element(*selector)
             ActionChains(self.driver).move_to_element(element).click(element).perform()
             logger.info(f"按钮 {element_name} 已被点击.")
@@ -209,6 +210,7 @@ class BasePage(object):
         """
         找到显示等待的元素
         """
+        self.forced_wait(*selector)
         # noinspection PyBroadException
         try:
             logger.info(f"找到 {self.get_element(*selector)} 按钮")
