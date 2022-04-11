@@ -1,10 +1,16 @@
+import os
+import json
 from framework.base_page import BasePage
 from selenium.webdriver.common.by import By
 
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+json_file = os.path.join(os.path.join(project_path, 'config'), 'register.json')
+with open(json_file, encoding='utf-8') as file:
+    json_config = json.load(file)
+
 
 class Register_Page(BasePage):
-    register_init_button_element = (
-        By.XPATH, '/html/body/app-root/app-login/div/form/nz-form-item[4]/nz-form-control/div/div/div/a[contains(text(),"注册新账号")]')
+    register_init_button_element = (json_config["method"][0], json_config["init_button"][0])
     register_account_element = (By.XPATH, '//*[@id="username"]')
     register_password1_element = (By.XPATH, '//*[@id="password"]')
     register_password2_element = (By.XPATH, '//*[@id="confirmPassword"]')
