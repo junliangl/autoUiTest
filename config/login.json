@@ -1,0 +1,23 @@
+{
+  "method": [
+      "xpath",
+      "css selector"
+    ],
+  "account": [
+      "/html/body/app-root/app-login/div/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input",
+      ""
+    ],
+  "password": [
+      "/html/body/app-root/app-login/div/form/nz-form-item[2]/nz-form-control/div/div/nz-input-group/input",
+      ""
+    ],
+  "login_button": [
+      "/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button",
+      ""
+    ],
+
+  "username": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[3]",
+      ""
+    ]
+}

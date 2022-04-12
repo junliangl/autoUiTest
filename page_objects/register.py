@@ -1,31 +1,34 @@
 import os
 import json
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
-from selenium.webdriver.common.by import By
 
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 json_file = os.path.join(os.path.join(project_path, 'config'), 'register.json')
+
+# 拿到 json 文件解析成 dict
 with open(json_file, encoding='utf-8') as file:
-    json_config = json.load(file)
+    register_json = json.load(file)
 
 
 class Register_Page(BasePage):
-    register_init_button_element = (json_config["method"][0], json_config["init_button"][0])
-    register_account_element = (By.XPATH, '//*[@id="username"]')
-    register_password1_element = (By.XPATH, '//*[@id="password"]')
-    register_password2_element = (By.XPATH, '//*[@id="confirmPassword"]')
-    register_username_element = (By.XPATH, '//*[@id="actualName"]')
-    register_genderMan_element = (By.XPATH, '//*[@id="gender"]/label[1]/span[1]')
-    register_genderWomen_element = (By.XPATH, '//*[@id="gender"]/label[2]/span[1]')
-    register_phone_number_element = (By.XPATH, '//*[@id="telephone"]')
-    register_area1_element = (By.XPATH, '/html/body/app-root/app-register/div/form/nz-form-item[7]/nz-form-control')
-    register_area2_element = (By.XPATH, '/html/body/div[2]/div/div/div/ul[1]/li')
-    register_area3_element = (By.XPATH, '/html/body/div[2]/div/div/div/ul[2]/li[23]')
-    register_area4_element = (By.XPATH, '/html/body/div[2]/div/div/div/ul[3]/li[1]')
-    register_area5_element = (By.XPATH, '/html/body/div[2]/div/div/div/ul[4]/li[5]')
-    register_company_element = (By.XPATH, '//*[@id="workUnit"]')
-    register_enter_button_element = (
-        By.XPATH, '/html/body/app-root/app-register/div/form/nz-form-item[9]/nz-form-control/div/div/div/button')
+    # method 存放定位方法的列表  后面对应存放着对应的方法的元素列表
+    register_init_button_element = (register_json["method"][0], register_json["init_button"][0])
+    register_account_element = (register_json["method"][0], register_json["account"][0])
+    register_password1_element = (register_json["method"][0], register_json["password"]["first_password"][0])
+    register_password2_element = (register_json["method"][0], register_json["password"]["second_password"][0])
+    register_username_element = (register_json["method"][0], register_json["username"][0])
+    register_male_element = (register_json["method"][0], register_json["gender"]["male"][0])
+    register_female_element = (register_json["method"][0], register_json["gender"]["female"][0])
+    register_phone_number_element = (register_json["method"][0], register_json["phone_number"][0])
+    register_area1_element = (register_json["method"][0], register_json["area"]["area1"][0])
+    register_area2_element = (register_json["method"][0], register_json["area"]["area2"][0])
+    register_area3_element = (register_json["method"][0], register_json["area"]["area3"][0])
+    register_area4_element = (register_json["method"][0], register_json["area"]["area4"][0])
+    register_area5_element = (register_json["method"][0], register_json["area"]["area5"][0])
+    register_company_element = (register_json["method"][0], register_json["company"][0])
+    register_enter_button_element = (register_json["method"][0], register_json["enter_button"][0])
 
     def input_register_message_account(self, text):
         self.input(text, *self.register_account_element)
@@ -39,8 +42,11 @@ class Register_Page(BasePage):
     def input_register_message_username(self, text):
         self.input(text, *self.register_username_element)
 
-    def choose_register_gender(self):
-        self.click(*self.register_genderMan_element)
+    def choose_register_gender(self, gender):
+        if gender == "男":
+            self.click(*self.register_male_element)
+        elif gender == "女":
+            self.click(*self.register_female_element)
 
     def input_register_message_phone(self, text):
         self.input(text, *self.register_phone_number_element)
@@ -87,13 +93,13 @@ class Register_Page(BasePage):
         self.get_wait_element(*self.register_init_button_element)
 
     def get_result(self):
-        result = True
         # noinspection PyBroadException
         try:
-            self.driver.find_element(*self.register_enter_button_element)  # 判断是否能找到注册按钮，找不到就视为注册成功
+            # 判断是否能找到注册按钮，找不到就视为注册成功
+            WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.register_enter_button_element))
+            return True
         except Exception:
-            result = False
-        return result
+            return False
 
     def time_sleep(self):
         self.sleep(1.5)

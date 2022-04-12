@@ -1,17 +1,22 @@
-from framework.base_page import BasePage
-from selenium.webdriver.common.by import By
+import os
+import json
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from framework.base_page import BasePage
+
+
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+json_file = os.path.join(os.path.join(project_path, 'config'), 'login.json')
+
+with open(json_file, encoding='utf-8') as file:
+    login_json = json.load(file)
 
 
 class Login_Page(BasePage):
-    input_username_element = (
-        By.XPATH, '/html/body/app-root/app-login/div/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input')
-    input_password_element = (
-        By.XPATH, '/html/body/app-root/app-login/div/form/nz-form-item[2]/nz-form-control/div/div/nz-input-group/input')
-    login_button_element = (
-        By.XPATH, '/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button')
-    username_element = (By.XPATH, '/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[2]')
+    input_username_element = (login_json["method"][0], login_json["account"][0])
+    input_password_element = (login_json["method"][0], login_json["password"][0])
+    login_button_element = (login_json["method"][0], login_json["login_button"][0])
+    username_element = (login_json["method"][0], login_json["username"][0])
 
     def input_login_message_account(self, text):
         self.input(text, *self.input_username_element)
@@ -30,10 +35,10 @@ class Login_Page(BasePage):
     def get_result(self):
         # noinspection PyBroadException
         try:
-            WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.username_element))
+            # 判断是否能找到人员名字，找不到就视为登录成功
+            WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.username_element))
             return True
         except Exception:
             return False
 
-    def get_wait_log(self):
-        self.get_wait_element(*self.login_button_element)
+

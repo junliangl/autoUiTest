@@ -1,6 +1,7 @@
 # coding=utf-8
+import os
 import unittest
-from selenium.webdriver.common.by import By
+from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
 from framework.browser_info import Message
 from page_objects.register import Register_Page
@@ -8,43 +9,46 @@ from framework.logger import Logger
 
 logger = Logger(logger='注册测试结果').get_log()
 get_message = Message()
-register_init_button_element = (By.XPATH,
-                                '/html/body/app-root/app-login/div/form/nz-form-item[4]/nz-form-control/div/div/div/a[contains(text(),"注册新账号")]')
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_path = os.path.join(os.path.join(project_path, 'data'), 'register_data.json')
 
 
+@ddt
 class Test_Register(unittest.TestCase):
     """
     测试注册模块
     """
 
-    @classmethod
-    def setUpClass(cls):
+    # @classmethod
+    def setUp(self):
         """
         测试固件的setUp()的代码，主要是测试的前提准备工作
         """
-        browser = BrowserEngine(cls)
-        cls.driver = browser.open_browser(cls, *register_init_button_element)
+        browser = BrowserEngine(self)
+        self.driver = browser.open_browser(self)
 
-    @classmethod
-    def tearDownClass(cls):
+    # @classmethod
+    def tearDown(self):
         """
         测试结束后的操作，这里基本上都是关闭浏览器
         """
-        pass
+        self.driver.close()
 
-    def test_register(self):
+    # 拿到json里的数据进行数据驱动测试
+    @file_data(data_path)
+    def test_register(self, account, first_password, second_password, username, gender, phone_number, company):
         """
         测试注册用例
         """
         register_page = Register_Page(self.driver)
         register_page.get_wait_log()
         register_page.click_init_register_button()
-        register_page.input_register_message_account('testauto123')  # 测试账号
-        register_page.input_register_message_password('aA123456')
-        register_page.input_register_message_confirm_password('aA1234567')
-        register_page.input_register_message_username('junliangl')
-        register_page.choose_register_gender()
-        register_page.input_register_message_phone('12345678911')
+        register_page.input_register_message_account(account)
+        register_page.input_register_message_password(first_password)
+        register_page.input_register_message_confirm_password(second_password)
+        register_page.input_register_message_username(username)
+        register_page.choose_register_gender(gender)
+        register_page.input_register_message_phone(phone_number)
         register_page.choose_area1()  # 选择区域
 
         # 判断浏览器用不同方法点击
@@ -60,7 +64,7 @@ class Test_Register(unittest.TestCase):
             register_page.choose_firefox_area4()  # 选择成都市
             register_page.choose_firefox_area5()  # 选择武侯区
 
-        register_page.input_register_message_company('墨奇科技')
+        register_page.input_register_message_company(company)
         register_page.get_windows_img()
         register_page.click_register_button()
 

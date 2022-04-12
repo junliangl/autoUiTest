@@ -1,56 +1,56 @@
 # coding=utf-8
+import os
 import unittest
+from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
 from framework.browser_info import Message
 from page_objects.login import Login_Page
 from framework.logger import Logger
 from selenium.webdriver.common import action_chains
-from selenium.webdriver.common.by import By
 
 logger = Logger(logger='登录测试结果').get_log()
 get_message = Message()
-
-# 登录按钮
-login_button_element = (
-    By.XPATH, '/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button')
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_path = os.path.join(os.path.join(project_path, 'data'), 'login_data.json')
 
 
+@ddt
 class Test_Login(unittest.TestCase):
     """
     测试登录模块
     """
 
-    @classmethod
-    def setUpClass(cls):
+    # @classmethod
+    def setUp(self):
         """
         测试固件的setUp()的代码，主要是测试的前提准备工作
         """
-        browser = BrowserEngine(cls)
-        cls.driver = browser.open_browser(cls, *login_button_element)
+        browser = BrowserEngine(self)
+        self.driver = browser.open_browser(self)
 
-    @classmethod
-    def tearDownClass(cls):
+    # @classmethod
+    def tearDown(self):
         """
         测试结束后的操作，这里基本上都是关闭浏览器
         """
-        pass
+        self.driver.close()
 
-    # 判断是用的哪个 driver
-    def test_login(self):
+    @file_data(data_path)
+    def test_login(self, account, password):
         """
         测试登录用例
         """
         login_page = Login_Page(self.driver)  # 把 setup 的 driver 传下来
         if get_message.get_driver() == "Chrome":
-            login_page.input_login_message_account('testauto')
-            login_page.input_login_message_password('aA123456')  # 调用页面对象中的方法
+            login_page.input_login_message_account(account)
+            login_page.input_login_message_password(password)  # 调用页面对象中的方法
             action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()  # 点击空白解除网页的非安全链接提醒
             login_page.click_login_button()
             login_page.get_windows_img()
 
         elif get_message.get_driver() == "Firefox":
-            login_page.input_login_message_account('testauto')
-            login_page.input_login_message_password('aA123456')  # 调用页面对象中的方法
+            login_page.input_login_message_account(account)
+            login_page.input_login_message_password(password)  # 调用页面对象中的方法
             action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()  # 点击空白解除网页的非安全链接提醒
             login_page.click_login_button()
             login_page.get_windows_img()

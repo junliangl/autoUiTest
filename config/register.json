@@ -1,84 +1,75 @@
 {
-  "method" :
-    [
+  "method" : [
       "xpath",
       "css selector"
     ],
-  "init_button" :
-    [
+  "init_button" : [
       "/html/body/app-root/app-login/div/form/nz-form-item[4]/nz-form-control/div/div/div/a[contains(text(),\"注册新账号\")]",
       ""
     ],
-  "account":
-    [
+  "account": [
       "//*[@id=\"username\"]",
       ""
     ],
-  "password1":
-    [
-      "//*[@id=\"password\"]",
-      ""
-    ],
-  "password2":
-    [
-      "//*[@id=\"confirmPassword\"]",
-      ""
-    ],
-  "username":
-    [
-      "//*[@id=\"actualName\"]",
-      ""
-    ],
-  "gender":
-    {
-      "male_method": [
-        "*[@id=\"gender\"]/label[1]/span[1]",
+  "password": {
+      "first_password": [
+        "//*[@id=\"password\"]",
         ""
       ],
-      "female_method": [
-        "//*[@id=\"gender\"]/label[1]/span[1]",
+      "second_password": [
+        "//*[@id=\"confirmPassword\"]",
         ""
       ]
     },
-  "phone_number":
-    [
-      "//*[@id=\"telephone\"",
+  "username": [
+      "//*[@id=\"actualName\"]",
       ""
     ],
-  "area":
-    {
-      "area1_method": [
+  "gender": {
+      "male": [
+        "//*[@id=\"gender\"]/label[1]/span[1]",
+        ""
+      ],
+      "female": [
+        "//*[@id=\"gender\"]/label[2]/span[1]",
+        ""
+      ]
+    },
+  "phone_number": [
+      "//*[@id=\"telephone\"]",
+      ""
+    ],
+  "area": {
+      "area1": [
         "/html/body/app-root/app-register/div/form/nz-form-item[7]/nz-form-control",
         ""
       ],
 
-      "area2_element": [
+      "area2": [
         "/html/body/div[2]/div/div/div/ul[1]/li",
         ""
       ],
 
-      "area3_element": [
+      "area3": [
         "/html/body/div[2]/div/div/div/ul[2]/li[23]",
         ""
       ],
 
-      "area4_element": [
+      "area4": [
         "/html/body/div[2]/div/div/div/ul[3]/li[1]",
         ""
       ],
 
-      "area5_element": [
+      "area5": [
         "/html/body/div[2]/div/div/div/ul[4]/li[5]",
         ""
       ]
     },
-  "company":
-    [
+  "company": [
       "//*[@id=\"workUnit\"]",
       ""
     ],
-  "enter_button":
-    [
+  "enter_button": [
       "/html/body/app-root/app-register/div/form/nz-form-item[9]/nz-form-control/div/div/div/button",
       ""
     ]
