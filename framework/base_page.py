@@ -219,8 +219,13 @@ class BasePage(object):
             self.get_windows_img()
 
     def refresh_browser(self):
-        self.driver.navigate().refresh()
-        self.sleep(1)
+        # noinspection PyBroadException
+        try:
+            self.driver.refresh()
+            logger.info("刷新网页成功")
+        except Exception:
+            logger.error("刷新网页失败")
+            self.get_windows_img()
 
     @staticmethod
     def sleep(seconds):
@@ -228,4 +233,4 @@ class BasePage(object):
         强制等待的提醒
         """
         time.sleep(seconds)
-        logger.info(f"强制等待了 {} 秒")
+        logger.info(f"强制等待了 {seconds} 秒")
