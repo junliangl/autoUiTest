@@ -1,8 +1,4 @@
 {
-  "method" : [
-      "xpath",
-      "css selector"
-    ],
   "init_button" : [
       "/html/body/app-root/app-login/div/form/nz-form-item[4]/nz-form-control/div/div/div/a[contains(text(),\"注册新账号\")]",
       ""
@@ -12,11 +8,11 @@
       ""
     ],
   "password": {
-      "first_password": [
+      "new_password": [
         "//*[@id=\"password\"]",
         ""
       ],
-      "second_password": [
+      "confirm_password": [
         "//*[@id=\"confirmPassword\"]",
         ""
       ]

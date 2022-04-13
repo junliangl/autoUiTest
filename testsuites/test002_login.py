@@ -38,9 +38,9 @@ class Test_Login(unittest.TestCase):
         """
         测试登录用例
         """
-        login_page = Login_Page(self.driver)  # 把 setup 的 driver 传下来
+        login_page = Login_Page(self.driver)
         login_page.input_login_message_account(account)
-        login_page.input_login_message_password(password)  # 调用页面对象中的方法
+        login_page.input_login_message_password(password)
         action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()  # 点击空白解除网页的非安全链接提醒
         login_page.click_login_button()
         login_page.get_windows_img()

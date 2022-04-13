@@ -1,8 +1,4 @@
 {
-  "method": [
-      "xpath",
-      "css selector"
-    ],
   "account": [
       "/html/body/app-root/app-login/div/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input",
       ""

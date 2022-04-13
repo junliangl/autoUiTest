@@ -103,7 +103,7 @@ class BasePage(object):
 
     def forced_wait(self, *selector):
         """
-        显式等待
+        显式等待,进行操作之前都需要显式等待一下
         """
         # noinspection PyBroadException
         try:
@@ -218,10 +218,14 @@ class BasePage(object):
             logger.error('找不到显式等待的元素')
             self.get_windows_img()
 
+    def refresh_browser(self):
+        self.driver.navigate().refresh()
+        self.sleep(1)
+
     @staticmethod
     def sleep(seconds):
         """
         强制等待的提醒
         """
         time.sleep(seconds)
-        logger.info("Sleep for %d seconds" % seconds)
+        logger.info(f"强制等待了 {} 秒")

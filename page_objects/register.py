@@ -6,29 +6,33 @@ from framework.base_page import BasePage
 
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 json_file = os.path.join(os.path.join(project_path, 'config'), 'register.json')
+method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 
 # 拿到 json 文件解析成 dict
-with open(json_file, encoding='utf-8') as file:
-    register_json = json.load(file)
+with open(json_file, encoding='utf-8') as file1:
+    register_json = json.load(file1)
+
+with open(method_file, encoding='utf-8') as file2:
+    method_json = json.load(file2)
 
 
 class Register_Page(BasePage):
-    # method 存放定位方法的列表  后面对应存放着对应的方法的元素列表
-    register_init_button_element = (register_json["method"][0], register_json["init_button"][0])
-    register_account_element = (register_json["method"][0], register_json["account"][0])
-    register_password1_element = (register_json["method"][0], register_json["password"]["first_password"][0])
-    register_password2_element = (register_json["method"][0], register_json["password"]["second_password"][0])
-    register_username_element = (register_json["method"][0], register_json["username"][0])
-    register_male_element = (register_json["method"][0], register_json["gender"]["male"][0])
-    register_female_element = (register_json["method"][0], register_json["gender"]["female"][0])
-    register_phone_number_element = (register_json["method"][0], register_json["phone_number"][0])
-    register_area1_element = (register_json["method"][0], register_json["area"]["area1"][0])
-    register_area2_element = (register_json["method"][0], register_json["area"]["area2"][0])
-    register_area3_element = (register_json["method"][0], register_json["area"]["area3"][0])
-    register_area4_element = (register_json["method"][0], register_json["area"]["area4"][0])
-    register_area5_element = (register_json["method"][0], register_json["area"]["area5"][0])
-    register_company_element = (register_json["method"][0], register_json["company"][0])
-    register_enter_button_element = (register_json["method"][0], register_json["enter_button"][0])
+    # method_json 存放定位方法的列表  后面对应存放着对应的方法的元素列表
+    register_init_button_element = (method_json["method"][0], register_json["init_button"][0])
+    register_account_element = (method_json["method"][0], register_json["account"][0])
+    register_password1_element = (method_json["method"][0], register_json["password"]["new_password"][0])
+    register_password2_element = (method_json["method"][0], register_json["password"]["confirm_password"][0])
+    register_username_element = (method_json["method"][0], register_json["username"][0])
+    register_male_element = (method_json["method"][0], register_json["gender"]["male"][0])
+    register_female_element = (method_json["method"][0], register_json["gender"]["female"][0])
+    register_phone_number_element = (method_json["method"][0], register_json["phone_number"][0])
+    register_area1_element = (method_json["method"][0], register_json["area"]["area1"][0])
+    register_area2_element = (method_json["method"][0], register_json["area"]["area2"][0])
+    register_area3_element = (method_json["method"][0], register_json["area"]["area3"][0])
+    register_area4_element = (method_json["method"][0], register_json["area"]["area4"][0])
+    register_area5_element = (method_json["method"][0], register_json["area"]["area5"][0])
+    register_company_element = (method_json["method"][0], register_json["company"][0])
+    register_enter_button_element = (method_json["method"][0], register_json["enter_button"][0])
 
     def input_register_message_account(self, text):
         self.input(text, *self.register_account_element)
