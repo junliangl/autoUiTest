@@ -7,7 +7,7 @@ from page_objects.change_password import Change_Password_Page
 from framework.logger import Logger
 from selenium.webdriver.common import action_chains
 
-logger = Logger(logger='登录测试结果').get_log()
+logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_path = os.path.join(os.path.join(project_path, 'data'), 'change_password_data.json')
 

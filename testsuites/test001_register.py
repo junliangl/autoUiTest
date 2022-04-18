@@ -7,7 +7,7 @@ from framework.browser_info import Message
 from page_objects.register import Register_Page
 from framework.logger import Logger
 
-logger = Logger(logger='注册测试结果').get_log()
+logger = Logger(logger='测试结果').get_log()
 get_message = Message()
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_path = os.path.join(os.path.join(project_path, 'data'), 'register_data.json')

@@ -132,6 +132,7 @@ class BasePage(object):
         """
         输入
         """
+        # self.forced_wait()
         try:
             element = self.driver.find_element(*selector)
             return element.text
@@ -173,7 +174,7 @@ class BasePage(object):
         self.forced_wait(*selector)  # 每次点击前都需要显式等待一下
         try:
             element = self.driver.find_element(*selector)
-            element_name = self.get_element(*selector)
+            element_name = element.text
             element.click()
             logger.info(f"按钮 {element_name} 已被点击.")
         except Exception as e:

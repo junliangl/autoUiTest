@@ -7,7 +7,7 @@ from page_objects.login_and_logout import Login_And_Logout_Page
 from framework.logger import Logger
 from selenium.webdriver.common import action_chains
 
-logger = Logger(logger='登录测试结果').get_log()
+logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_path = os.path.join(os.path.join(project_path, 'data'), 'login_and_logout_data.json')
 
@@ -36,7 +36,7 @@ class Test_Login_And_Logout(unittest.TestCase):
     @file_data(data_path)
     def test_login_and_logout(self, account, password):
         """
-        测试登录用例
+        测试登录和退出用例
         """
         login_and_logout_page = Login_And_Logout_Page(self.driver)
         login_and_logout_page.input_login_message_account(account)
