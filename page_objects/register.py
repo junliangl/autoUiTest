@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
 
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-json_file = os.path.join(os.path.join(project_path, 'config'), 'register.json')
+json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'init'), 'register.json')
 method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 
 # 拿到 json 文件解析成 dict

@@ -1,8 +1,6 @@
 # -*- coding:utf-8 -*-
 import os
 from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from framework.logger import Logger
 from framework.browser_info import Message
 
@@ -38,7 +36,6 @@ class BrowserEngine:
         logger.info(f"Open url: {get_message.get_url()}.")
         driver.maximize_window()
         logger.info("Maximize the current window.")
-        # WebDriverWait(driver, 10, 1).until(EC.presence_of_element_located(element))
         return driver
 
     def quit_browser(self):

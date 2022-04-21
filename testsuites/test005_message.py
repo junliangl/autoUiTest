@@ -1,13 +1,5 @@
 # coding=utf-8
-# 当前文件的绝对路径
-
 import os
-import sys
-now_path = os.path.dirname(os.path.abspath(__file__))
-# 找到根目录
-root_path = os.path.dirname(now_path)
-# 添加进根目录
-sys.path.append(root_path)
 import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
@@ -53,23 +45,28 @@ class Test_Message(unittest.TestCase):
         message_page.click_login_button()
         message_page.click_message_button()
         if message_page.get_message_result() is True:
+            message_page.sleep(2)
             self.assertTrue(message_page.get_message_result(), logger.info('消息框成功打开，查看消息成功'))
             # 获取未读消息的数量
             number = message_page.get_system_message_number()[6:len(message_page.get_system_message_number()) - 1]
             if number != '0':
                 logger.warning(f"还有未查看的消息,消息数为：{number}")
-                # 遍历每一页直到最后一页
-            # else:
-            #     logger.info("当前待查看消息为：0")
-            # message_page.click_detail_button()
-            # for i in range(message_page.get_message_number() - 1):
-            #     # 总共有有多少行
-            #     raw_number = message_page.get_message_info()[1]
-            #     for j in range(raw_number):
-            #         logger.info(f"{message_page.get_message_header()[j % 5]} ：{message_page.get_message_info()[0][j]}")
-            #     # 遍历完一页就点击下一页
-            #     message_page.click_next_page()
-            logger.info("查看消息完成")
+                message_page.click_detail_button()
+                info = message_page.get_message_info()
+                all_info = info[0]
+                number = info[1]
+                message_number = int(number / 5)
+                logger.info(f"总共有：{message_number} 条消息")
+                # 循环爬取消息
+                for text in range(message_number):
+                    logger.warning(f"下面是第{text + 1 }条消息")
+                    for title in range(5):
+                        logger.info(f"{message_page.get_message_header()[title]} : {all_info[text * 5 + title]}")
+                # for text in range(number):
+                #     logger.info(f"{message_page.get_message_header()[text % 5]} : {all_info[text]}")
+                logger.info("查看消息完成")
+            else:
+                logger.info("当前待查看消息为：0")
         else:
             self.assertTrue(message_page.get_message_result(), logger.info('查看消息失败'))
 

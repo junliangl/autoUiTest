@@ -36,11 +36,11 @@ class BasePage(object):
         """
         try:
             file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'screenshots')
-            rq = time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime(time.time()))
-            screen_name = os.path.join(file_path, rq + '.png')
+            datatime = time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime(time.time()))
+            screen_name = os.path.join(file_path, datatime + '.png')
             self.driver.get_screenshot_as_file(screen_name)
             logger.info(f"已经成功截图并保存在 : {screen_name}")
-        except NameError as e:
+        except Exception as e:
             logger.warning(f"截图失败： {e}.")
 
     def quit_browser(self):
@@ -112,6 +112,7 @@ class BasePage(object):
         except Exception:
             logger.warning('显式等待元素失败.')
 
+    # 暂时用不到这个自定义方法
     def find_element(self, *selector):
         """
         定位元素方法
@@ -172,13 +173,14 @@ class BasePage(object):
         点击元素
         """
         self.forced_wait(*selector)  # 每次点击前都需要显式等待一下
+        # noinspection PyBroadException
         try:
             element = self.driver.find_element(*selector)
             element_name = element.text
             element.click()
             logger.info(f"按钮 {element_name} 已被点击.")
-        except Exception as e:
-            logger.error(f"点击按钮 {e} 失败")
+        except Exception:
+            logger.error(f"点击按钮失败")
             self.get_windows_img()
 
     def actionchains_click(self, *selector):

@@ -3,7 +3,7 @@ import json
 from framework.base_page import BasePage
 
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-json_file = os.path.join(os.path.join(project_path, 'config'), 'available_quota.json')
+json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'menu'), 'available_quota.json')
 method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 
 with open(json_file, encoding='utf-8') as file1:

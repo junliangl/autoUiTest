@@ -1,0 +1,70 @@
+{
+  "case_database": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[1]/nz-form-control/div/div/nz-radio-group/label[1]/span[1]",
+    ""
+  ],
+  "person_database": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[1]/nz-form-control/div/div/nz-radio-group/label[2]/span[1]",
+    ""
+  ],
+  "target_database": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[2]/nz-form-control/div/div/nz-select/nz-select-top-control/nz-select-placeholder",
+    ""
+  ],
+  "all_database": [
+    "/html/body/div[2]/div/div/nz-option-container/div/cdk-virtual-scroll-viewport/div[1]",
+    ""
+  ],
+  "import_fpt": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[3]/nz-form-control/div/div/nz-radio-group/label[1]/span[1]",
+    ""
+  ],
+  "import_bmp": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[3]/nz-form-control/div/div/nz-radio-group/label[2]/span[1]",
+    ""
+  ],
+  "formats_explain": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[3]/button",
+    ""
+  ],
+  "download_sample": [
+    "/html/body/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div/button",
+    ""
+  ],
+  "not_override": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[4]/nz-form-control/div/div/nz-radio-group/label[1]/span[1]",
+    ""
+  ],
+  "override": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[4]/nz-form-control/div/div/nz-radio-group/label[2]/span[1]",
+    ""
+  ],
+  "import": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[5]/nz-form-control/div/div/button",
+    ""
+  ],
+  "import_file": [
+    "/html/body/div[2]/div/div/div/ul/li[1]",
+    ""
+  ],
+  "import_folder": [
+    "/html/body/div[2]/div/div/div/ul/li[1]",
+    ""
+  ],
+  "comment": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[6]/nz-form-control/div/div/nz-textarea-count/textarea",
+    ""
+  ],
+  "upload": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/div[1]/button",
+    ""
+  ],
+  "clear_list": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/div[2]/div[1]/button",
+    ""
+  ],
+  "delete_file": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/div[2]/div[2]/cdk-virtual-scroll-viewport/div[1]/nz-list/nz-spin/div/div/nz-list-item[i]/span[1]/i/svg",
+    ""
+  ]
+}
