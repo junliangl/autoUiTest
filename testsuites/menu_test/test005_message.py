@@ -3,12 +3,12 @@ import os
 import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
-from page_objects.message import Message_Page
+from page_objects.menu_management.message import Message_Page
 from framework.logger import Logger
 from selenium.webdriver.common import action_chains
 
 logger = Logger(logger='测试结果').get_log()
-project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 data_path = os.path.join(os.path.join(project_path, 'data'), 'message_data.json')
 
 
@@ -59,7 +59,7 @@ class Test_Message(unittest.TestCase):
                 logger.info(f"总共有：{message_number} 条消息")
                 # 循环爬取消息
                 for text in range(message_number):
-                    logger.warning(f"下面是第{text + 1 }条消息")
+                    logger.warning(f"下面是第{text + 1 }条消息:")
                     for title in range(5):
                         logger.info(f"{message_page.get_message_header()[title]} : {all_info[text * 5 + title]}")
                 # for text in range(number):

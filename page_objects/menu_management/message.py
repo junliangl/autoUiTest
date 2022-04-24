@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
 
-project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'menu'), 'message.json')
 method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 
@@ -21,7 +21,7 @@ class Message_Page(BasePage):
     login_button_element = (method_json["method"][0], message_json["login_button"][0])
     message_button_element = (method_json["method"][0], message_json["message_button"][0])
     message_div_element = (method_json["method"][0], message_json["message_div"][0])
-    system_message_element = (method_json["method"][0], message_json["system_message"][0])
+    system_message_element = (method_json["method"][0], message_json["system_message_1"][0])
     detail_button_element = (method_json["method"][0], message_json["detail"][0])
     next_page_element = (method_json["method"][0], message_json["next_page"][0])
     last_page_element = (method_json["method"][0], message_json["last_page"][0])

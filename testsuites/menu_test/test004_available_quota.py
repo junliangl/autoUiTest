@@ -4,13 +4,13 @@ import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
 from framework.browser_info import Message
-from page_objects.available_quota import Available_Quota_Page
+from page_objects.menu_management.available_quota import Available_Quota_Page
 from framework.logger import Logger
 from selenium.webdriver.common import action_chains
 
 logger = Logger(logger='测试结果').get_log()
 get_message = Message()
-project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 data_path = os.path.join(os.path.join(project_path, 'data'), 'available_quota_data.json')
 
 

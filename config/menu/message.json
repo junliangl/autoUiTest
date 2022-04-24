@@ -19,7 +19,7 @@
     "/html/body/div[2]/div/div/div/div",
     ""
   ],
-  "system_message": [
+  "system_message_1": [
     "/html/body/div[2]/div[2]/div/div/div/nz-tabset/nz-tabs-nav/div/div/div[1]/div",
     ""
   ],
@@ -34,12 +34,32 @@
   "detail": [
     "/html/body/div[2]/div[2]/div/div/div/nz-row/div[2]"
   ],
+  "system_message_2": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/nz-tabs-nav/div/div/div[1]/div",
+    ""
+  ],
+  "指纹联盟比中": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/nz-tabs-nav/div/div/div[2]/div",
+    ""
+  ],
+  "forward_page": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/div/div/div[1]/nz-table/nz-spin/div/nz-pagination/li[1]",
+    ""
+  ],
   "next_page": [
     "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/div/div/div[1]/nz-table/nz-spin/div/nz-pagination/li[last()]",
     ""
   ],
   "last_page": [
     "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/div/div/div[1]/nz-table/nz-spin/div/nz-pagination/li[last()]/button[contains(@disabled)]",
+    ""
+  ],
+  "every_page_number": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/div/div/div[1]/nz-table/nz-spin/div/nz-pagination/div/nz-select/nz-select-top-control/nz-select-item",
+    ""
+  ],
+  "go_to_page": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/div/div/div[1]/nz-table/nz-spin/div/nz-pagination/div/div/input",
     ""
   ],
   "data_and_time": [

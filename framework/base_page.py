@@ -107,7 +107,7 @@ class BasePage(object):
         """
         # noinspection PyBroadException
         try:
-            WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(selector))
+            WebDriverWait(self.driver, 10, 1).until(EC.presence_of_element_located(selector))
             logger.info('显式等待元素成功.')
         except Exception:
             logger.warning('显式等待元素失败.')

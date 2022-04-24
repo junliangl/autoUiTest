@@ -4,12 +4,12 @@ import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
 from framework.browser_info import Message
-from page_objects.register import Register_Page
+from page_objects.account_management.register import Register_Page
 from framework.logger import Logger
 
 logger = Logger(logger='测试结果').get_log()
 get_message = Message()
-project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 data_path = os.path.join(os.path.join(project_path, 'data'), 'register_data.json')
 
 
