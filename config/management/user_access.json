@@ -1,0 +1,241 @@
+{
+  "account": [
+    "/html/body/app-root/app-login/div/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input",
+    ""
+  ],
+  "password": [
+    "/html/body/app-root/app-login/div/form/nz-form-item[2]/nz-form-control/div/div/nz-input-group/input",
+    ""
+  ],
+  "login_button": [
+    "/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button",
+    ""
+  ],
+  "user_access": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[1]/nz-card",
+    ""
+  ],
+  "action": {
+    "升级为付费单位": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button/span[contains(text(),'升级为付费单位')]",
+      ""
+    ],
+    "invite_to_group": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button/span[contains(text(),'邀请用户入组')]",
+      ""
+    ],
+    "delete_child_group": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button/span[contains(text(),'删除子用户组')]",
+      ""
+    ],
+    "cannot_delete_group": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button[@disabled]/span[contains(text(),'删除子用户组')]",
+      ""
+    ],
+    "delete_role_group": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button/span[contains(text(),'删除角色组')]",
+      ""
+    ],
+    "cannot_delete_role": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button[@disabled]/span[contains(text(),'删除角色组')]",
+      ""
+    ],
+    "add_child_group": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button/span[contains(text(),'新增子用户组')]",
+      ""
+    ],
+    "add_role_group": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button/span[contains(text(),'新增角色组')]",
+      ""
+    ]
+  },
+  "invite_users": {
+    "choose_users": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[2]/form/nz-form-item/nz-form-control",
+      ""
+    ],
+    "first_user": [
+      "/html/body/div[2]/div[4]/div/nz-option-container/div/cdk-virtual-scroll-viewport/div[1]/nz-option-item[1]",
+      ""
+    ],
+    "invite_confirm_button": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[3]/button[2]",
+      ""
+    ],
+    "invite_cancel_button": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[3]/button[1]",
+      ""
+    ]
+  },
+  "delete_role": {
+    "input_password": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[2]/form/nz-form-item/nz-form-control/div/div/input",
+      ""
+    ]
+  },
+  "child_group": {
+    "group_number": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[1]/div[2]/nz-tree/div[2]/div/div",
+      ""
+    ],
+    "group_name": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[1]/div[1]/span[1]",
+      ""
+    ],
+    "search_input": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[1]/div[2]/nz-input-group/input",
+      ""
+    ],
+    "child_group1": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[1]/div[2]/nz-tree/div[2]/div/div/nz-tree-node[1]/nz-tree-node-title",
+      ""
+    ],
+    "child_group2": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[1]/div[2]/nz-tree/div[2]/div/div/nz-tree-node[2]/nz-tree-node-title",
+      ""
+    ],
+    "child_group3": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[1]/div[2]/nz-tree/div[2]/div/div/nz-tree-node[3]/nz-tree-node-title",
+      ""
+    ]
+  },
+  "role_group": {
+    "role_number": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[2]/div[2]/nz-list/nz-spin/div/div",
+      ""
+    ],
+    "input": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[2]/div[2]/nz-input-group/input",
+      ""
+    ],
+    "role1": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[2]/div[2]/nz-list/nz-spin/div/div/nz-list-item[1]",
+      ""
+    ],
+    "role2": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[2]/div[2]/nz-list/nz-spin/div/div/nz-list-item[2]",
+      ""
+    ]
+  },
+  "basic_information": {
+    "basic_info": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[1]/div[2]/div[1]",
+      ""
+    ],
+    "edit_basic_forbidden": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/div/button[@disabled]",
+      ""
+    ],
+    "edit_basic_info": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/div/button",
+      ""
+    ],
+    "child_name_input": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[2]/form/nz-form-item[1]/nz-form-control/div/div/input",
+      ""
+    ],
+    "child_user_group_code": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/div/input",
+      ""
+    ],
+    "child_code_input_forbidden": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/div/input[contains(@disabled)]",
+      ""
+    ],
+    "group_region_code": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[2]/form/nz-form-item[3]/nz-form-control",
+      ""
+    ],
+    "department": [
+      "/html/body/div[2]/div[4]/div/div/ul[1]/li[1]",
+      ""
+    ],
+    "province": [
+      "/html/body/div[2]/div[4]/div/div/ul[2]/li[23]",
+      ""
+    ],
+    "city": [
+      "/html/body/div[2]/div[4]/div/div/ul[3]/li[1]",
+      ""
+    ],
+    "district": [
+      "/html/body/div[2]/div[4]/div/div/ul[4]/li[3]",
+      ""
+    ]
+  },
+  "authorization_management": {
+    "authorization_management_element": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[1]/div[2]/div[2]",
+      ""
+    ],
+    "modification_permission": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/button",
+      ""
+    ],
+    "check_box": [
+      "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[2]/div[2]/nz-tree/div[2]/div/div/nz-tree-node[7]/nz-tree-node-checkbox",
+      ""
+    ]
+  },
+  "user_management": {
+    "user_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[1]/div[2]/div[3]",
+      ""
+    ],
+    "account_quota_used": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[1]",
+      ""
+    ],
+    "account_quota_available": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[2]",
+      ""
+    ],
+    "auth_quota_used": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[3]",
+      ""
+    ],
+    "auth_quota_available": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[4]",
+      ""
+    ],
+    "username": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-tabset/div/div/div[2]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[1]",
+      ""
+    ],
+    "fullname": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-tabset/div/div/div[2]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[2]",
+      ""
+    ],
+    "last_login": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-tabset/div/div/div[2]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[3]",
+      ""
+    ],
+    "action": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-tabset/div/div/div[2]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[4]",
+      ""
+    ],
+    "forward_page": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/nz-pagination/li[1]/button",
+      ""
+    ],
+    "first_page": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/nz-pagination/li[1]/button[@disabled]",
+      ""
+    ],
+    "next_page": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/nz-pagination/li[last()]/button",
+      ""
+    ],
+    "last_page": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/nz-pagination/li[last()]/button[@disabled]"
+    ]
+  },
+  "cancel_button": [
+    "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[3]/button[1]",
+    ""
+  ],
+  "confirm_button": [
+    "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/div[3]/button[2]",
+    ""
+  ]
+}

@@ -11,14 +11,6 @@
     "/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button",
     ""
   ],
-  "username": [
-    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[2]/span",
-    ""
-  ],
-  "logout_button": [
-    "/html/body/div[2]/div[last()]/div/div/ul/li[3]/a",
-    ""
-  ],
   "cancel_button": [
     "/html/body/div[2]/div[last()]/div/nz-modal-container/div/div/div[3]/button[1]",
     ""

@@ -5,17 +5,21 @@ from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
 
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'menu'), 'change_password.json')
+element_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'menu'), 'change_password.json')
+menu_file = os.path.join(os.path.join(project_path, 'config'), 'menu_element.json')
 method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 data_file = os.path.join(os.path.join(project_path, 'data'), 'change_password_data.json')
-with open(json_file, encoding='utf-8') as file1:
+with open(element_file, encoding='utf-8') as file1:
     change_password_json = json.load(file1)
 
-with open(method_file, encoding='utf-8') as file2:
-    method_json = json.load(file2)
+with open(menu_file, encoding='utf-8') as file2:
+    menu_json = json.load(file2)
 
-with open(data_file, encoding='utf-8') as file3:
-    password_json = json.load(file3)
+with open(method_file, encoding='utf-8') as file3:
+    method_json = json.load(file3)
+
+with open(data_file, encoding='utf-8') as file4:
+    password_json = json.load(file4)
 
 password = password_json["test1"]["password"]
 
@@ -24,8 +28,8 @@ class Change_Password_Page(BasePage):
     input_username_element = (method_json["method"][0], change_password_json["account"][0])
     input_password_element = (method_json["method"][0], change_password_json["password"][0])
     login_button_element = (method_json["method"][0], change_password_json["login_button"][0])
-    username_element = (method_json["method"][0], change_password_json["username"][0])
-    change_password_element = (method_json["method"][0], change_password_json["change_password"][0])
+    username_element = (method_json["method"][0], menu_json["user"]["button"][0])
+    change_password_element = (method_json["method"][0], menu_json["user"]["change_password"][0])
     initial_password_element = (method_json["method"][0], change_password_json["initial_password"][0])
     new_password_element = (method_json["method"][0], change_password_json["new_password"][0])
     confirm_password_element = (method_json["method"][0], change_password_json["confirm_password"][0])
@@ -87,3 +91,4 @@ class Change_Password_Page(BasePage):
             return True
         except Exception:
             return False
+

@@ -107,8 +107,8 @@ class BasePage(object):
         """
         # noinspection PyBroadException
         try:
-            WebDriverWait(self.driver, 10, 1).until(EC.presence_of_element_located(selector))
-            logger.info('显式等待元素成功.')
+            WebDriverWait(self.driver, 7, 1).until(EC.presence_of_element_located(selector))
+            # logger.info('显式等待元素成功.')
         except Exception:
             logger.warning('显式等待元素失败.')
 
@@ -193,6 +193,7 @@ class BasePage(object):
             element_name = self.get_element(*selector)
             ActionChains(self.driver).move_to_element(element).click(element).perform()
             logger.info(f"按钮 {element_name} 已被点击.")
+            self.sleep(2)
         except Exception as e:
             logger.error(f"点击按钮 {e} 失败")
             self.get_windows_img()

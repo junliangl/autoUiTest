@@ -15,7 +15,7 @@ data_path = os.path.join(os.path.join(project_path, 'data'), 'available_quota_da
 
 
 @ddt
-class Test_available_quota(unittest.TestCase):
+class Test_Available_Quota(unittest.TestCase):
     """
     测试登录模块
     """

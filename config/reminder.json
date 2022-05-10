@@ -1,0 +1,26 @@
+{
+  "reminder": [
+    "html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span",
+    ""
+  ],
+  "add_child_group": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'子用户组添加成功')]",
+    ""
+  ],
+  "add_role_group": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'角色组添加成功')]",
+    ""
+  ],
+  "edit_basic_info": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'修改基础信息成功')]",
+    ""
+  ],
+  "invite_to_group": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'邀请用户入组成功')]",
+    ""
+  ],
+  "delete_role": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'删除角色组成功')]",
+    ""
+  ]
+}

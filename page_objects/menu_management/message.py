@@ -6,23 +6,27 @@ from framework.base_page import BasePage
 
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'menu'), 'message.json')
+menu_file = os.path.join(os.path.join(project_path, 'config'), 'menu_element.json')
 method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 
 with open(json_file, encoding='utf-8') as file1:
     message_json = json.load(file1)
 
-with open(method_file, encoding='utf-8') as file2:
-    method_json = json.load(file2)
+with open(menu_file, encoding='utf-8') as file2:
+    menu_json = json.load(file2)
+
+with open(method_file, encoding='utf-8') as file3:
+    method_json = json.load(file3)
 
 
 class Message_Page(BasePage):
     input_username_element = (method_json["method"][0], message_json["account"][0])
     input_password_element = (method_json["method"][0], message_json["password"][0])
     login_button_element = (method_json["method"][0], message_json["login_button"][0])
-    message_button_element = (method_json["method"][0], message_json["message_button"][0])
-    message_div_element = (method_json["method"][0], message_json["message_div"][0])
-    system_message_element = (method_json["method"][0], message_json["system_message_1"][0])
-    detail_button_element = (method_json["method"][0], message_json["detail"][0])
+    message_button_element = (method_json["method"][0], menu_json["message"]["button"][0])
+    message_div_element = (method_json["method"][0], menu_json["message"]["message_div"][0])
+    system_message_element = (method_json["method"][0], menu_json["message"]["system_message_1"][0])
+    detail_button_element = (method_json["method"][0], menu_json["message"]["detail"][0])
     next_page_element = (method_json["method"][0], message_json["next_page"][0])
     last_page_element = (method_json["method"][0], message_json["last_page"][0])
     data_and_time_element = (method_json["method"][0], message_json["data_and_time"][0])

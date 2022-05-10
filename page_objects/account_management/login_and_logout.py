@@ -6,21 +6,25 @@ from framework.base_page import BasePage
 
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'init'), 'login_and_logout.json')
+menu_file = os.path.join(os.path.join(project_path, 'config'), 'menu_element.json')
 method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 
 with open(json_file, encoding='utf-8') as file1:
     login_json = json.load(file1)
 
-with open(method_file, encoding='utf-8') as file2:
-    method_json = json.load(file2)
+with open(menu_file, encoding='utf-8') as file2:
+    menu_json = json.load(file2)
+
+with open(method_file, encoding='utf-8') as file3:
+    method_json = json.load(file3)
 
 
 class Login_And_Logout_Page(BasePage):
     input_username_element = (method_json["method"][0], login_json["account"][0])
     input_password_element = (method_json["method"][0], login_json["password"][0])
     login_button_element = (method_json["method"][0], login_json["login_button"][0])
-    username_element = (method_json["method"][0], login_json["username"][0])
-    logout_button_element = (method_json["method"][0], login_json["logout_button"][0])
+    username_element = (method_json["method"][0], menu_json["user"]["button"][0])
+    logout_button_element = (method_json["method"][0], menu_json["user"]["log_out"][0])
     cancel_button_element = (method_json["method"][0], login_json["cancel_button"][0])
     confirm_button_element = (method_json["method"][0], login_json["confirm_button"][0])
 

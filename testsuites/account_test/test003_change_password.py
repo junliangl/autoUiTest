@@ -13,7 +13,7 @@ data_path = os.path.join(os.path.join(project_path, 'data'), 'change_password_da
 
 
 @ddt
-class Test_Change_password(unittest.TestCase):
+class Test_Change_Password(unittest.TestCase):
     """
     测试登录模块
     """

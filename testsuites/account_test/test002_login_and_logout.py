@@ -64,7 +64,7 @@ class Test_Login_And_Logout(unittest.TestCase):
             logger.warning(e)
 
         # 点击注销前刷新一下网页
-        login_and_logout_page.refresh_browser()
+        # login_and_logout_page.refresh_browser()
         login_and_logout_page.click_username_button()
         login_and_logout_page.click_logout_button()
         login_and_logout_page.click_confirm_button()
