@@ -19,14 +19,14 @@ with open(method_file, encoding='utf-8') as file3:
     method_json = json.load(file3)
 
 
-class See_Group_Page(BasePage):
+class Check_Group_Page(BasePage):
     input_username_element = (method_json["method"][0], group_management_json["account"][0])
     input_password_element = (method_json["method"][0], group_management_json["password"][0])
     login_button_element = (method_json["method"][0], group_management_json["login_button"][0])
     setting_button_element = (method_json["method"][0], menu_json["setting"]["button"][0])
     group = (method_json["method"][0], menu_json["setting"]["group"][0])
     group_father_element = (method_json["method"][0], group_management_json["group_father"][0])
-    user_access_element = (method_json["method"][0], group_management_json["group_management"]["user_access"][0])
+    user_access_element = (method_json["method"][0], menu_json["setting"]["user_access"][0])
     group_name = (method_json["method"][0], group_management_json["child_group"]["group_name"][0])
 
     def input_login_message_account(self, text):

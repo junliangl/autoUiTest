@@ -1,9 +1,5 @@
 # coding=utf-8
 import os
-import sys
-import time
-root_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(root_path)
 import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
@@ -105,7 +101,7 @@ class Test_User_Access(unittest.TestCase):
         """
         user_access_page = User_Access_Page(self.driver)
         result = user_access_page.delete_groups('aA123456')
-        time.sleep(3)
+        self.sleep(3)
         if result:
             self.assertTrue(result, logger.info('删除子用户组没有问题.'))
         else:
@@ -116,9 +112,10 @@ class Test_User_Access(unittest.TestCase):
         测试添加子用户组
         """
         user_access_page = User_Access_Page(self.driver)
-        random_name = user_access_page.get_random_code()
-        result = user_access_page.add_group('test_' + str(random_name), random_name)
-        time.sleep(3)
+        random_name = user_access_page.get_random_name()
+        random_number = user_access_page.get_random_number()
+        result = user_access_page.add_group(random_name, random_number)
+        user_access_page.sleep(3)
         if result:
             self.assertTrue(result, logger.info("添加子用户组没有问题."))
         else:
@@ -129,8 +126,9 @@ class Test_User_Access(unittest.TestCase):
         测试添加角色组
         """
         user_access_page = User_Access_Page(self.driver)
-        result = user_access_page.add_role('test_' + user_access_page.get_random_name())
-        time.sleep(3)
+        random_name = user_access_page.get_random_name()
+        result = user_access_page.add_role(random_name)
+        user_access_page.sleep(3)
         if result:
             self.assertTrue(result, logger.info("添加角色组没有问题."))
         else:

@@ -16,10 +16,6 @@
     ""
   ],
   "group_management": {
-    "user_access": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[1]/nz-card",
-      ""
-    ],
     "authorization": [
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/nz-spin/div/div/div[2]/nz-card/div/div",
       ""

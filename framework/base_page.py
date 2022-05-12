@@ -1,5 +1,6 @@
 # coding=utf-8
 import time
+import random
 import os.path
 from selenium.webdriver import ActionChains
 from framework.logger import Logger
@@ -173,14 +174,14 @@ class BasePage(object):
         点击元素
         """
         self.forced_wait(*selector)  # 每次点击前都需要显式等待一下
-        # noinspection PyBroadException
         try:
             element = self.driver.find_element(*selector)
             element_name = element.text
             element.click()
             logger.info(f"按钮 {element_name} 已被点击.")
-        except Exception:
+        except Exception as e:
             logger.error(f"点击按钮失败")
+            logger.error(e)
             self.get_windows_img()
 
     def actionchains_click(self, *selector):
@@ -221,6 +222,20 @@ class BasePage(object):
         except Exception:
             logger.error('找不到显式等待的元素')
             self.get_windows_img()
+
+    @staticmethod
+    # 得到随机的一个名字
+    def get_random_name():
+        random_name = ''
+        for i in range(5):
+            random_name = random_name + random.choice('abcdefghijklmnopqrstuvwxyz')
+        return 'test_' + random_name
+
+    @staticmethod
+    # 得到一个随机的代号
+    def get_random_number():
+        random_number = random.randint(1, 3)
+        return random_number
 
     def refresh_browser(self):
         # noinspection PyBroadException

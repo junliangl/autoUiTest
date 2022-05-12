@@ -32,7 +32,7 @@ class User_Access_Page(BasePage):
     login_button_element = (method_json["method"][0], user_access_json["login_button"][0])
     setting_button_element = (method_json["method"][0], menu_json["setting"]["button"][0])
     group_element = (method_json["method"][0], menu_json["setting"]["group"][0])
-    user_access_element = (method_json["method"][0], user_access_json["user_access"][0])
+    user_access_element = (method_json["method"][0], menu_json["setting"]["user_access"][0])
     child_group1_element = (method_json["method"][0], user_access_json["child_group"]["child_group1"][0])
     child_group2_element = (method_json["method"][0], user_access_json["child_group"]["child_group2"][0])
     role_group1_element = (method_json["method"][0], user_access_json["role_group"]["role1"][0])
@@ -555,19 +555,3 @@ class User_Access_Page(BasePage):
                     self.get_windows_img()
             break
         return False
-
-    @staticmethod
-    # 得到随机的一个名字
-    def get_random_name():
-        random_name = ''
-        for i in range(5):
-            random_name = random_name + random.choice('abcdefghijklmnopqrstuvwxyz')
-        return random_name
-
-    @staticmethod
-    # 得到一个随机的代号
-    def get_random_code():
-        random_code = random.randint(10000, 99999)
-        return random_code
-
-

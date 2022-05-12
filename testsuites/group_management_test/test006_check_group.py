@@ -1,13 +1,10 @@
 # coding=utf-8
 import os
-import sys
-root_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(root_path)
 import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
 from framework.browser_info import Message
-from page_objects.group_management.check_group import See_Group_Page
+from page_objects.group_management.check_group import Check_Group_Page
 from framework.logger import Logger
 from selenium.webdriver.common import action_chains
 
@@ -18,7 +15,7 @@ data_path = os.path.join(os.path.join(project_path, 'data'), 'check_group_data.j
 
 
 @ddt
-class Test_See_Group(unittest.TestCase):
+class Test_Check_Group(unittest.TestCase):
     """
     测试查看域
     """
@@ -43,7 +40,7 @@ class Test_See_Group(unittest.TestCase):
         """
         测试查看当前用户的所有的域
         """
-        see_group_page = See_Group_Page(self.driver)
+        see_group_page = Check_Group_Page(self.driver)
         see_group_page.input_login_message_account(account)
         see_group_page.input_login_message_password(password)
         action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()  # 点击空白解除网页的非安全链接提醒

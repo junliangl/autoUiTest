@@ -11,10 +11,6 @@
     "/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button",
     ""
   ],
-  "user_access": [
-    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[1]/nz-card",
-    ""
-  ],
   "action": {
     "升级为付费单位": [
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[1]/div/div[2]/button/span[contains(text(),'升级为付费单位')]",
