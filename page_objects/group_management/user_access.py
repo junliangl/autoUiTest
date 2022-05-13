@@ -1,6 +1,5 @@
 import os
 import json
-import random
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
@@ -297,18 +296,18 @@ class User_Access_Page(BasePage):
         self.sleep(4)
         info_number = 0
         # 做一个循环对当前用户组信息的遍历
-        for cow1 in range(4):
-            account_quota = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[{cow1 + 1}]")
-            account_quota_info = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[2]/td[{cow1+ 1}]")
+        for col1 in range(4):
+            account_quota = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[{col1 + 1}]")
+            account_quota_info = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[2]/td[{col1+ 1}]")
             self.forced_wait(*account_quota)
             logger.info(f"{self.get_element(*account_quota)} : {self.get_element(*account_quota_info)}")
         while True:
             users_number = self.get_page_users_number()
             for number in range(users_number):
                 logger.info(f"第 {number + 1 + info_number} 个用户信息如下:")
-                for cow2 in range(4):
-                    user_info = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[{cow2 + 1}]")
-                    users = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr[{number + 1}]/td[{cow2 + 1}]")
+                for col2 in range(4):
+                    user_info = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr[1]/th[{col2 + 1}]")
+                    users = (method_json["method"][0], f"/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-manage/section[2]/div/div[3]/div[2]/nz-table[2]/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr[{number + 1}]/td[{col2 + 1}]")
                     logger.info(f"{self.get_element(*user_info)}:{self.get_element(*users)}.")
             # noinspection PyBroadException
             try:

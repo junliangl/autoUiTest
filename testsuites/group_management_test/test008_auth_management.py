@@ -1,8 +1,5 @@
 # coding=utf-8
 import os
-import sys
-root_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(root_path)
 import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
