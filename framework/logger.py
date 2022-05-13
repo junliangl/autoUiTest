@@ -4,7 +4,7 @@ import os.path
 import time
 import colorlog
 log_colors_config = {
-    'DEBUG': 'cyan',
+    'DEBUG': 'white',
     'INFO': 'green',
     'WARNING': 'yellow',
     'ERROR': 'red',

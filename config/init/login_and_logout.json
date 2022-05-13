@@ -1,0 +1,22 @@
+{
+  "account": [
+    "/html/body/app-root/app-login/div/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input",
+    ""
+  ],
+  "password": [
+    "/html/body/app-root/app-login/div/form/nz-form-item[2]/nz-form-control/div/div/nz-input-group/input",
+    ""
+  ],
+  "login_button": [
+    "/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button",
+    ""
+  ],
+  "cancel_button": [
+    "/html/body/div[2]/div[last()]/div/nz-modal-container/div/div/div[3]/button[1]",
+    ""
+  ],
+  "confirm_button": [
+    "/html/body/div[2]/div[last()]/div/nz-modal-container/div/div/div[3]/button[2]",
+    ""
+  ]
+}

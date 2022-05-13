@@ -1,0 +1,12 @@
+{
+  "method": [
+    "xpath",
+    "css selector",
+    "id",
+    "link_text",
+    "partial link text",
+    "name",
+    "tag name",
+    "class name"
+  ]
+}

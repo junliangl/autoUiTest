@@ -1,5 +1,6 @@
 # coding=utf-8
 import time
+import random
 import os.path
 from selenium.webdriver import ActionChains
 from framework.logger import Logger
@@ -34,13 +35,13 @@ class BasePage(object):
         浏览器截图操作
         在这里我们把file_path这个参数写死，直接保存到我们项目根目录的一个文件夹./screenshots下
         """
-        file_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/screenshots/'
-        rq = time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime(time.time()))
-        screen_name = file_path + rq + '.png'
         try:
+            file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'screenshots')
+            datatime = time.strftime('%Y_%m_%d_%H_%M_%S', time.localtime(time.time()))
+            screen_name = os.path.join(file_path, datatime + '.png')
             self.driver.get_screenshot_as_file(screen_name)
             logger.info(f"已经成功截图并保存在 : {screen_name}")
-        except NameError as e:
+        except Exception as e:
             logger.warning(f"截图失败： {e}.")
 
     def quit_browser(self):
@@ -103,15 +104,16 @@ class BasePage(object):
 
     def forced_wait(self, *selector):
         """
-        显式等待
+        显式等待,进行操作之前都需要显式等待一下
         """
         # noinspection PyBroadException
         try:
-            WebDriverWait(self.driver, 10, 1).until(EC.presence_of_element_located(selector))
-            logger.info('显式等待元素成功.')
+            WebDriverWait(self.driver, 7, 1).until(EC.presence_of_element_located(selector))
+            # logger.info('显式等待元素成功.')
         except Exception:
             logger.warning('显式等待元素失败.')
 
+    # 暂时用不到这个自定义方法
     def find_element(self, *selector):
         """
         定位元素方法
@@ -132,6 +134,7 @@ class BasePage(object):
         """
         输入
         """
+        # self.forced_wait()
         try:
             element = self.driver.find_element(*selector)
             return element.text
@@ -144,12 +147,12 @@ class BasePage(object):
         输入框输入信息
         """
         self.forced_wait(*selector)
-        element = self.driver.find_element(*selector)
-        element.clear()
         try:
+            element = self.driver.find_element(*selector)
+            element.clear()
             element.send_keys(text)
             logger.info(f"输入 {text} 成功")
-        except NameError as e:
+        except Exception as e:
             logger.error(f"输入框输入 {e} 失败")
             self.get_windows_img()
 
@@ -157,11 +160,12 @@ class BasePage(object):
         """
         清除文本框
         """
-        element = self.driver.find_element(*selector)
+        self.forced_wait(*selector)
         try:
+            element = self.driver.find_element(*selector)
             element.clear()
             logger.info("清除了输入框.")
-        except NameError as e:
+        except Exception as e:
             logger.warning(f"清除输入框 {e} 失败")
             self.get_windows_img()
 
@@ -170,13 +174,14 @@ class BasePage(object):
         点击元素
         """
         self.forced_wait(*selector)  # 每次点击前都需要显式等待一下
-        element = self.driver.find_element(*selector)
         try:
-            element_name = self.get_element(*selector)
+            element = self.driver.find_element(*selector)
+            element_name = element.text
             element.click()
             logger.info(f"按钮 {element_name} 已被点击.")
-        except NameError as e:
-            logger.error(f"点击按钮 {e} 失败")
+        except Exception as e:
+            logger.error(f"点击按钮失败")
+            logger.error(e)
             self.get_windows_img()
 
     def actionchains_click(self, *selector):
@@ -184,12 +189,13 @@ class BasePage(object):
         移动鼠标点击
         """
         self.forced_wait(*selector)
-        element = self.driver.find_element(*selector)
         try:
+            element = self.driver.find_element(*selector)
             element_name = self.get_element(*selector)
             ActionChains(self.driver).move_to_element(element).click(element).perform()
             logger.info(f"按钮 {element_name} 已被点击.")
-        except NameError as e:
+            self.sleep(2)
+        except Exception as e:
             logger.error(f"点击按钮 {e} 失败")
             self.get_windows_img()
 
@@ -209,6 +215,7 @@ class BasePage(object):
         """
         找到显示等待的元素
         """
+        self.forced_wait(*selector)
         # noinspection PyBroadException
         try:
             logger.info(f"找到 {self.get_element(*selector)} 按钮")
@@ -217,9 +224,32 @@ class BasePage(object):
             self.get_windows_img()
 
     @staticmethod
+    # 得到随机的一个名字
+    def get_random_name():
+        random_name = ''
+        for i in range(5):
+            random_name = random_name + random.choice('abcdefghijklmnopqrstuvwxyz')
+        return 'test_' + random_name
+
+    @staticmethod
+    # 得到一个随机的代号
+    def get_random_number():
+        random_number = random.randint(1, 3)
+        return random_number
+
+    def refresh_browser(self):
+        # noinspection PyBroadException
+        try:
+            self.driver.refresh()
+            logger.info("刷新网页成功")
+        except Exception:
+            logger.error("刷新网页失败")
+            self.get_windows_img()
+
+    @staticmethod
     def sleep(seconds):
         """
         强制等待的提醒
         """
         time.sleep(seconds)
-        logger.info("Sleep for %d seconds" % seconds)
+        logger.info(f"强制等待了 {seconds} 秒")

@@ -1,0 +1,68 @@
+{
+  "init_button": [
+    "/html/body/app-root/app-login/div/form/nz-form-item[4]/nz-form-control/div/div/div/a[contains(text(),\"注册新账号\")]",
+    ""
+  ],
+  "account": [
+    "//*[@id=\"username\"]",
+    ""
+  ],
+  "password": {
+    "new_password": [
+      "//*[@id=\"password\"]",
+      ""
+    ],
+    "confirm_password": [
+      "//*[@id=\"confirmPassword\"]",
+      ""
+    ]
+  },
+  "username": [
+    "//*[@id=\"actualName\"]",
+    ""
+  ],
+  "gender": {
+    "male": [
+      "//*[@id=\"gender\"]/label[1]/span[1]",
+      ""
+    ],
+    "female": [
+      "//*[@id=\"gender\"]/label[2]/span[1]",
+      ""
+    ]
+  },
+  "phone_number": [
+    "//*[@id=\"telephone\"]",
+    ""
+  ],
+  "area": {
+    "area1": [
+      "/html/body/app-root/app-register/div/form/nz-form-item[7]/nz-form-control",
+      ""
+    ],
+    "area2": [
+      "/html/body/div[2]/div/div/div/ul[1]/li[1]",
+      ""
+    ],
+    "area3": [
+      "/html/body/div[2]/div/div/div/ul[2]/li[23]",
+      ""
+    ],
+    "area4": [
+      "/html/body/div[2]/div/div/div/ul[3]/li[1]",
+      ""
+    ],
+    "area5": [
+      "/html/body/div[2]/div/div/div/ul[4]/li[5]",
+      ""
+    ]
+  },
+  "company": [
+    "//*[@id=\"workUnit\"]",
+    ""
+  ],
+  "enter_button": [
+    "/html/body/app-root/app-register/div/form/nz-form-item[9]/nz-form-control/div/div/div/button",
+    ""
+  ]
+}

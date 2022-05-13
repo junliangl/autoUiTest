@@ -1,0 +1,42 @@
+{
+  "test1":
+     {
+       "account": "testauto111",
+       "first_password":"aA123456",
+       "second_password":"aA123457",
+       "username": "junliangl",
+       "gender": "男",
+       "phone_number": "12345678911",
+       "company": "墨奇科技"
+     },
+  "test2":
+     {
+       "account": "",
+       "first_password":"aA123456",
+       "second_password":"aA123457",
+       "username": "junliangl",
+       "gender": "女",
+       "phone_number": "12345678911",
+       "company": "墨奇科技"
+     },
+  "test3":
+     {
+       "account": "testauto111",
+       "first_password":"",
+       "second_password":"",
+       "username": "junliangl",
+       "gender": "男",
+       "phone_number": "12345678911",
+       "company": "墨奇科技"
+     },
+  "test4":
+     {
+       "account": "testauto111",
+       "first_password":"aA123456",
+       "second_password":"aA123457",
+       "username": "",
+       "gender": "女",
+       "phone_number": "12345678911",
+       "company": "墨奇科技"
+     }
+}

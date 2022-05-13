@@ -1,0 +1,87 @@
+{
+  "import": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-sider/div/ul/li[1]",
+    ""
+  ],
+  "reset": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[1]/app-customize-search-form/form/div[2]/button[1]",
+    ""
+  ],
+  "search": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[1]/app-customize-search-form/form/div[2]/button[2]",
+    ""
+  ],
+  "expand_and_collapse": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[1]/app-customize-search-form/form/div[2]/a",
+    ""
+  ],
+  "search_setting": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[1]/app-customize-search-form/form/div[2]/div",
+    ""
+  ],
+  "upload_file": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/div/div[2]/button",
+    ""
+  ],
+  "spacing": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/div/div[1]",
+    ""
+  ],
+  "display_setting": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/div/div[2]",
+    ""
+  ],
+  "import_number": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[1]",
+    ""
+  ],
+  "status": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[2]",
+    ""
+  ],
+  "target_database": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[3]",
+    ""
+  ],
+  "importer": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[4]",
+    ""
+  ],
+  "organization": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[5]",
+    ""
+  ],
+  "imported_time": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[6]",
+    ""
+  ],
+  "complete_time": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[7]",
+    ""
+  ],
+  "total_size": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[8]",
+    ""
+  ],
+  "comment": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[9]",
+    ""
+  ],
+  "action": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/thead/tr/th[11]",
+    ""
+  ],
+  "matching_task": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr[i]/td[11]/div/a[1]",
+    ""
+  ],
+  "person_or_case": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr[i]/td[11]/div/a[2]",
+    ""
+  ],
+  "next_page": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-list/div/div[2]/app-customize-table-list/div/nz-table/nz-spin/div/nz-pagination/li[9]/button",
+    ""
+  ],
+  ""
+}

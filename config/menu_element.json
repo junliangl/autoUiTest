@@ -1,0 +1,119 @@
+{
+  "help_check": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/span/i[contains(@class, 'anticon anticon-audit')]/..",
+      ""
+    ]
+  },
+  "remind_setting": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/app-notification-config",
+      ""
+    ],
+    "pop_ups_remind": [
+      "/html/body/div[2]/div[2]/div/div/ul/li[1]/nz-space/div[3]/nz-switch/button",
+      ""
+    ],
+    "voice_remind": [
+      "/html/body/div[2]/div[2]/div/div/ul/li[2]/nz-space/div[3]/nz-switch/button",
+      ""
+    ]
+  },
+  "setting": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/span/i[contains(@class, 'anticon anticon-team')]/..",
+      ""
+    ],
+    "group": [
+      "/html/body/div[2]/div/div/div/ul/li[last()]",
+      ""
+    ],
+    "user_access": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'用户权限管理')]/../..",
+      ""
+    ],
+    "auth_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'license 授权管理')]/../..",
+      ""
+    ],
+    "quota_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'算力管理')]/../..",
+      ""
+    ],
+    "user_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'用户管理')]/../..",
+      ""
+    ],
+    "mobile_police_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'移动警务管理')]/../..",
+      ""
+    ],
+    "matching_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'指纹比对 APP 管理')]/../..",
+      ""
+    ],
+    "inspection_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'墨奇检视管理')]/../..",
+      ""
+    ],
+    "examining_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'检视组管理')]/../..",
+      ""
+    ]
+  },
+  "message": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/div",
+      ""
+    ],
+    "message_div": [
+      "/html/body/div[2]/div/div/div/div",
+      ""
+    ],
+    "system_message_1": [
+      "/html/body/div[2]/div[2]/div/div/div/nz-tabset/nz-tabs-nav/div/div/div[1]/div",
+      ""
+    ],
+    "fingerprint_alliance": [
+      "/html/body/div[2]/div[2]/div/div/div/nz-tabset/nz-tabs-nav/div/div/div[2]/div",
+      ""
+    ],
+    "mark": [
+      "/html/body/div[2]/div[2]/div/div/div/nz-row/div[1]",
+      ""
+    ],
+    "detail": [
+      "/html/body/div[2]/div[2]/div/div/div/nz-row/div[2]"
+    ]
+  },
+  "user": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/span/i[contains(@nztype, 'user')]/..",
+      ""
+    ],
+    "available_quota": [
+      "/html/body/div[2]/div[2]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'查看可用算力')]",
+      ""
+    ],
+    "change_password": [
+      "/html/body/div[2]/div[2]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'修改密码')]",
+      ""
+    ],
+    "manage_examining": [
+      "/html/body/div[2]/div[2]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'检视组设置')]",
+      ""
+    ],
+    "log_out": [
+      "/html/body/div[2]/div[2]/div/div/ul/li[last()]",
+      ""
+    ]
+  },
+  "help": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/i[contains(@class,'anticon anticon-question-circle')]/../span",
+    ""
+  ],
+  "language": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[last()]",
+    ""
+  ]
+}
