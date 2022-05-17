@@ -1,0 +1,10 @@
+{
+  "invited": {
+    "account": "testauto1",
+    "password": "aA123456"
+  },
+  "uninvited": {
+    "account": "testauto",
+    "password": "aA123456"
+  }
+}

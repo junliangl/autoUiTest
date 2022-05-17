@@ -3,7 +3,10 @@ import json
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
+from framework.logger import Logger
+from page_objects.common_login.login import Login
 
+logger = Logger(logger='测试流程').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'menu'), 'message.json')
 menu_file = os.path.join(os.path.join(project_path, 'config'), 'menu_element.json')
@@ -20,12 +23,9 @@ with open(method_file, encoding='utf-8') as file3:
 
 
 class Message_Page(BasePage):
-    input_username_element = (method_json["method"][0], message_json["account"][0])
-    input_password_element = (method_json["method"][0], message_json["password"][0])
-    login_button_element = (method_json["method"][0], message_json["login_button"][0])
     message_button_element = (method_json["method"][0], menu_json["message"]["button"][0])
+    message_number = (method_json["method"][0], menu_json["message"]["message_number"][0])
     message_div_element = (method_json["method"][0], menu_json["message"]["message_div"][0])
-    system_message_element = (method_json["method"][0], menu_json["message"]["system_message_1"][0])
     detail_button_element = (method_json["method"][0], menu_json["message"]["detail"][0])
     next_page_element = (method_json["method"][0], message_json["next_page"][0])
     last_page_element = (method_json["method"][0], message_json["last_page"][0])
@@ -35,39 +35,18 @@ class Message_Page(BasePage):
     time_of_action_element = (method_json["method"][0], message_json["time_of_action"][0])
     action_element = (method_json["method"][0], message_json["action"][0])
 
-    def input_login_message_account(self, text):
-        self.input(text, *self.input_username_element)
+    def login(self):
+        login = Login(self.driver)
+        login.login('invited')
 
-    def input_login_message_password(self, text):
-        self.input(text, *self.input_password_element)
-
-    def time_sleep(self):
-        self.sleep(0.5)
-
-    def click_login_button(self):
-        self.click(*self.login_button_element)
-
-    def click_message_button(self):
-        self.click(*self.message_button_element)
-
-    def click_detail_button(self):
-        self.click(*self.detail_button_element)
-
-    def click_next_page(self):
-        self.click(*self.next_page_element)
-
-    def get_message_result(self):
+    def get_uncheck_message_number(self):
         # noinspection PyBroadException
         try:
-            # 判断是否能找到消息 div ，找到就视为打开消息成功
-            WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.message_div_element))
-            return True
+            WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.message_number))
+            message_number = self.get_element(*self.message_number)
+            return int(message_number)
         except Exception:
-            return False
-
-    def get_system_message_number(self):
-        self.forced_wait(*self.system_message_element)
-        return self.get_element(*self.system_message_element)
+            return 0
 
     def get_message_header(self):
         WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.action_element))
@@ -97,3 +76,35 @@ class Message_Page(BasePage):
             except Exception:
                 self.click(*self.next_page_element)
         return info, len(info)
+
+    def get_message_result(self):
+        self.click(*self.message_button_element)
+        # noinspection PyBroadException
+        try:
+            # 判断是否能找到消息 div ，找到就视为打开消息成功
+            WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.message_div_element))
+            self.sleep(2)
+            # 获取未读消息的数量
+            uncheck_number = self.get_uncheck_message_number()
+            if uncheck_number != '0':
+                logger.warning(f"还有未查看的消息,消息数为：{uncheck_number}")
+                # 循环遍历所有消息
+                # self.click(*self.detail_button_element)
+                # info = self.get_message_info()
+                # all_info = info[0]
+                # number = info[1]
+                # message_number = int(number / 5)
+                # logger.info(f"总共有：{message_number} 条消息")
+                # for text in range(message_number):
+                #     logger.warning(f"下面是第{text + 1 }条消息:")
+                #     for title in range(5):
+                #         logger.info(f"{self.get_message_header()[title]} : {all_info[text * 5 + title]}")
+                # # for text in range(number):
+                # #     logger.info(f"{self.get_message_header()[text % 5]} : {all_info[text]}")
+                # logger.info("查看消息完成")
+            else:
+                logger.info("当前待查看消息为：0")
+            return True
+        except Exception:
+            return False
+

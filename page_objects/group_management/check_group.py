@@ -2,6 +2,7 @@ import os
 import json
 from framework.base_page import BasePage
 from framework.logger import Logger
+from page_objects.common_login.login import Login
 
 logger = Logger(logger='测试流程').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -20,35 +21,25 @@ with open(method_file, encoding='utf-8') as file3:
 
 
 class Check_Group_Page(BasePage):
-    input_username_element = (method_json["method"][0], group_management_json["account"][0])
-    input_password_element = (method_json["method"][0], group_management_json["password"][0])
-    login_button_element = (method_json["method"][0], group_management_json["login_button"][0])
     setting_button_element = (method_json["method"][0], menu_json["setting"]["button"][0])
     group = (method_json["method"][0], menu_json["setting"]["group"][0])
     group_father_element = (method_json["method"][0], group_management_json["group_father"][0])
-    user_access_element = (method_json["method"][0], menu_json["setting"]["user_access"][0])
+    cd1_user_access_element = (method_json["method"][0], menu_json["cd1_setting"]["user_access"][0])
+    staging_user_access_element = (method_json["method"][0], menu_json["staging_setting"]["user_access"][0])
     group_name = (method_json["method"][0], group_management_json["child_group"]["group_name"][0])
 
-    def input_login_message_account(self, text):
-        self.input(text, *self.input_username_element)
-
-    def input_login_message_password(self, text):
-        self.input(text, *self.input_password_element)
-
-    def time_sleep(self):
-        self.sleep(0.5)
-
-    def click_login_button(self):
-        self.click(*self.login_button_element)
-
-    def click_setting_button(self):
-        self.click(*self.setting_button_element)
+    def login(self):
+        login = Login(self.driver)
+        login.login('invited')
 
     def click_user_access(self):
-        self.click(*self.user_access_element)
+        if self.get_url() == 'http://10.1.1.80:7001/':
+            self.click(*self.cd1_user_access_element)
+        elif self.get_url() == 'http://staging.test.frontend.moqi.com.cn/shell':
+            self.click(*self.staging_user_access_element)
 
     def get_group_number(self):
-        self.click_setting_button()
+        self.click(*self.setting_button_element)
         self.forced_wait(*self.group)
         element = self.driver.find_element(*self.group_father_element)
         return len(element.find_elements(method_json["method"][0], 'li'))
@@ -61,7 +52,7 @@ class Check_Group_Page(BasePage):
             group.append(self.get_element(*group_element))
         return group, group_number
 
-    def get_click_groups_result(self):
+    def get_check_groups_result(self):
         group = self.get_all_groups()
         logger.info(f"当前用户总共有 {group[1]} 个域")
         temp = 0
@@ -76,7 +67,7 @@ class Check_Group_Page(BasePage):
                 temp = temp + 1
             else:
                 logger.error(f"这是第 {number + 1} 个域,进入 {group[0][number]} 失败!")
-            self.click_setting_button()
+            self.click(*self.setting_button_element)
         # 判定进入当前域管理数量和总域数量是否相同
         if temp == group[1]:
             return True

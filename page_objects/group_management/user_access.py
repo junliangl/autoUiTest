@@ -3,6 +3,7 @@ import json
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
+from page_objects.common_login.login import Login
 from framework.logger import Logger
 
 logger = Logger(logger='测试流程').get_log()
@@ -26,12 +27,10 @@ with open(reminder_file, encoding='utf-8') as file4:
 
 
 class User_Access_Page(BasePage):
-    input_username_element = (method_json["method"][0], user_access_json["account"][0])
-    input_password_element = (method_json["method"][0], user_access_json["password"][0])
-    login_button_element = (method_json["method"][0], user_access_json["login_button"][0])
     setting_button_element = (method_json["method"][0], menu_json["setting"]["button"][0])
     group_element = (method_json["method"][0], menu_json["setting"]["group"][0])
-    user_access_element = (method_json["method"][0], menu_json["setting"]["user_access"][0])
+    cd1_user_access_element = (method_json["method"][0], menu_json["cd1_setting"]["user_access"][0])
+    staging_user_access_element = (method_json["method"][0], menu_json["staging_setting"]["user_access"][0])
     child_group1_element = (method_json["method"][0], user_access_json["child_group"]["child_group1"][0])
     child_group2_element = (method_json["method"][0], user_access_json["child_group"]["child_group2"][0])
     role_group1_element = (method_json["method"][0], user_access_json["role_group"]["role1"][0])
@@ -65,31 +64,15 @@ class User_Access_Page(BasePage):
     add_role_group_reminder = (method_json["method"][0], reminder_json["add_role_group"][0])
     edit_basic_info_reminder = (method_json["method"][0], reminder_json["edit_basic_info"][0])
     invite_to_group_reminder = (method_json["method"][0], reminder_json["invite_to_group"][0])
+    delete_group_reminder = (method_json["method"][0], reminder_json["delete_group"][0])
     delete_role_reminder = (method_json["method"][0], reminder_json["delete_role"][0])
     reminder = (method_json["method"][0], reminder_json["reminder"][0])
     group_number_element = (method_json["method"][0], user_access_json["child_group"]["group_number"][0])
     role_number_element = (method_json["method"][0], user_access_json["role_group"]["role_number"][0])
-
-    def input_login_message_account(self, account):
-        self.input(account, *self.input_username_element)
-
-    def input_login_message_password(self, password):
-        self.input(password, *self.input_password_element)
-
-    def input_child_name(self, name):
-        self.input(name, *self.child_name_input)
-
-    def input_child_user_group_code(self, code):
-        self.input(code, *self.child_user_group_code)
-
-    def input_delete_password(self, password):
-        self.input(password, *self.delete_password)
-
-    def time_sleep(self):
-        self.sleep(0.5)
-
-    def click_login_button(self):
-        self.click(*self.login_button_element)
+    
+    def login(self):
+        login = Login(self.driver)
+        login.login('invited')
 
     def click_setting_button(self):
         self.click(*self.setting_button_element)
@@ -98,34 +81,10 @@ class User_Access_Page(BasePage):
         self.click(*self.group_element)
 
     def click_user_access(self):
-        self.click(*self.user_access_element)
-
-    def click_edit_basic_info(self):
-        self.click(*self.edit_basic_info)
-
-    def click_group_region_code(self):
-        self.click(*self.group_region_code)
-
-    def choose_department_button(self):
-        self.actionchains_click(*self.choose_department)
-
-    def choose_province_button(self):
-        self.actionchains_click(*self.choose_province)
-
-    def choose_city_button(self):
-        self.actionchains_click(*self.choose_city)
-
-    def choose_district_button(self):
-        self.actionchains_click(*self.choose_district)
-
-    def click_confirm_button(self):
-        self.click(*self.confirm_button)
-
-    def click_cancel_button(self):
-        self.click(*self.cancel_button)
-
-    def click_user_management(self):
-        self.click(*self.user_management)
+        if self.get_url() == 'http://10.1.1.80:7001/':
+            self.click(*self.cd1_user_access_element)
+        elif self.get_url() == 'http://staging.test.frontend.moqi.com.cn/shell':
+            self.click(*self.staging_user_access_element)
 
     # 找到当前总共有多少个用户组
     def get_group_number(self):
@@ -246,14 +205,14 @@ class User_Access_Page(BasePage):
         elif result[0] == False and result[1] == 1:
             return False
         else:
-            self.click_edit_basic_info()
-            self.input_child_name(group_name)
-            self.click_group_region_code()
-            self.choose_department_button()
-            self.choose_province_button()
-            self.choose_city_button()
-            self.choose_district_button()
-            self.click_confirm_button()
+            self.click(*self.edit_basic_info)
+            self.input(group_name, *self.child_name_input)
+            self.click(*self.group_region_code)
+            self.actionchains_click(*self.choose_department)
+            self.actionchains_click(*self.choose_province)
+            self.actionchains_click(*self.choose_city)
+            self.actionchains_click(*self.choose_district)
+            self.click(*self.confirm_button)
             self.forced_wait(*self.reminder)
             reminder = self.get_element(*self.reminder)
             # noinspection PyBroadException
@@ -266,7 +225,7 @@ class User_Access_Page(BasePage):
                 # noinspection PyBroadException
                 try:
                     WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.cancel_button))
-                    self.click_cancel_button()
+                    self.click(*self.cancel_button)
                     logger.error(f"{reminder}!")
                     logger.error("修改基础信息失败!")
                     self.get_windows_img()
@@ -292,7 +251,7 @@ class User_Access_Page(BasePage):
         self.sleep(2)
         self.click(*self.role_group1_element)
         self.sleep(2)
-        self.click_user_management()
+        self.click(*self.user_management)
         self.sleep(4)
         info_number = 0
         # 做一个循环对当前用户组信息的遍历
@@ -336,7 +295,7 @@ class User_Access_Page(BasePage):
             self.click(*self.first_user)
             username = self.get_element(*self.first_user)
             self.click(*self.choose_users)
-            self.click_confirm_button()
+            self.click(*self.confirm_button)
             self.forced_wait(*self.reminder)
             reminder = self.get_element(*self.reminder)
             # noinspection PyBroadException
@@ -349,7 +308,7 @@ class User_Access_Page(BasePage):
                 # noinspection PyBroadException
                 try:
                     WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.cancel_button))
-                    self.click_cancel_button()
+                    self.click(*self.cancel_button)
                     logger.error(f"{reminder}")
                     logger.error("邀请用户入组失败!")
                     self.get_windows_img()
@@ -394,7 +353,7 @@ class User_Access_Page(BasePage):
                 self.get_windows_img()
                 break
             self.click(*self.delete_role)
-            self.input_delete_password(password)
+            self.input(password, *self.delete_password)
             self.click(*self.confirm_button)
             self.forced_wait(*self.reminder)
             reminder = self.get_element(*self.reminder)
@@ -409,7 +368,7 @@ class User_Access_Page(BasePage):
                 # noinspection PyBroadException
                 try:
                     WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.cancel_button))
-                    self.click_cancel_button()
+                    self.click(*self.cancel_button)
                     logger.error(f"{reminder}")
                     logger.error(f"删除 {role_name} 角色组失败!")
                     self.get_windows_img()
@@ -450,21 +409,21 @@ class User_Access_Page(BasePage):
                 self.get_windows_img()
                 break
             self.click(*self.delete_group)
-            self.input_delete_password(password)
+            self.input(password, *self.delete_password)
             self.click(*self.confirm_button)
             self.forced_wait(*self.reminder)
             reminder = self.get_element(*self.reminder)
             # noinspection PyBroadException
             try:
-                WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.delete_role_reminder))
-                logger.info(f"删除 {group_name} 角色组成功.")
+                WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.delete_group_reminder))
+                logger.info(f"删除 {group_name} 子用户组成功.")
                 self.get_windows_img()
                 return True
             except Exception:
                 # noinspection PyBroadException
                 try:
                     WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.cancel_button))
-                    self.click_cancel_button()
+                    self.click(*self.cancel_button)
                     logger.error(f"{reminder}")
                     logger.error(f"删除 {group_name} 子用户组失败!")
                     self.get_windows_img()
@@ -487,14 +446,14 @@ class User_Access_Page(BasePage):
                 self.get_windows_img()
                 break
             self.click(*self.add_child_group)
-            self.input_child_name(group_name)
-            self.input_child_user_group_code(code)
-            self.click_group_region_code()
-            self.choose_department_button()
-            self.choose_province_button()
-            self.choose_city_button()
-            self.choose_district_button()
-            self.click_confirm_button()
+            self.input(group_name, *self.child_name_input)
+            self.input(code, *self.child_user_group_code)
+            self.click(*self.group_region_code)
+            self.actionchains_click(*self.choose_department)
+            self.actionchains_click(*self.choose_province)
+            self.actionchains_click(*self.choose_city)
+            self.actionchains_click(*self.choose_district)
+            self.click(*self.confirm_button)
             self.forced_wait(*self.reminder)
             reminder = self.get_element(*self.add_child_group_reminder)
             # noinspection PyBroadException
@@ -507,7 +466,7 @@ class User_Access_Page(BasePage):
                 # noinspection PyBroadException
                 try:
                     WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.cancel_button))
-                    self.click_cancel_button()
+                    self.click(*self.cancel_button)
                     logger.error(f"{reminder}!")
                     logger.error("子用户组添加失败!")
                     self.get_windows_img()
@@ -530,8 +489,8 @@ class User_Access_Page(BasePage):
                 self.get_windows_img()
                 break
             self.click(*self.add_role_group)
-            self.input_child_name(role_name)
-            self.click_confirm_button()
+            self.input(role_name, *self.child_name_input)
+            self.click(*self.confirm_button)
             self.forced_wait(*self.reminder)
             reminder = self.get_element(*self.add_role_group_reminder)
             # noinspection PyBroadException
@@ -544,7 +503,7 @@ class User_Access_Page(BasePage):
                 # noinspection PyBroadException
                 try:
                     WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.cancel_button))
-                    self.click_cancel_button()
+                    self.click(*self.cancel_button)
                     logger.error(f"{reminder}!")
                     logger.error("角色组添加失败!")
                     self.get_windows_img()

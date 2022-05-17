@@ -3,6 +3,7 @@ import json
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.base_page import BasePage
+from page_objects.common_login.login import Login
 from framework.logger import Logger
 
 logger = Logger(logger='测试流程').get_log()
@@ -26,12 +27,10 @@ with open(reminder_file, encoding='utf-8') as file4:
 
 
 class Auth_Management_Page(BasePage):
-    input_username_element = (method_json["method"][0], auth_management_json["account"][0])
-    input_password_element = (method_json["method"][0], auth_management_json["password"][0])
-    login_button_element = (method_json["method"][0], auth_management_json["login_button"][0])
     setting_button_element = (method_json["method"][0], menu_json["setting"]["button"][0])
     group_element = (method_json["method"][0], menu_json["setting"]["group"][0])
-    auth_management_element = (method_json["method"][0], menu_json["setting"]["auth_management"][0])
+    cd1_auth_management_element = (method_json["method"][0], menu_json["cd1_setting"]["auth_management"][0])
+    staging_auth_management_element = (method_json["method"][0], menu_json["staging_setting"]["auth_management"][0])
     permission_granted = (method_json["method"][0], auth_management_json["header"]["permission_granted"][0])
     auth_count_available = (method_json["method"][0], auth_management_json["header"]["auth_count_available"][0])
     auth_amount_used = (method_json["method"][0], auth_management_json["header"]["auth_amount_used"][0])
@@ -57,26 +56,9 @@ class Auth_Management_Page(BasePage):
     ban_reminder = (method_json["method"][0], reminder_json["ban"][0])
     recover_reminder = (method_json["method"][0], reminder_json["recover"][0])
 
-    def input_login_message_account(self, account):
-        self.input(account, *self.input_username_element)
-
-    def input_login_message_password(self, password):
-        self.input(password, *self.input_password_element)
-
-    def click_login_button(self):
-        self.click(*self.login_button_element)
-
-    def click_setting_button(self):
-        self.click(*self.setting_button_element)
-
-    def click_group_button(self):
-        self.click(*self.group_element)
-
-    def click_auth_management(self):
-        self.click(*self.auth_management_element)
-
-    def click_generate_auth_code(self):
-        self.click(*self.generate_auth_code)
+    def login(self):
+        login = Login(self.driver)
+        login.login('invited')
 
     def input_random_number(self):
         random_number = self.get_random_number()
@@ -87,6 +69,13 @@ class Auth_Management_Page(BasePage):
         self.input(self.get_random_name(), *self.remark_input)
 
     def get_used_info(self):
+        self.click(*self.setting_button_element)
+        self.click(*self.group_element)
+        if self.get_url() == 'http://10.1.1.80:7001/':
+            self.click(*self.cd1_auth_management_element)
+        elif self.get_url() == 'http://staging.test.frontend.moqi.com.cn/shell':
+            self.click(*self.staging_auth_management_element)
+        self.sleep(6)
         logger.info("license授权使用情况如下：")
         logger.info(f"{self.get_element(*self.permission_granted)}.")
         logger.info(f"{self.get_element(*self.auth_count_available)}.")
@@ -108,7 +97,7 @@ class Auth_Management_Page(BasePage):
 
     def generate_authorization_code(self):
         first_number = self.get_used_number()
-        self.click_generate_auth_code()
+        self.click(*self.generate_auth_code)
         random_number = self.input_random_number()
         self.input_random_name()
         self.click(*self.confirm_button)

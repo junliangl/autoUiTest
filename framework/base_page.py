@@ -4,11 +4,13 @@ import random
 import os.path
 from selenium.webdriver import ActionChains
 from framework.logger import Logger
+from framework.browser_info import Browser_Info
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # create a logger instance
 logger = Logger(logger="测试流程").get_log()
+get_browser_info = Browser_Info()
 
 
 class BasePage(object):
@@ -132,7 +134,7 @@ class BasePage(object):
 
     def get_element(self, *selector):
         """
-        输入
+        得到元素文本信息
         """
         # self.forced_wait()
         try:
@@ -222,6 +224,10 @@ class BasePage(object):
         except Exception:
             logger.error('找不到显式等待的元素')
             self.get_windows_img()
+
+    @staticmethod
+    def get_url():
+        return get_browser_info.get_url()
 
     @staticmethod
     # 得到随机的一个名字
