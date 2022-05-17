@@ -46,14 +46,14 @@ class Register_Page(BasePage):
     def input_register_message_username(self, text):
         self.input(text, *self.register_username_element)
 
+    def input_register_message_phone(self, text):
+        self.input(text, *self.register_phone_number_element)
+
     def choose_register_gender(self, gender):
         if gender == "男":
             self.click(*self.register_male_element)
         elif gender == "女":
             self.click(*self.register_female_element)
-
-    def input_register_message_phone(self, text):
-        self.input(text, *self.register_phone_number_element)
 
     def choose_area1(self):
         self.click(*self.register_area1_element)
@@ -105,5 +105,3 @@ class Register_Page(BasePage):
         except Exception:
             return False
 
-    def time_sleep(self):
-        self.sleep(1.5)

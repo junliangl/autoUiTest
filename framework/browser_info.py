@@ -8,7 +8,7 @@ config.read(file_path)
 
 
 # 得到配置里的 driver_name 和 url
-class Message:
+class Browser_Info:
     def __init__(self):
         self.browser = config.get("browserType", "browserName")
         self.url = config.get("testServer", "URL")

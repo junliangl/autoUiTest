@@ -1,0 +1,11 @@
+{
+  "test1": {
+    "account": "testauto111",
+    "first_password": "aA123456",
+    "second_password": "aA123457",
+    "username": "junliangl",
+    "gender": "男",
+    "phone_number": "12345678911",
+    "company": "墨奇科技"
+  }
+}

@@ -1,20 +1,14 @@
 # coding=utf-8
 import os
 import unittest
-from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
-from framework.browser_info import Message
 from page_objects.group_management.user_access import User_Access_Page
 from framework.logger import Logger
-from selenium.webdriver.common import action_chains
 
 logger = Logger(logger='测试结果').get_log()
-get_message = Message()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-data_path = os.path.join(os.path.join(project_path, 'data'), 'user_access_data.json')
 
 
-@ddt
 class Test_User_Access(unittest.TestCase):
     """
     测试查看用户权限管理
@@ -35,16 +29,12 @@ class Test_User_Access(unittest.TestCase):
         """
         cls.driver.close()
 
-    @file_data(data_path)
-    def test01_check_group(self, account, password):
+    def test01_check_group(self):
         """
         测试查看当前子用户组
         """
         user_access_page = User_Access_Page(self.driver)
-        user_access_page.input_login_message_account(account)
-        user_access_page.input_login_message_password(password)
-        action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()  # 点击空白解除网页的非安全链接提醒
-        user_access_page.click_login_button()
+        user_access_page.login()
         user_access_page.click_setting_button()
         user_access_page.click_group_button()
         user_access_page.click_user_access()
@@ -101,7 +91,7 @@ class Test_User_Access(unittest.TestCase):
         """
         user_access_page = User_Access_Page(self.driver)
         result = user_access_page.delete_groups('aA123456')
-        self.sleep(3)
+        user_access_page.sleep(3)
         if result:
             self.assertTrue(result, logger.info('删除子用户组没有问题.'))
         else:

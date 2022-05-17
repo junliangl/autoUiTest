@@ -1,20 +1,14 @@
 # coding=utf-8
 import os
 import unittest
-from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
-from framework.browser_info import Message
 from page_objects.menu_management.available_quota import Available_Quota_Page
 from framework.logger import Logger
-from selenium.webdriver.common import action_chains
 
 logger = Logger(logger='测试结果').get_log()
-get_message = Message()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-data_path = os.path.join(os.path.join(project_path, 'data'), 'available_quota_data.json')
 
 
-@ddt
 class Test_Available_Quota(unittest.TestCase):
     """
     测试登录模块
@@ -35,24 +29,19 @@ class Test_Available_Quota(unittest.TestCase):
         """
         self.driver.close()
 
-    @file_data(data_path)
-    def test_available_quota(self, account, password):
+    def test_available_quota(self):
         """
         测试未加入域查看算力用例
         """
         available_quota_page = Available_Quota_Page(self.driver)
-        available_quota_page.input_login_message_account(account)
-        available_quota_page.input_login_message_password(password)
-        action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()  # 点击空白解除网页的非安全链接提醒
-        available_quota_page.click_login_button()
-        available_quota_page.click_username_button()
-        available_quota_page.click_quota_button()
+        available_quota_page.login()
 
         # 如果找到登录的元素那么判定登录成功
-        if available_quota_page.get_result() is True:
-            self.assertTrue(available_quota_page.get_result(), logger.info("查看算力成功，且当前角色未加入域"))
+        result = available_quota_page.get_result()
+        if result is True:
+            self.assertTrue(result, logger.info("查看算力成功，且当前角色未加入域."))
         else:
-            self.assertTrue(available_quota_page.get_result(), logger.critical('查看算力失败失败'))
+            self.assertTrue(result, logger.critical('查看算力失败!'))
 
 
 if __name__ == '__main__':

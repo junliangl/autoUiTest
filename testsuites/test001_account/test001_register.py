@@ -3,14 +3,14 @@ import os
 import unittest
 from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
-from framework.browser_info import Message
+from framework.browser_info import Browser_Info
 from page_objects.account_management.register import Register_Page
 from framework.logger import Logger
 
 logger = Logger(logger='测试结果').get_log()
-get_message = Message()
+get_browser_info = Browser_Info()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-data_path = os.path.join(os.path.join(project_path, 'data'), 'register_data.json')
+data_path = os.path.join(os.path.join(os.path.join(project_path, 'data'), 'register'), 'register_data.json')
 
 
 @ddt
@@ -52,13 +52,13 @@ class Test_Register(unittest.TestCase):
         register_page.choose_area1()  # 选择区域
 
         # 判断浏览器用不同方法点击
-        if get_message.get_driver() == "Chrome":
+        if get_browser_info.get_driver() == "Chrome":
             register_page.choose_chrome_area2()  # 选择公安部
             register_page.choose_chrome_area3()  # 选择四川省
             register_page.choose_chrome_area4()  # 选择成都市
             register_page.choose_chrome_area5()  # 选择武侯区
 
-        elif get_message.get_driver() == "Firefox":
+        elif get_browser_info.get_driver() == "Firefox":
             register_page.choose_firefox_area2()  # 选择公安部
             register_page.choose_firefox_area3()  # 选择四川省
             register_page.choose_firefox_area4()  # 选择成都市
