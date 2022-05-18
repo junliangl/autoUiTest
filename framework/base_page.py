@@ -198,7 +198,24 @@ class BasePage(object):
             logger.info(f"按钮 {element_name} 已被点击.")
             self.sleep(2)
         except Exception as e:
-            logger.error(f"点击按钮 {e} 失败")
+            logger.error("点击按失败")
+            logger.error(e)
+            self.get_windows_img()
+
+    def execute_script(self, *selector):
+        """
+        调用js点击
+        """
+        self.forced_wait(*selector)
+        try:
+            element = self.driver.find_element(*selector)
+            element_name = self.get_element(*selector)
+            self.driver.execute_script('arguments[0].click()', element)
+            logger.info(f"按钮 {element_name} 已被点击.")
+            self.sleep(1)
+        except Exception as e:
+            logger.error("点击按钮失败")
+            logger.error(e)
             self.get_windows_img()
 
     def get_page_title(self):
@@ -248,6 +265,7 @@ class BasePage(object):
         try:
             self.driver.refresh()
             logger.info("刷新网页成功")
+            self.sleep(3)
         except Exception:
             logger.error("刷新网页失败")
             self.get_windows_img()

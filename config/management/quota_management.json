@@ -1,30 +1,26 @@
 {
-  "account": [
-    "/html/body/app-root/app-login/div/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input",
-    ""
-  ],
-  "password": [
-    "/html/body/app-root/app-login/div/form/nz-form-item[2]/nz-form-control/div/div/nz-input-group/input",
-    ""
-  ],
-  "login_button": [
-    "/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button",
-    ""
-  ],
   "quota_amount": [
-    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[1]",
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[contains(text(), '算力总量')]",
+    ""
+  ],
+  "used_allocatable_amount": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[contains(text(), '已分配量')]",
+    ""
+  ],
+  "allocatable_amount": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[contains(text(), '可分配量')]",
     ""
   ],
   "available_amount": [
-    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[2]",
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[contains(text(), '可用量')]",
     ""
   ],
   "used_amount": [
-    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[3]",
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[contains(text(), '已用量')]",
     ""
   ],
   "frozen_amount": [
-    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[4]",
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[2]/nz-spin/div/div/div[contains(text(), '冻结量')]",
     ""
   ],
   "available_quota": [
@@ -45,7 +41,7 @@
   ],
   "record": {
     "button": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[3]/nz-tabset/div/div/div[1]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[9]",
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[3]/nz-tabset/div/div/div[@nz-tab-body]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[9]/div/a",
       ""
     ],
     "all": [
@@ -58,6 +54,20 @@
     ],
     "close_page": [
       "/html/body/div[2]/div[3]/div/nz-modal-container/div/div/button",
+      ""
+    ]
+  },
+  "using_detail": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-list/div/div[3]/nz-tabset/div/div/div[@nz-tab-body]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr[1]",
+      ""
+    ],
+    "allocation_record": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-compute-package-detail/div/div[3]/div[1]/div[2]/button",
+      ""
+    ],
+    "close_page": [
+      "/html/body/div[2]/div[2]/div/nz-modal-container/div/div/button",
       ""
     ]
   }
