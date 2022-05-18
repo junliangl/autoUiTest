@@ -1,8 +1,5 @@
 # coding=utf-8
 import os
-import sys
-root_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(root_path)
 import unittest
 from framework.browser_engine import BrowserEngine
 from page_objects.group_management.quota_management import Quota_Management_Page

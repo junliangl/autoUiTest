@@ -1,0 +1,18 @@
+{
+  "account_quota_available": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-customer-list/div/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[1]",
+    ""
+  ],
+  "account_quota_used": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-customer-list/div/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[2]",
+    ""
+  ],
+  "account_quota_total": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-customer-list/div/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[3]",
+    ""
+  ],
+  "package_expire_time": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-customer-list/div/div[2]/nz-table[1]/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[4]",
+    ""
+  ]
+}
