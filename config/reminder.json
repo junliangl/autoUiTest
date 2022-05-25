@@ -66,5 +66,9 @@
   "export": [
     "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'导出成功')]",
     ""
+  ],
+  "change": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'修改成功')]",
+    ""
   ]
 }

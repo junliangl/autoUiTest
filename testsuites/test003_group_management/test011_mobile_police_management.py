@@ -8,9 +8,9 @@ logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-class Test_Quota_Management(unittest.TestCase):
+class Test_Mobile_Police_Management(unittest.TestCase):
     """
-    测试算力管理
+    测试移动警务管理
     """
 
     @classmethod

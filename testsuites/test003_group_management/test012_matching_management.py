@@ -2,7 +2,7 @@
 import os
 import unittest
 from framework.browser_engine import BrowserEngine
-from page_objects.group_management.user_management import User_Management_Page
+from page_objects.group_management.matching_management import Matching_Management_Page
 from framework.logger import Logger
 logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -32,13 +32,13 @@ class Test_User_Management(unittest.TestCase):
         """
         测试查看用户账号信息信息
         """
-        user_management_page = User_Management_Page(self.driver)
-        user_management_page.login()
-        result = user_management_page.get_user_management_info()
+        matching_management_page = Matching_Management_Page(self.driver)
+        matching_management_page.login()
+        result = matching_management_page.change_matching_management()
         if result:
-            self.assertTrue(result, logger.info("查看账号信息没有问题."))
+            self.assertTrue(result, logger.info("修改app比对库没有问题."))
         else:
-            self.assertTrue(result, logger.error("查看账号信息有误."))
+            self.assertTrue(result, logger.error("修改app比对库存在问题!"))
 
 
 if __name__ == '__main__':
