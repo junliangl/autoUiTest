@@ -106,7 +106,7 @@ class Auth_Management_Page(BasePage):
         # noinspection PyBroadException
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.generate_auth_code_reminder))
-            logger.info(f"{reminder}")
+            logger.info(f"{self.get_element(*self.generate_auth_code_reminder)}")
             self.get_windows_img()
         except Exception:
             # noinspection PyBroadException
@@ -163,7 +163,7 @@ class Auth_Management_Page(BasePage):
         # noinspection PyBroadException
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.ban_reminder))
-            logger.info(f"{reminder}")
+            logger.info(f"{self.get_element(*self.ban_reminder)}")
             self.get_windows_img()
         except Exception:
             try:
@@ -231,7 +231,7 @@ class Auth_Management_Page(BasePage):
         # noinspection PyBroadException
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.recover_reminder))
-            logger.info(f"{reminder}")
+            logger.info(f"{self.get_element(*self.recover_reminder)}")
             self.get_windows_img()
         except Exception:
             try:

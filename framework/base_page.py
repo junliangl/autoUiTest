@@ -1,7 +1,11 @@
 # coding=utf-8
 import time
+import pandas
 import random
 import os.path
+import pyautogui
+import pyperclip
+import platform
 from selenium.webdriver import ActionChains
 from framework.logger import Logger
 from framework.browser_info import Browser_Info
@@ -11,6 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # create a logger instance
 logger = Logger(logger="测试流程").get_log()
 get_browser_info = Browser_Info()
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class BasePage(object):
@@ -153,9 +158,10 @@ class BasePage(object):
             element = self.driver.find_element(*selector)
             element.clear()
             element.send_keys(text)
-            logger.info(f"输入 {text} 成功")
+            logger.info(f"输入 '{text}' 成功")
         except Exception as e:
-            logger.error(f"输入框输入 {e} 失败")
+            logger.error(f"输入框输入失败")
+            logger.error({e})
             self.get_windows_img()
 
     def clear(self, *selector):
@@ -168,7 +174,7 @@ class BasePage(object):
             element.clear()
             logger.info("清除了输入框.")
         except Exception as e:
-            logger.warning(f"清除输入框 {e} 失败")
+            logger.warning(f"清除输入框 '{e}' 失败")
             self.get_windows_img()
 
     def click(self, *selector):
@@ -180,11 +186,27 @@ class BasePage(object):
             element = self.driver.find_element(*selector)
             element_name = element.text
             element.click()
-            logger.info(f"按钮 {element_name} 已被点击.")
+            logger.info(f"按钮 '{element_name}' 已被点击.")
         except Exception as e:
             logger.error(f"点击按钮失败")
             logger.error(e)
             self.get_windows_img()
+
+    def create_csv(self, column, raw):
+        """
+        创建一个csv文件
+        """
+        csv_path = None
+        try:
+            random_name = self.get_random_name()
+            csv_path = os.path.join(os.path.join(os.path.join(project_path, 'data'), 'csv_data'), random_name + '.csv')
+            csv_file = pandas.DataFrame(columns=column, data=raw)
+            csv_file.to_csv(csv_path, mode='w', header=True, index=False, encoding='gbk')
+            logger.info(f"创建: {random_name} 文件成功.")
+        except Exception as e:
+            logger.error("创建 csv 文件失败!")
+            logger.error(e)
+        return csv_path
 
     def actionchains_click(self, *selector):
         """
@@ -195,7 +217,7 @@ class BasePage(object):
             element = self.driver.find_element(*selector)
             element_name = self.get_element(*selector)
             ActionChains(self.driver).move_to_element(element).click(element).perform()
-            logger.info(f"按钮 {element_name} 已被点击.")
+            logger.info(f"按钮 '{element_name}' 已被点击.")
             self.sleep(2)
         except Exception as e:
             logger.error("点击按失败")
@@ -211,7 +233,7 @@ class BasePage(object):
             element = self.driver.find_element(*selector)
             element_name = self.get_element(*selector)
             self.driver.execute_script('arguments[0].click()', element)
-            logger.info(f"按钮 {element_name} 已被点击.")
+            logger.info(f"按钮 '{element_name}' 已被点击.")
             self.sleep(1)
         except Exception as e:
             logger.error("点击按钮失败")
@@ -237,9 +259,19 @@ class BasePage(object):
         self.forced_wait(*selector)
         # noinspection PyBroadException
         try:
-            logger.info(f"找到 {self.get_element(*selector)} 按钮")
+            logger.info(f"找到 '{self.get_element(*selector)}' 按钮")
         except Exception:
             logger.error('找不到显式等待的元素')
+            self.get_windows_img()
+
+    def refresh_browser(self):
+        # noinspection PyBroadException
+        try:
+            self.driver.refresh()
+            logger.info("刷新网页成功")
+            self.sleep(3)
+        except Exception:
+            logger.error("刷新网页失败")
             self.get_windows_img()
 
     @staticmethod
@@ -257,18 +289,10 @@ class BasePage(object):
     @staticmethod
     # 得到一个随机的代号
     def get_random_number():
-        random_number = random.randint(1, 3)
+        random_number = ''
+        for i in range(4):
+            random_number = random_number + str(random.randint(1, 9))
         return random_number
-
-    def refresh_browser(self):
-        # noinspection PyBroadException
-        try:
-            self.driver.refresh()
-            logger.info("刷新网页成功")
-            self.sleep(3)
-        except Exception:
-            logger.error("刷新网页失败")
-            self.get_windows_img()
 
     @staticmethod
     def sleep(seconds):
@@ -277,3 +301,16 @@ class BasePage(object):
         """
         time.sleep(seconds)
         logger.info(f"强制等待了 {seconds} 秒")
+
+    @staticmethod
+    def import_file(path):
+        time.sleep(2)
+        pyperclip.copy(path)
+        # 判断操作系统
+        if platform.system() == 'Windows':
+            pyautogui.hotkey('ctrl', 'v')
+        elif platform.system() == 'Mac':
+            pyautogui.hotkey('command', 'v')
+        else:
+            raise Exception('操作系统不为Windows或Mac.')
+        pyautogui.press('enter', 2)

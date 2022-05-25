@@ -1,42 +1,70 @@
 {
   "reminder": [
-    "html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span",
+    "html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span",
+    ""
+  ],
+  "login": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'登录成功')]",
     ""
   ],
   "add_child_group": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'子用户组添加成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'子用户组添加成功')]",
     ""
   ],
   "add_role_group": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'角色组添加成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'角色组添加成功')]",
     ""
   ],
   "edit_basic_info": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'修改基础信息成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'修改基础信息成功')]",
     ""
   ],
   "invite_to_group": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'邀请用户入组成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'邀请用户入组成功')]",
     ""
   ],
   "delete_group": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'删除子用户组成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'删除子用户组成功')]",
     ""
   ],
   "delete_role": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'删除角色组成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'删除角色组成功')]",
     ""
   ],
   "generate_auth_code": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'授权码添加成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'授权码添加成功')]",
     ""
   ],
   "ban": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'禁用成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'禁用成功')]",
     ""
   ],
   "recover": [
-    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message/div/div/div/span[contains(text(),'恢复成功')]",
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'恢复成功')]",
+    ""
+  ],
+  "import_mobile_user_fail": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'文件不符合规范，请重新上传')]",
+    ""
+  ],
+  "add_mobile_police_success": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'移动警务用户添加成功')]",
+    ""
+  ],
+  "add_mobile_police_fail": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'移动警务用户添加失败，请重试')]",
+    ""
+  ],
+  "delete": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'删除成功')]",
+    ""
+  ],
+  "error_input": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'请检查是否正确填写表单')]",
+    ""
+  ],
+  "export": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'导出成功')]",
     ""
   ]
 }
