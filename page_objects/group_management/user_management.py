@@ -55,6 +55,7 @@ class User_Management_Page(BasePage):
             return True
         else:
             logger.error("账号信息存在问题!")
+            self.get_windows_img()
             return False
 
 

@@ -139,6 +139,7 @@ class Mobile_Police_Management_Page(BasePage):
         except Exception as e:
             logger.error("删除当前上传文件失败.")
             logger.error(e)
+            self.get_windows_img()
             return False
         self.click(*self.import_csv_file)
         if csv_path:
@@ -156,6 +157,7 @@ class Mobile_Police_Management_Page(BasePage):
         # noinspection PyBroadException
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.fail_reminder))
+            self.get_windows_img()
             logger.error(self.get_element(*self.fail_reminder))
             return False
         except Exception:
@@ -185,12 +187,14 @@ class Mobile_Police_Management_Page(BasePage):
             except Exception as e:
                 logger.error("正确文件数量为0,还可以继续上传,上传存在问题.")
                 logger.error(e)
+                self.get_windows_img()
                 return False
         elif fail_number[-1] == '0' and fail_number[-2] == '：':
             # noinspection PyBroadException
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.disabled_submit))
                 logger.error("现在全部正常导入,但是不能正常提交")
+                self.get_windows_img()
             except Exception:
                 logger.info("现在全部正常导入,可以正常提交.")
                 self.click(*self.submit)
@@ -220,6 +224,7 @@ class Mobile_Police_Management_Page(BasePage):
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.disabled_submit))
                 logger.error("现在全部正常导入,但是不能正常提交")
+                self.get_windows_img()
                 return False
             except Exception:
                 logger.info("现在全部正常导入,可以正常提交.")

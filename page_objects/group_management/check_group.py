@@ -72,4 +72,5 @@ class Check_Group_Page(BasePage):
         if temp == group[1]:
             return True
         else:
+            self.get_windows_img()
             return False

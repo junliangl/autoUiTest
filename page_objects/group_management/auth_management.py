@@ -134,6 +134,7 @@ class Auth_Management_Page(BasePage):
             return True
         else:
             logger.error("前端数字显示有异常!")
+            self.get_windows_img()
             return False
 
     def ban_auth_code(self):
@@ -145,15 +146,18 @@ class Auth_Management_Page(BasePage):
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.recover))
                 logger.error("新添加的第一个授权码已经被禁用.")
+                self.get_windows_img()
                 return False
             except Exception as e:
                 logger.error(e)
                 logger.error("新添加的授权码存在异常")
+                self.get_windows_img()
                 return False
         if self.get_element(*self.activated_status) == '未激活':
             pass
         else:
             logger.info(self.get_element(*self.activated_status))
+            self.get_windows_img()
             return False
         first_ban_number = self.get_used_number()
         self.click(*self.ban)
@@ -176,6 +180,7 @@ class Auth_Management_Page(BasePage):
             except Exception as e:
                 logger.error(e)
                 logger.error("禁用授权码有问题!")
+                self.get_windows_img()
                 return False
         self.forced_wait(*self.activated_status)
         self.sleep(3)
@@ -183,6 +188,7 @@ class Auth_Management_Page(BasePage):
             pass
         else:
             logger.error("前端字体未变化")
+            self.get_windows_img()
             return False
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.recover))
@@ -190,6 +196,7 @@ class Auth_Management_Page(BasePage):
         except Exception as e:
             logger.error("禁用失败!")
             logger.error(e)
+            self.get_windows_img()
             return False
         second_ban_number = self.get_used_number()
         result1 = first_ban_number[0] == second_ban_number[0]
@@ -202,6 +209,7 @@ class Auth_Management_Page(BasePage):
             return True
         else:
             logger.error("前端数字显示有异常!")
+            self.get_windows_img()
             return False
 
     def recover_auth_code(self):
@@ -213,15 +221,18 @@ class Auth_Management_Page(BasePage):
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.ban))
                 logger.error("第一个被禁用的授权码不可以被恢复.")
+                self.get_windows_img()
                 return False
             except Exception as e:
                 logger.error(e)
                 logger.error("新禁用的的授权码存在异常")
+                self.get_windows_img()
                 return False
         if self.get_element(*self.activated_status) == '已禁用':
             pass
         else:
             logger.info(self.get_element(*self.activated_status))
+            self.get_windows_img()
             return False
         first_recover_number = self.get_used_number()
         self.click(*self.recover)
@@ -244,6 +255,7 @@ class Auth_Management_Page(BasePage):
             except Exception as e:
                 logger.error(e)
                 logger.error("恢复授权码有问题!")
+                self.get_windows_img()
                 return False
         self.forced_wait(*self.activated_status)
         self.sleep(3)
@@ -251,6 +263,7 @@ class Auth_Management_Page(BasePage):
             pass
         else:
             logger.error("前端字体未变化")
+            self.get_windows_img()
             return False
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.ban))
@@ -258,6 +271,7 @@ class Auth_Management_Page(BasePage):
         except Exception as e:
             logger.error("恢复失败!")
             logger.error(e)
+            self.get_windows_img()
             return False
         second_recover_number = self.get_used_number()
         result1 = first_recover_number[0] == second_recover_number[0]
@@ -270,6 +284,7 @@ class Auth_Management_Page(BasePage):
             return True
         else:
             logger.error("前端数字显示有异常!")
+            self.get_windows_img()
             return False
 
     # 查看授权码
@@ -285,6 +300,7 @@ class Auth_Management_Page(BasePage):
             return True
         except Exception as e:
             logger.error("关闭授权码界面失败")
+            self.get_windows_img()
             self.refresh_browser()
             self.sleep(8)
             logger.error(e)
@@ -302,4 +318,5 @@ class Auth_Management_Page(BasePage):
         if auth_number == 1:
             return True
         else:
+            self.get_windows_img()
             return False

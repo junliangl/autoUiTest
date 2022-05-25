@@ -92,8 +92,9 @@ class User_Access_Page(BasePage):
         element = self.driver.find_element(*self.group_number_element)
         number = len(element.find_elements(method_json["method"][0], 'nz-tree-node'))
         if number < 1:
-            logger.error("这个域列表存在异常!")
-            raise KeyError
+            logger.error("这个域列表没有显示!")
+            self.get_windows_img()
+            raise KeyError('域列表存在异常!')
         else:
             return number
 
@@ -117,7 +118,8 @@ class User_Access_Page(BasePage):
         number = len(element.find_elements(method_json["method"][0], 'nz-list-item'))
         if number < 1:
             logger.error("当前用户组没有默认角色组.")
-            raise KeyError
+            self.get_windows_img()
+            raise KeyError('当前用户组存在异常!')
         else:
             logger.info(f"当前用户组总共有 {number} 个角色组.")
             return number
@@ -137,8 +139,8 @@ class User_Access_Page(BasePage):
         temp = 0
         level = self.get_group_level()
         if level[0] != 0:
-            self.get_windows_img()
             logger.error("这个用户组列表存在异常!")
+            self.get_windows_img()
             return False
         else:
             if len(level) == 1:
@@ -182,6 +184,7 @@ class User_Access_Page(BasePage):
                 return True, group_number
             except Exception:
                 logger.error(f"{self.get_element(*self.child_group1_element)} 用户组越权修改权限或按钮未找到.")
+                self.get_windows_img()
                 return False, group_number
         else:
             self.click(*self.child_group2_element)
@@ -195,6 +198,7 @@ class User_Access_Page(BasePage):
                 return True, group_number
             except Exception:
                 logger.error(f"{self.get_element(*self.child_group2_element)} 用户组没有修改基础信息权限或按钮未找到.")
+                self.get_windows_img()
                 return False, group_number
 
     # 编辑用户基本信息
