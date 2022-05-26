@@ -8,9 +8,9 @@ logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-class Test_User_Management(unittest.TestCase):
+class Test_Matching_Management(unittest.TestCase):
     """
-    测试用户管理
+    测试App比对管理
     """
 
     # @classmethod
@@ -28,9 +28,9 @@ class Test_User_Management(unittest.TestCase):
         """
         self.driver.close()
 
-    def test01_check_account_info(self):
+    def test01_change_matching(self):
         """
-        测试查看用户账号信息信息
+        测试修改app比对管理设置
         """
         matching_management_page = Matching_Management_Page(self.driver)
         matching_management_page.login()
