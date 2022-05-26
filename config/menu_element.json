@@ -54,7 +54,7 @@
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'指纹比对 APP 管理')]/../..",
       ""
     ],
-    "inspection_management": [
+    "moqi_check_management": [
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'墨奇检视管理')]/../..",
       ""
     ],
@@ -88,7 +88,7 @@
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/nz-spin/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'指纹比对 APP 管理')]/../..",
       ""
     ],
-    "inspection_management": [
+    "moqi_check_management": [
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/nz-spin/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'墨奇检视管理')]/../..",
       ""
     ],

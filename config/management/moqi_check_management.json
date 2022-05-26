@@ -1,0 +1,49 @@
+{
+  "check_activated": {
+    "number": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[1]/nz-form-control/div/div/nz-radio-group",
+      ""
+    ],
+    "true": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[1]/nz-form-control/div/div/nz-radio-group/label[1]/span[@class='ant-radio']/input",
+      ""
+    ],
+    "true_click": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[1]/nz-form-control/div/div/nz-radio-group/label[1]/span[@class='ant-radio ant-radio-checked']/input",
+      ""
+    ],
+    "false": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[1]/nz-form-control/div/div/nz-radio-group/label[2]/span[@class='ant-radio']/input",
+      ""
+    ],
+    "false_click": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[1]/nz-form-control/div/div/nz-radio-group/label[2]/span[@class='ant-radio ant-radio-checked']/input",
+      ""
+    ]
+  },
+  "amount": {
+    "number": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[2]/nz-form-control/div/div/nz-radio-group",
+      ""
+    ],
+    "disabled": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[2]/nz-form-control/div/div/nz-radio-group/label[1]/span[1]/input[@disabled]",
+      ""
+    ],
+    "buttons": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/div/div/nz-form-item[2]/nz-form-control/div/div/nz-radio-group/label/span/..",
+      ""
+    ],
+    "attribute_value": [
+      "ant-radio-wrapper-checked"
+    ]
+  },
+  "cancel": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/nz-row/nz-col[1]/nz-form-item/nz-form-control/div/div/button",
+    ""
+  ],
+  "save": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-cloud-inspection/div/div[2]/form/nz-row/nz-col[2]/nz-form-item/nz-form-control/div/div/button",
+    ""
+  ]
+}

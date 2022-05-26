@@ -137,6 +137,19 @@ class BasePage(object):
             logger.error(f"找不到元素: {self.get_element(*selector)}")
             self.get_windows_img()
 
+    def find_element_attribute(self, *selector, attribute):
+        """
+        得到某个节点标签的属性值
+        """
+        self.forced_wait(*selector)
+        try:
+            element = self.driver.find_element(*selector).get_attribute(attribute)
+            return element
+        except Exception as e:
+            logger.error("找不到该节点标签的属性值")
+            logger.error(e)
+            self.get_windows_img()
+
     def get_element(self, *selector):
         """
         得到元素文本信息
@@ -189,6 +202,31 @@ class BasePage(object):
             logger.info(f"按钮 '{element_name}' 已被点击.")
         except Exception as e:
             logger.error(f"点击按钮失败")
+            logger.error(e)
+            self.get_windows_img()
+
+    def traverse_click(self, *selector, attribute, value):
+        """
+        遍历点击相同节点下的所有按钮
+        """
+        times = 0
+        # 避免值属性位置不确定,取每一个值传入无序集合中
+        self.forced_wait(*selector)
+        try:
+            elements = self.driver.find_elements(*selector)
+            for element in elements:
+                times = times + 1
+                element.click()
+                values = element.get_attribute(attribute)
+                if value in values:
+                    logger.info(f"循环点击第{times}个按钮:'{element.text}'成功.")
+                else:
+                    logger.error(f"循环点击第{times}个按钮:'{element.text}'失败!")
+                    self.get_windows_img()
+                self.sleep(1)
+            logger.info("循环点击成功.")
+        except Exception as e:
+            logger.error("循环点击失败!")
             logger.error(e)
             self.get_windows_img()
 
