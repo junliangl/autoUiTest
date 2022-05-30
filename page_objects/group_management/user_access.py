@@ -344,7 +344,7 @@ class User_Access_Page(BasePage):
             except Exception:
                 logger.warning("该用户组没有可以删除的角色组!")
                 self.get_windows_img()
-                break
+                return True
             self.click(*self.role_group2_element)
             role_name = self.get_element(*self.role_group2_element)
             # noinspection PyBroadException

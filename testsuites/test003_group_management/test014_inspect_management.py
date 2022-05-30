@@ -1,7 +1,5 @@
 # coding=utf-8
 import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import unittest
 from framework.browser_engine import BrowserEngine
 from page_objects.group_management.inspect_management import Inspect_Management_Page

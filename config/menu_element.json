@@ -111,19 +111,19 @@
       ""
     ],
     "system_message_1": [
-      "/html/body/div[2]/div[2]/div/div/div/nz-tabset/nz-tabs-nav/div/div/div[1]/div",
+      "/html/body/div[2]/div[@dir]/div/div/div/nz-tabset/nz-tabs-nav/div/div/div[1]/div",
       ""
     ],
     "fingerprint_alliance": [
-      "/html/body/div[2]/div[2]/div/div/div/nz-tabset/nz-tabs-nav/div/div/div[2]/div",
+      "/html/body/div[2]/div[@dir]/div/div/div/nz-tabset/nz-tabs-nav/div/div/div[2]/div",
       ""
     ],
     "mark": [
-      "/html/body/div[2]/div[2]/div/div/div/nz-row/div[1]",
+      "/html/body/div[2]/div[@dir]/div/div/div/nz-row/div[1]",
       ""
     ],
     "detail": [
-      "/html/body/div[2]/div[2]/div/div/div/nz-row/div[2]"
+      "/html/body/div[2]/div[@dir]/div/div/div/nz-row/div[2]"
     ]
   },
   "user": {
@@ -132,19 +132,19 @@
       ""
     ],
     "available_quota": [
-      "/html/body/div[2]/div[2]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'查看可用算力')]",
+      "/html/body/div[2]/div[@dir]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'查看可用算力')]",
       ""
     ],
     "change_password": [
-      "/html/body/div[2]/div[2]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'修改密码')]",
+      "/html/body/div[2]/div[@dir]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'修改密码')]",
       ""
     ],
     "manage_examining": [
-      "/html/body/div[2]/div[2]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'检视组设置')]",
+      "/html/body/div[2]/div[@dir]/div/div/ul/li[@nz-menu-item]/a[contains(text(),'检视组设置')]",
       ""
     ],
     "log_out": [
-      "/html/body/div[2]/div[@style]/div/div/ul/li[last()]",
+      "/html/body/div[2]/div[@dir]/div/div/ul/li[last()]",
       ""
     ]
   },

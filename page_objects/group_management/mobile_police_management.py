@@ -128,9 +128,11 @@ class Mobile_Police_Management_Page(BasePage):
         column = ['移动警务ID', '用户名']
         raw = [[self.get_random_number(), username]]
         csv_path = self.create_csv(column, raw)
+        if not csv_path:
+            logger.error("csv文件创建失败!")
+            return False
         self.click(*self.bulk_import)
         self.click(*self.import_csv_file)
-        self.sleep(2)
         self.import_file(csv_path)
         self.click(*self.delete_file)
         try:
@@ -140,28 +142,35 @@ class Mobile_Police_Management_Page(BasePage):
             logger.error("删除当前上传文件失败.")
             logger.error(e)
             self.get_windows_img()
-            return False
-        self.click(*self.import_csv_file)
-        if csv_path:
-            self.import_file(csv_path)
             # 如果创建文件成功导入后就删除
             try:
                 os.remove(csv_path)
+                logger.info(f"删除文件:{csv_path}成功.")
             except Exception as e:
-                logger.error("删除文件失败")
+                logger.error(f"删除文件:{csv_path}失败")
                 logger.error(e)
-        else:
-            logger.error("csv文件路径为None.")
             return False
+        self.click(*self.import_csv_file)
+        self.import_file(csv_path)
         self.click(*self.next_step)
         # noinspection PyBroadException
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.fail_reminder))
             self.get_windows_img()
             logger.error(self.get_element(*self.fail_reminder))
+            try:
+                os.remove(csv_path)
+            except Exception as e:
+                logger.error("删除文件失败")
+                logger.error(e)
             return False
         except Exception:
             logger.info("上传成功.")
+            try:
+                os.remove(csv_path)
+            except Exception as e:
+                logger.error("删除文件失败")
+                logger.error(e)
         self.forced_wait(*self.fail_number)
         success_number = self.get_element(*self.success_number)
         fail_number = self.get_element(*self.fail_number)

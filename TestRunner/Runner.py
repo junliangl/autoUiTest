@@ -5,15 +5,15 @@ import unittest
 import time
 from selenium import webdriver
 
-# 当前文件的绝对路径
-now_path = os.path.dirname(os.path.abspath(__file__))
+
 # 找到根目录
-root_path = os.path.dirname(now_path)
+root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 添加进根目录
 sys.path.append(root_path)
 
 from Python_HTMLTestReportCN import HTMLTestReportCN
 
+chrome_driver_path = os.path.join(os.path.join(root_path, 'tools'), 'chromedriver.exe')
 report_path = os.path.join(root_path, 'test_report')
 now_time = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
 
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 # 测试结束后自动打开测试报告且不让它关闭
 def open_report_html():
     global driver
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(executable_path=chrome_driver_path)
     driver.get(os.path.join('file://', HtmlFile))
 
 

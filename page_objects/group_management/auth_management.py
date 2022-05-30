@@ -61,7 +61,7 @@ class Auth_Management_Page(BasePage):
         login.login('invited')
 
     def input_random_number(self):
-        random_number = self.get_random_number()
+        random_number = int(int(self.get_random_number()) / 1000)
         self.input(random_number, *self.amount_input)
         return random_number
 

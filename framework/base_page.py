@@ -366,4 +366,4 @@ class BasePage(object):
             pyautogui.hotkey('command', 'v')
         else:
             raise Exception('操作系统不为Windows或Mac.')
-        pyautogui.press('enter', 2)
+        pyautogui.press('enter', 1)
