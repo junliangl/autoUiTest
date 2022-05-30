@@ -59,6 +59,22 @@
     "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'删除成功')]",
     ""
   ],
+  "create_inspect": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'创建检视组成功')]",
+    ""
+  ],
+  "delete_inspect": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'删除检视组成功')]",
+    ""
+  ],
+  "create_inspector": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'新增检视专家成功')]",
+    ""
+  ],
+  "delete_inspector": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'删除检视专家成功')]",
+    ""
+  ],
   "error_input": [
     "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'请检查是否正确填写表单')]",
     ""

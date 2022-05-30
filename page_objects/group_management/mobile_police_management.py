@@ -249,7 +249,7 @@ class Mobile_Police_Management_Page(BasePage):
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.delete))
                 logger.warning(f"即将删除 id:{self.get_element(*self.id)} username:{self.get_element(*self.username)} "
                                f"name:{self.get_element(*self.name)} date:{self.get_element(*self.date)} 检视人员")
-                self.execute_script(*self.delete)
+                self.execute_script_click(*self.delete)
                 times = times + 1
                 self.click(*self.confirm2_button)
                 self.forced_wait(*self.reminder)

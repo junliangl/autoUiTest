@@ -86,7 +86,7 @@ class Quota_Management_Page(BasePage):
         self.click(*self.valid_only)
 
     def check_record(self):
-        self.execute_script(*self.record)
+        self.execute_script_click(*self.record)
         self.click(*self.all_record)
         self.click(*self.allocation_only)
         self.click(*self.close_page)
@@ -103,7 +103,7 @@ class Quota_Management_Page(BasePage):
             return True
 
     def check_using_detail(self):
-        self.execute_script(*self.using_detail)
+        self.execute_script_click(*self.using_detail)
         self.click(*self.allocation_record)
         self.click(*self.close_page)
         self.sleep(2)

@@ -137,14 +137,14 @@ class BasePage(object):
             logger.error(f"找不到元素: {self.get_element(*selector)}")
             self.get_windows_img()
 
-    def find_element_attribute(self, *selector, attribute):
+    def find_element_attribute(self, attribute, *selector):
         """
         得到某个节点标签的属性值
         """
         self.forced_wait(*selector)
         try:
-            element = self.driver.find_element(*selector).get_attribute(attribute)
-            return element
+            value = self.driver.find_element(*selector).get_attribute(attribute)
+            return value
         except Exception as e:
             logger.error("找不到该节点标签的属性值")
             logger.error(e)
@@ -205,7 +205,7 @@ class BasePage(object):
             logger.error(e)
             self.get_windows_img()
 
-    def traverse_click(self, *selector, attribute, value):
+    def traverse_click(self, attribute, value, *selector):
         """
         遍历点击相同节点下的所有按钮
         """
@@ -262,7 +262,7 @@ class BasePage(object):
             logger.error(e)
             self.get_windows_img()
 
-    def execute_script(self, *selector):
+    def execute_script_click(self, *selector):
         """
         调用js点击
         """
@@ -275,6 +275,21 @@ class BasePage(object):
             self.sleep(1)
         except Exception as e:
             logger.error("点击按钮失败")
+            logger.error(e)
+            self.get_windows_img()
+
+    def execute_script_get_text(self, *selector):
+        """
+        调用js获取文本
+        """
+        self.forced_wait(*selector)
+        try:
+            element = self.driver.find_element(*selector)
+            self.driver.execute_script('arguments[0].value()', element)
+            logger.info(f"文本内容已被获取.")
+            self.sleep(1)
+        except Exception as e:
+            logger.error("文本内容获取失败!")
             logger.error(e)
             self.get_windows_img()
 
