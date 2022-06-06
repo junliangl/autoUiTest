@@ -367,3 +367,14 @@ class BasePage(object):
         else:
             raise Exception('操作系统不为Windows或Mac.')
         pyautogui.press('enter', 1)
+
+    @staticmethod
+    def force_refresh():
+        # 强制刷新
+        if platform.system() == 'Windows':
+            pyautogui.hotkey('ctrl', 'shift', 'r')
+        elif platform.system() == 'Mac':
+            pyautogui.hotkey('command', 'shift', 'r')
+        else:
+            raise Exception('操作系统不为Windows或Mac.')
+        time.sleep(2)

@@ -27,7 +27,9 @@ class BrowserEngine:
             driver = webdriver.Firefox(executable_path=self.geckodriver_driver_path)  # 给Firefox()指定驱动路径
             logger.info("Starting firefox browser.")
         elif get_browser_info.get_driver() == "Chrome":
-            driver = webdriver.Chrome(executable_path=self.chrome_driver_path)  # 给Chrome()指定驱动路径
+            options = webdriver.ChromeOptions()
+            options.add_argument("--auto-open-devtools-for-tabs")
+            driver = webdriver.Chrome(executable_path=self.chrome_driver_path, chrome_options=options)  # 给Chrome()指定驱动路径
             logger.info("Starting Chrome browser.")
         elif get_browser_info.get_driver() == "IE":
             driver = webdriver.Ie(self.ie_driver_path)

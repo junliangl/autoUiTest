@@ -1,13 +1,13 @@
 {
   "help_check": {
     "button": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/span/i[contains(@class, 'anticon anticon-audit')]/..",
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[@class]/span/i[contains(@class, 'anticon anticon-audit')]/..",
       ""
     ]
   },
   "remind_setting": {
     "button": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/app-notification-config",
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[@class]/app-notification-config",
       ""
     ],
     "pop_ups_remind": [
@@ -21,7 +21,7 @@
   },
   "setting": {
     "button": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/span/i[contains(@class, 'anticon anticon-team')]/..",
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[@class]/span/i[contains(@class, 'anticon anticon-team')]/..",
       ""
     ],
     "group": [
@@ -99,7 +99,7 @@
   },
   "message": {
     "button": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/div",
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[@class]/div",
       ""
     ],
     "message_number": [
@@ -128,7 +128,7 @@
   },
   "user": {
     "button": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/span/i[contains(@nztype, 'user')]/..",
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[@class]/span/i[contains(@nztype, 'user')]/..",
       ""
     ],
     "available_quota": [
@@ -144,12 +144,16 @@
       ""
     ],
     "log_out": [
-      "/html/body/div[2]/div[@dir]/div/div/ul/li[last()]",
+      "/html/body/div[2]/div[@dir]/div/div/ul/li[last()]/a[contains(text(),'退出')]/..",
       ""
     ]
   },
+  "notification": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[@class]/app-notification-config/nz-space/div/span[contains(text(),'提醒设置')]/..",
+    ""
+  ],
   "help": [
-    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[contains(@class, 'button-item')]/i[contains(@class,'anticon anticon-question-circle')]/../span",
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[@class]/i[@class]/../span[contains(text(), '帮助')]",
     ""
   ],
   "language": [
