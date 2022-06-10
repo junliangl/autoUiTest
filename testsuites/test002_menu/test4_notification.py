@@ -1,8 +1,5 @@
 # coding=utf-8
 import os
-import sys
-project = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(project)
 import unittest
 from framework.browser_engine import BrowserEngine
 from page_objects.menu_management.notification import Notification_Page

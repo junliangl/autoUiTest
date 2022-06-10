@@ -90,5 +90,9 @@
   "none_match_type": [
     "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'至少需要选择一种比对类型')]",
     ""
+  ],
+  "create": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'新建成功')]",
+    ""
   ]
 }

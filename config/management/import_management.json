@@ -1,0 +1,137 @@
+{
+  "none_data": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td/div/nz-embed-empty/nz-empty/p",
+    ""
+  ],
+  "create": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-title-footer/div/div[2]/button",
+      ""
+    ],
+    "person_db": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[1]/sf-radio/sf-item-wrap/nz-form-item/div[2]/div/div/nz-radio-group/label[@nz-radio]/span/span[contains(text(), '人员库')]/../..",
+      ""
+    ],
+    "case_db": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[1]/sf-radio/sf-item-wrap/nz-form-item/div[2]/div/div/nz-radio-group/label[@nz-radio]/span/span[contains(text(), '案件库')]/../..",
+      ""
+    ],
+    "target_import_db": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[2]/sf-select/sf-item-wrap/nz-form-item/div[2]/div/div/nz-select/nz-select-top-control",
+      ""
+    ],
+    "data_type": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[3]/sf-select/sf-item-wrap/nz-form-item/div[2]/div/div/nz-select/nz-select-top-control",
+      ""
+    ],
+    "TL_LL_match_db": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[4]/sf-custom/sf-item-wrap/nz-form-item/div[2]/div/div/div[1]/nz-select/nz-select-top-control",
+      ""
+    ],
+    "TL_LL_text": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[4]/sf-custom/sf-item-wrap/nz-form-item/div[2]/div/div/div[1]/div/nz-spin/div",
+      ""
+    ],
+    "LT_TT_match_db": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[4]/sf-custom/sf-item-wrap/nz-form-item/div[2]/div/div/div[2]/nz-select/nz-select-top-control",
+      ""
+    ],
+    "LT_TT_text": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[4]/sf-custom/sf-item-wrap/nz-form-item/div[2]/div/div/div[2]/div/nz-spin/div",
+      ""
+    ],
+    "match_priority": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[5]/sf-select/sf-item-wrap/nz-form-item/div[2]/div/div/nz-select/nz-select-top-control",
+      ""
+    ],
+    "group_change_true": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[6]/sf-radio/sf-item-wrap/nz-form-item/div[2]/div/div/nz-radio-group/label[@nz-radio]/span/span[contains(text(), '是')]/../..",
+      ""
+    ],
+    "group_change_false": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[6]/sf-radio/sf-item-wrap/nz-form-item/div[2]/div/div/nz-radio-group/label[@nz-radio]/span/span[contains(text(), '否')]/../..",
+      ""
+    ],
+    "import_change_true": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[7]/sf-radio/sf-item-wrap/nz-form-item/div[2]/div/div/nz-radio-group/label[@nz-radio]/span/span[contains(text(), '是')]/../.."
+    ],
+    "import_change_false": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/app-auto-send-setting-form/sf/form/sf-item/sf-object/sf-item[7]/sf-radio/sf-item-wrap/nz-form-item/div[2]/div/div/nz-radio-group/label[@nz-radio]/span/span[contains(text(), '否')]/../.."
+    ],
+    "type_first": [
+      "/html/body/div[2]/div[@dir]/div/nz-option-container/div/cdk-virtual-scroll-viewport/div[1]/nz-option-item[1]"
+    ],
+    "type_last": [
+      "/html/body/div[2]/div[@dir]/div/nz-option-container/div/cdk-virtual-scroll-viewport/div[1]/nz-option-item[last()]"
+    ],
+    "cancel": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[3]/button[1]",
+      ""
+    ],
+    "confirm": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[3]/button[2]",
+      ""
+    ]
+  },
+  "target_import_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[1]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "target_match_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[2]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "match_type": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[3]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "data_type": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[4]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "match_priority": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[5]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "group_change": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[6]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "import_change": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[7]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "last_editor": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[8]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "last_edit_time": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[9]/app-customize-data-cell/span/span",
+    ""
+  ],
+  "action": {
+    "edit": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[10]/span[1]/button",
+      ""
+    ],
+    "delete": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[10]/span[2]/button",
+      ""
+    ],
+    "disabled_delete": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-import-setting/div/div[2]/app-customize-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[10]/span[2]/button[@disabled]",
+      ""
+    ],
+    "cancel": [
+      "/html/body/div[2]/div[3]/div/nz-modal-confirm-container/div/div/div/div/div[2]/button[1]",
+      ""
+    ],
+    "confirm": [
+      "/html/body/div[2]/div[3]/div/nz-modal-confirm-container/div/div/div/div/div[2]/button[2]",
+      ""
+    ]
+  },
+  "attribute_value": [
+    "ant-radio-wrapper-checked"
+  ]
+}

@@ -121,21 +121,21 @@ class BasePage(object):
             logger.warning('显式等待元素失败.')
 
     # 暂时用不到这个自定义方法
-    def find_element(self, *selector):
-        """
-        定位元素方法
-        传入元组
-        传入的时候定义好定位的方式和元素
-        """
-        # noinspection PyBroadException
-        try:
-            # self.forced_wait(*selector)
-            element = self.driver.find_element(*selector)
-            logger.info(f"成功找到元素：{selector}")
-            return element
-        except Exception:
-            logger.error(f"找不到元素: {self.get_element(*selector)}")
-            self.get_windows_img()
+    # def find_element(self, *selector):
+    #     """
+    #     定位元素方法
+    #     传入元组
+    #     传入的时候定义好定位的方式和元素
+    #     """
+    #     # noinspection PyBroadException
+    #     try:
+    #         # self.forced_wait(*selector)
+    #         element = self.driver.find_element(*selector)
+    #         logger.info(f"成功找到元素：{selector}")
+    #         return element
+    #     except Exception:
+    #         logger.error(f"找不到元素: {self.get_element(*selector)}")
+    #         self.get_windows_img()
 
     def find_element_attribute(self, attribute, *selector):
         """
@@ -149,6 +149,7 @@ class BasePage(object):
             logger.error("找不到该节点标签的属性值")
             logger.error(e)
             self.get_windows_img()
+            return ''
 
     def get_element(self, *selector):
         """

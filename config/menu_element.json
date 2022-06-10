@@ -61,6 +61,10 @@
     "inspect_management": [
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'检视组管理')]/../..",
       ""
+    ],
+    "import_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'入库设置')]/../..",
+      ""
     ]
   },
   "staging_setting": {
@@ -94,6 +98,10 @@
     ],
     "inspect_management": [
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/nz-spin/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'检视组管理')]/../..",
+      ""
+    ],
+    "import_management": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-custom-group/app-custom-group-navigator/div/div/nz-spin/div/div/div[@nz-col]/nz-card/div/div[contains(text(),'入库设置')]/../..",
       ""
     ]
   },
