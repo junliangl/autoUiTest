@@ -152,7 +152,7 @@
       ""
     ],
     "log_out": [
-      "/html/body/div[2]/div[@dir]/div/div/ul/li[last()]/a[contains(text(),'退出')]/..",
+      "/html/body/div[2]/div[@dir]/div/div/ul/li[@class]/a[contains(text(),'退出')]",
       ""
     ]
   },

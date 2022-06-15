@@ -1,0 +1,204 @@
+{
+  "system_management": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-header/div/div[2]/div[1]",
+    ""
+  ],
+  "group_management": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-navigator/div/div/div/div[1]/nz-card/div/div[contains(text(),'付费域')]/../..",
+    ""
+  ],
+  "create_new_group": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-list/div/div[3]/div[1]/div[2]/button",
+    ""
+  ],
+  "group_name": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[1]/nz-form-control/div/div/input",
+    ""
+  ],
+  "group_id": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[2]/nz-form-control/div/div/input",
+    ""
+  ],
+  "group_area": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[3]/nz-form-control",
+      ""
+    ],
+    "ministry": [
+      "/html/body/div[2]/div/div/div/ul/li",
+      ""
+    ],
+    "province": [
+      "/html/body/div[2]/div/div/div/ul[2]/li[23]",
+      ""
+    ],
+    "city": [
+      "/html/body/div[2]/div/div/div/ul[3]/li[1]"
+    ],
+    "district": [
+      "/html/body/div[2]/div/div/div/ul[4]/li[5]",
+      ""
+    ]
+  },
+  "group_account_number": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[4]/nz-form-control/div/div/input",
+    ""
+  ],
+  "group_app_number": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[5]/nz-form-control/div/div/input",
+    ""
+  ],
+  "group_expiration_time": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[6]/nz-form-control/div/div/nz-date-picker/div/input",
+    ""
+  ],
+  "set_admin": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[7]/nz-form-control/div/div/nz-select/nz-select-top-control",
+    ""
+  ],
+  "set_public_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[8]/nz-form-control/div/div/nz-select/nz-select-top-control",
+    ""
+  ],
+  "available_quota": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[9]/nz-form-control/div/div/input",
+    ""
+  ],
+  "quota_expiration_time": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[11]/nz-form-control/div/div/nz-date-picker/div/input",
+    ""
+  ],
+  "finger_palm": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[12]/nz-form-control/div/div/nz-radio-group/label/span[contains(text(), '指掌纹')]/..",
+    ""
+  ],
+  "finger": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[12]/nz-form-control/div/div/nz-radio-group/label/span[contains(text(), '指纹')]/..",
+    ""
+  ],
+  "mobile_police": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[13]/nz-form-control/div/div/label",
+    ""
+  ],
+  "moqi_match": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[14]/nz-form-control/div/div/label",
+    ""
+  ],
+  "invite_match": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[15]/nz-form-control/div/div/label",
+    ""
+  ],
+  "save_group": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-add/div/div/div/div/form/nz-form-item[16]/nz-form-control/div/div/button",
+    ""
+  ],
+  "search_input": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-list/div/div[2]/form/nz-form-item[1]/nz-form-control/div/div/input",
+    ""
+  ],
+  "search": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-list/div/div[2]/form/nz-form-item[2]/nz-form-control/div/div/button",
+    ""
+  ],
+  "group_name_text": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-list/div/div[3]/div[2]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[1]",
+    ""
+  ],
+  "group": {
+    "button": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-list/div/div[3]/div[2]/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr",
+      ""
+    ],
+    "detail": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-detail/div/div[2]/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr[5]/td[3]/a[contains(text(), '详情')]",
+      ""
+    ],
+    "role": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-custom-group-manage/section[2]/div/div[2]/div[2]/nz-list/nz-spin/div/div/nz-list-item",
+      ""
+    ],
+    "invite_user": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-custom-group-manage/section[1]/div/div[2]/button[@class]/span[contains(text(), '邀请用户入组')]"
+    ],
+    "input_account": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[2]/form/nz-form-item/nz-form-control/div/div/nz-select/nz-select-top-control/nz-select-search/input",
+      ""
+    ],
+    "first_user": [
+      "/html/body/div[2]/div[@dir]/div/nz-option-container/div/cdk-virtual-scroll-viewport/div[1]/nz-option-item/div",
+      ""
+    ],
+    "confirm_button": [
+      "/html/body/div[2]/div[@dir]/div/nz-modal-container/div/div/div[3]/button[2]",
+      ""
+    ]
+  },
+  "db_detail": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-custom-group-detail/div/div[2]/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr[3]/td[3]",
+    ""
+  ],
+  "add_private_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-database-list/div/div[2]/div[1]/div[2]/button[2]",
+    ""
+  ],
+  "private_db_name": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[1]/nz-form-control/div/div/input",
+    ""
+  ],
+  "private_db_id": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[2]/nz-form-control/div/div/input",
+    ""
+  ],
+  "private_case_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[5]/nz-form-control/div/div/nz-radio-group/label/span[contains(text(), '案件库')]/..",
+    ""
+  ],
+  "max_data": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[6]/nz-form-control/div/div/input",
+    ""
+  ],
+  "db_management": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-navigator/div/div/div/div[2]/nz-card/div/div[contains(text(), '指纹库列表')]/../..",
+    ""
+  ],
+  "create_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-manage-database-list/div/div[2]/div[1]/div[2]/button",
+    ""
+  ],
+  "db_name": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[1]/nz-form-control/div/div/input",
+    ""
+  ],
+  "db_id": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[2]/nz-form-control/div/div/input",
+    ""
+  ],
+  "private_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[3]/nz-form-control/div/div/nz-radio-group/label/span[contains(text(), '私有库')]",
+    ""
+  ],
+  "input_group": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[4]/nz-form-control/div/div/nz-select/nz-select-top-control/nz-select-search/input",
+    ""
+  ],
+  "choose_group": [
+    "/html/body/div[2]/div[2]/div/nz-option-container/div/cdk-virtual-scroll-viewport/div[1]/nz-option-item[1]",
+    ""
+  ],
+  "case_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[5]/nz-form-control/div/div/nz-radio-group/label/span[contains(text(), '案件库')]",
+    ""
+  ],
+  "max_finger": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[6]/nz-form-control/div[1]/div/input",
+    ""
+  ],
+  "max_palm": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[7]/nz-form-control/div[1]/div/input",
+    ""
+  ],
+  "save_db": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-admin/app-admin-manage-database-add/div/div[2]/div/div/form/nz-form-item[@class]/nz-form-control/div/div/button",
+    ""
+  ]
+}

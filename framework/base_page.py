@@ -17,6 +17,8 @@ logger = Logger(logger="测试流程").get_log()
 get_browser_info = Browser_Info()
 project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+account = None
+
 
 class BasePage(object):
     """
@@ -323,10 +325,20 @@ class BasePage(object):
         try:
             self.driver.refresh()
             logger.info("刷新网页成功")
-            self.sleep(3)
+            self.sleep(2)
         except Exception:
             logger.error("刷新网页失败")
             self.get_windows_img()
+
+    # 创建一个随机账号
+    def get_random_account(self):
+        global account
+        account = self.get_random_name() + self.get_random_name()[5:7]
+        return account
+
+    @staticmethod
+    def get_account():
+        return account
 
     @staticmethod
     def get_url():

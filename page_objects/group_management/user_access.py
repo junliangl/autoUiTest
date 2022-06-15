@@ -69,10 +69,18 @@ class User_Access_Page(BasePage):
     reminder = (method_json["method"][0], reminder_json["reminder"][0])
     group_number_element = (method_json["method"][0], user_access_json["child_group"]["group_number"][0])
     role_number_element = (method_json["method"][0], user_access_json["role_group"]["role_number"][0])
-    
+
     def login(self):
-        login = Login(self.driver)
-        login.login('invited')
+        # 以下为调试使用
+        # login = Login(self.driver)
+        # login.login('')
+
+        if self.get_account():
+            login = Login(self.driver)
+            # 参数为'superadmin'就登录superadmin账号，其他则登录注册成功的账号
+            login.login('')
+        else:
+            raise Exception('登录账号为空!')
 
     def click_setting_button(self):
         self.click(*self.setting_button_element)

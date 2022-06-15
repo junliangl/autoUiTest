@@ -1,0 +1,10 @@
+{
+  "accept": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/div/div/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[5]/div/a[contains(text(), '加入')]",
+    ""
+  ],
+  "refuse": [
+    "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-message/div[2]/nz-tabset/div/div/div/nz-table/nz-spin/div/div/nz-table-inner-default/div/table/tbody/tr/td[5]/div/a[contains(text(), '拒绝')]",
+    ""
+  ]
+}

@@ -22,20 +22,24 @@ class Login(BasePage):
     input_username_element = (method_json["method"][0], login_json["account"][0])
     input_password_element = (method_json["method"][0], login_json["password"][0])
     login_button_element = (method_json["method"][0], login_json["login_button"][0])
-    account1 = account_json["invited"]["account"]
-    account2 = account_json["uninvited"]["account"]
-    password1 = account_json["invited"]["password"]
-    password2 = account_json["uninvited"]["password"]
+    superadmin_account = account_json["superadmin"]["account"]
+    superadmin_password = account_json["superadmin"]["password"]
+    change_password = account_json["change"]["password"]
 
     def login(self, test):
-        if test == 'invited':
-            self.input(self.account1, *self.input_username_element)
-            self.input(self.password1, *self.input_password_element)
+        if test == 'superadmin':
+            self.input(self.superadmin_account, *self.input_username_element)
+            self.input(self.superadmin_password, *self.input_password_element)
+        elif test == 'change_password':
+            # 静态账号调试使用
+            # self.input('test006', *self.input_username_element)
+            self.input(self.get_account(), *self.input_username_element)
+            self.input(self.change_password, *self.input_password_element)
         else:
-            self.input(self.account2, *self.input_username_element)
-            self.input(self.password2, *self.input_password_element)
+            # 静态账号调试使用
+            # self.input('test006', *self.input_username_element)
+            self.input(self.get_account(), *self.input_username_element)
+            self.input('aA123456', *self.input_password_element)
         action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()
         self.click(*self.login_button_element)
         self.sleep(1)
-
-

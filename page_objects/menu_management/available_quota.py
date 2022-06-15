@@ -25,8 +25,16 @@ class Available_Quota_Page(BasePage):
     quota_list_element = (method_json["method"][0], available_quota_json["quota_list"][0])
 
     def login(self):
-        login = Login(self.driver)
-        login.login('uninvited')
+        # 以下为调试使用
+        # login = Login(self.driver)
+        # login.login('')
+
+        if self.get_account():
+            login = Login(self.driver)
+            # 参数为'superadmin'就登录superadmin账号，其他则登录注册成功的账号
+            login.login('')
+        else:
+            raise Exception('登录账号为空!')
 
     def click_quota_info(self):
         self.click(*self.quota_info_element)

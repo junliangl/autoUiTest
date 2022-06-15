@@ -36,8 +36,16 @@ class Message_Page(BasePage):
     action_element = (method_json["method"][0], message_json["action"][0])
 
     def login(self):
-        login = Login(self.driver)
-        login.login('invited')
+        # 以下为调试使用
+        # login = Login(self.driver)
+        # login.login('')
+
+        if self.get_account():
+            login = Login(self.driver)
+            # 参数为'superadmin'就登录superadmin账号，其他则登录注册成功的账号
+            login.login('')
+        else:
+            raise Exception('登录账号为空!')
 
     def get_uncheck_message_number(self):
         # noinspection PyBroadException

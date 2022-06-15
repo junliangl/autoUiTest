@@ -6,5 +6,13 @@
   "uninvited": {
     "account": "testauto",
     "password": "aA123456"
+  },
+  "superadmin": {
+    "account": "superadmin",
+    "password": "aA123456"
+  },
+  "change": {
+    "account": "",
+    "password": "Aa123456"
   }
 }

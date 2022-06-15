@@ -1,21 +1,17 @@
 # coding=utf-8
 import os
 import unittest
-from ddt import ddt, file_data
 from framework.browser_engine import BrowserEngine
 from page_objects.account_management.change_password import Change_Password_Page
 from framework.logger import Logger
 
 logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-change_password_file = os.path.join(os.path.join(project_path, 'data'), 'change_password')
-data_path = os.path.join(change_password_file, 'change_password_data.json')
 
 
-@ddt
 class Test_Change_Password(unittest.TestCase):
     """
-    测试登录模块
+    测试修改密码模块
     """
 
     @classmethod
@@ -31,35 +27,44 @@ class Test_Change_Password(unittest.TestCase):
         """
         测试结束后的操作，这里基本上都是关闭浏览器
         """
+        change_password_page = Change_Password_Page(cls.driver)
+        change_password_page.restore_initial_password()
         cls.driver.close()
 
-    def test01_cancel_change_password(self):
+    def test1_cancel_change_password(self):
         """
         测试取消修改密码
         """
         change_password_page = Change_Password_Page(self.driver)
         change_password_page.login()
         result = change_password_page.get_cancel_result()
-
         # 如果找到取消元素那么判定取消修改密码页面失败
         if result:
             self.assertTrue(result, logger.info('取消修改密码成功'))
         else:
-            self.assertTrue(result, logger.critical('取消修改密码失败'))
+            self.assertTrue(result, logger.error('取消修改密码失败'))
 
-    @file_data(data_path)
-    def test02_change_password(self, password, new_password, confirm_password):
+    def test2_change_same_password(self):
+        """
+        测试修改相同的密码
+        """
+        change_password_page = Change_Password_Page(self.driver)
+        result = change_password_page.change_same_password()
+        if result:
+            self.assertTrue(result, logger.info('不能修改成相同的密码'))
+        else:
+            self.assertTrue(result, logger.error('可以修改成相同的密码'))
+
+    def test3_change_right_password(self):
         """
         测试修改密码
         """
         change_password_page = Change_Password_Page(self.driver)
-        result = change_password_page.get_change_result(password, new_password, confirm_password)
-
-        # 如果找到确认按钮那么判定修改密码失败
+        result = change_password_page.change_right_password()
         if result:
-            self.assertTrue(result, logger.info('修改密码成功'))
+            self.assertTrue(result, logger.info('修改密码成功.'))
         else:
-            self.assertTrue(result, logger.critical('修改密码失败'))
+            self.assertTrue(result, logger.error('修改密码失败!'))
 
 
 if __name__ == '__main__':

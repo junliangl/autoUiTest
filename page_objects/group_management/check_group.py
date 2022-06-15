@@ -29,8 +29,16 @@ class Check_Group_Page(BasePage):
     group_name = (method_json["method"][0], group_management_json["child_group"]["group_name"][0])
 
     def login(self):
-        login = Login(self.driver)
-        login.login('invited')
+        # 以下为调试使用
+        # login = Login(self.driver)
+        # login.login('')
+
+        if self.get_account():
+            login = Login(self.driver)
+            # 参数为'superadmin'就登录superadmin账号，其他则登录注册成功的账号
+            login.login('')
+        else:
+            raise Exception('登录账号为空!')
 
     def click_user_access(self):
         if self.get_url() == 'http://10.1.1.80:7001/':

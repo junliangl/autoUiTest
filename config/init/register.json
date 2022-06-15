@@ -58,7 +58,7 @@
     ]
   },
   "company": [
-    "//*[@id=\"workUnit\"]",
+    "/html/body/app-root/app-register/div/form/nz-form-item[8]/nz-form-control/div/div/input",
     ""
   ],
   "enter_button": [

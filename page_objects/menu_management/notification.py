@@ -40,8 +40,16 @@ class Notification_Page(BasePage):
     disabled_attribute_value = notification_json["attribute_value"]["disabled"][0]
 
     def login(self):
-        login = Login(self.driver)
-        login.login('invited')
+        # 以下为调试使用
+        # login = Login(self.driver)
+        # login.login('')
+
+        if self.get_account():
+            login = Login(self.driver)
+            # 参数为'superadmin'就登录superadmin账号，其他则登录注册成功的账号
+            login.login('')
+        else:
+            raise Exception('登录账号为空!')
 
     def check_default_reminder_button(self):
         global result

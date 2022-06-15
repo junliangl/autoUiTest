@@ -31,8 +31,16 @@ class User_Management_Page(BasePage):
     package_expire_time = (method_json["method"][0], user_management_json["package_expire_time"][0])
 
     def login(self):
-        login = Login(self.driver)
-        login.login('invited')
+        # 以下为调试使用
+        # login = Login(self.driver)
+        # login.login('')
+
+        if self.get_account():
+            login = Login(self.driver)
+            # 参数为'superadmin'就登录superadmin账号，其他则登录注册成功的账号
+            login.login('')
+        else:
+            raise Exception('登录账号为空!')
 
     def get_user_management_info(self):
         self.click(*self.setting_button_element)

@@ -61,7 +61,7 @@
       ""
     ],
     "override": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[@class]/nz-form-control/div/div/nz-radio-group/label/span[contains(text(), '覆盖')]/..",
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[@class]/nz-form-control/div/div/nz-radio-group/label[2]/span[contains(text(), '覆盖')]/..",
       ""
     ],
     "not_auto_match": [
@@ -73,7 +73,12 @@
       ""
     ],
     "change_auto_match": [
-      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[@class]/nz-form-control/div/div/button[@nztype = 'link']"
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[@class]/nz-form-control/div/div/button[@nztype = 'link']",
+      ""
+    ],
+    "disabled_change_auto_match": [
+      "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[@class]/nz-form-control/div/div/button[@disabled]",
+      ""
     ],
     "icon_pencil": [
       "/html/body/app-root/app-shell/div/nz-layout/nz-layout/nz-content/app-add-batch-task/app-add-batch-task-upload/div[2]/div/div/form/nz-form-item[@class]/nz-form-control/div/div/button/i[@nztype = 'edit']",

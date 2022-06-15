@@ -7,12 +7,11 @@ from framework.logger import Logger
 
 logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-data_path = os.path.join(os.path.join(project_path, 'data'), 'login_and_logout_data.json')
 
 
 class Test_Login_And_Logout(unittest.TestCase):
     """
-    测试登录模块
+    测试登录注销模块
     """
 
     @classmethod
@@ -36,8 +35,6 @@ class Test_Login_And_Logout(unittest.TestCase):
         """
         login_and_logout_page = Login_And_Logout_Page(self.driver)
         login_and_logout_page.login()
-        login_and_logout_page.get_windows_img()
-
         # 如果找到登录的元素那么判定登录成功
         result = login_and_logout_page.get_login_result()
         if result is True:

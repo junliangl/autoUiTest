@@ -3,8 +3,16 @@
     "html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span",
     ""
   ],
+  "register": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'用户注册成功')]",
+    ""
+  ],
   "login": [
     "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'登录成功')]",
+    ""
+  ],
+  "change_same_password": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'新密码不能与原密码相同，请重试')]",
     ""
   ],
   "add_child_group": [
@@ -93,6 +101,18 @@
   ],
   "create": [
     "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'新建成功')]",
+    ""
+  ],
+  "create_group": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'新建域成功')]",
+    ""
+  ],
+  "create_db": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'新建指纹库成功')]",
+    ""
+  ],
+  "accept_invite": [
+    "/html/body/div[2]/div[1]/div/nz-message-container/div/nz-message[last()]/div/div/div/span[contains(text(),'消息处理完成')]",
     ""
   ]
 }

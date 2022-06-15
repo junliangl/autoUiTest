@@ -32,30 +32,41 @@ class Test_Import_Page(unittest.TestCase):
         """
         cls.driver.close()
 
-    def test01_enter_import_page(self):
+    def test01_check_import_setting_exist(self):
+        """
+        测试查看是否有入库设置
+        """
+        import_page = Import_File_Page(self.driver)
+        import_page.login()
+        result = import_page.check_import_setting_exist()
+        if result:
+            self.assertTrue(result, logger.debug('存在入库设置.'))
+        else:
+            self.assertTrue(result, logger.error('不存在入库设置!'))
+
+    def test02_enter_import_page(self):
         """
         测试进入导入页
         """
         import_page = Import_File_Page(self.driver)
-        import_page.login()
         result = import_page.enter_import_file_page()
         if result:
             self.assertTrue(result, logger.debug('进入导入页没有问题.'))
         else:
             self.assertTrue(result, logger.error('进入导入页存在问题!'))
 
-    def test02_check_buttons(self):
+    def test03_check_buttons(self):
         """
         测试查看默认buttons
         """
         import_page = Import_File_Page(self.driver)
         result = import_page.check_default_buttons()
         if result:
-            self.assertTrue(result, logger.debug('查看buttons问题.'))
+            self.assertTrue(result, logger.debug('查看buttons没有问题.'))
         else:
             self.assertTrue(result, logger.error('buttons存在问题!'))
 
-    def test03_switch_buttons(self):
+    def test04_switch_buttons(self):
         """
         测试切换按钮
         """

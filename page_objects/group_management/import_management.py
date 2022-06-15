@@ -71,8 +71,16 @@ class Import_Management_Page(BasePage):
     delete_reminder = (method_json["method"][0], reminder_json["delete"][0])
 
     def login(self):
-        login = Login(self.driver)
-        login.login('invited')
+        # 以下为调试使用
+        # login = Login(self.driver)
+        # login.login('')
+
+        if self.get_account():
+            login = Login(self.driver)
+            # 参数为'superadmin'就登录superadmin账号，其他则登录注册成功的账号
+            login.login('')
+        else:
+            raise Exception('登录账号为空!')
 
     def check_import_settings(self):
         global result
