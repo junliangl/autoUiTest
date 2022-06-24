@@ -1,42 +1,85 @@
 # -*- coding:utf-8 -*-
 import os
+import platform
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome import service
 from framework.logger import Logger
 from framework.browser_info import Browser_Info
-
 logger = Logger(logger="浏览器初始化配置").get_log()
 get_browser_info = Browser_Info()
 
 
 class BrowserEngine:
     dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    geckodriver_driver_path = os.path.join(os.path.join(dir, 'tools'), 'geckodriver.exe')
-    chrome_driver_path = os.path.join(os.path.join(dir, 'tools'), 'chromedriver.exe')
-    ie_driver_path = os.path.join(os.path.join(dir, 'tools'), 'IEDriverServer.exe')
+    windows_geckodriver_driver_path = os.path.join(os.path.join(dir, 'tools'), 'geckodriver.exe')
+    windows_chrome_driver_path = os.path.join(os.path.join(dir, 'tools'), 'chromedriver.exe')
+    windows_ie_driver_path = os.path.join(os.path.join(dir, 'tools'), 'IEDriverServer.exe')
+    linux_chrome_driver_path = os.path.join(os.path.join(dir, 'tools'), 'chromedriver')
 
     def __init__(self, driver):
         self.driver = driver
-
-        # 从 browser_message 里面拿到数据
 
     def open_browser(self, driver):
         # 获取配置文件属性
         logger.info(f"You had select {get_browser_info.get_driver()} browser.")
         logger.info(f"The test server url is: {get_browser_info.get_url()}")
 
-        if get_browser_info.get_driver() == "Firefox":
-            s = Service(self.geckodriver_driver_path)  # 给Firefox()指定驱动路径
-            driver = webdriver.Firefox(service=s)
-            logger.info("Starting firefox browser.")
-        elif get_browser_info.get_driver() == "Chrome":
-            s = Service(self.chrome_driver_path)  # 给Chrome()指定驱动路径
-            driver = webdriver.Chrome(service=s)
-            logger.info("Starting Chrome browser.")
-        elif get_browser_info.get_driver() == "IE":
-            s = Service(self.geckodriver_driver_path)
-            driver = webdriver.Ie(service=s)
-            logger.info("Starting IE browser.")
+        if platform.system() == 'Linux':
+            if get_browser_info.get_driver() == "Chrome":
+                options = webdriver.chrome.options.Options()
+                options.add_argument('--headless')  # 使用无头模式执行
+                options.add_argument('--disable-gpu')
+                options.add_argument('disable-extensions')
+                options.add_argument('--no-sandbox')
+                _service = webdriver.chrome.service.Service(self.linux_chrome_driver_path)  # 给Chrome()指定驱动路径
+                driver = webdriver.Chrome(service=_service, options=options)
+                logger.info("Starting Chrome browser.")
+            elif get_browser_info.get_driver() == "Firefox":
+                options = webdriver.firefox.options.Options()
+                options.add_argument('--headless')  # 使用无头模式执行
+                options.add_argument('--disable-gpu')
+                options.add_argument('disable-extensions')
+                options.add_argument('--no-sandbox')
+                _service = webdriver.chrome.service.Service(self.windows_geckodriver_driver_path)  # 给Firefox()指定驱动路径
+                driver = webdriver.Firefox(service=_service)
+                logger.info("Starting firefox browser.")
+            elif get_browser_info.get_driver() == "IE":
+                options = webdriver.firefox.options.Options()
+                options.add_argument('--headless')  # 使用无头模式执行
+                options.add_argument('--disable-gpu')
+                options.add_argument('disable-extensions')
+                options.add_argument('--no-sandbox')
+                _service = webdriver.chrome.service.Service(self.windows_ie_driver_path)
+                driver = webdriver.Ie(service=_service)
+                logger.info("Starting IE browser.")
+        elif platform.system() == 'Windows':
+            if get_browser_info.get_driver() == "Chrome":
+                options = webdriver.chrome.options.Options()
+                options.add_argument('--headless')  # 使用无头模式执行
+                options.add_argument('--disable-gpu')
+                options.add_argument('disable-extensions')
+                options.add_argument('--no-sandbox')
+                _service = webdriver.chrome.service.Service(self.windows_chrome_driver_path)  # 给Chrome()指定驱动路径
+                driver = webdriver.Chrome(service=_service, options=options)
+                logger.info("Starting Chrome browser.")
+            elif get_browser_info.get_driver() == "Firefox":
+                options = webdriver.firefox.options.Options()
+                options.add_argument('--headless')  # 使用无头模式执行
+                options.add_argument('--disable-gpu')
+                options.add_argument('disable-extensions')
+                options.add_argument('--no-sandbox')
+                _service = webdriver.chrome.service.Service(self.windows_geckodriver_driver_path)  # 给Firefox()指定驱动路径
+                driver = webdriver.Firefox(service=_service)
+                logger.info("Starting firefox browser.")
+            elif get_browser_info.get_driver() == "IE":
+                options = webdriver.firefox.options.Options()
+                options.add_argument('--headless')  # 使用无头模式执行
+                options.add_argument('--disable-gpu')
+                options.add_argument('disable-extensions')
+                options.add_argument('--no-sandbox')
+                _service = webdriver.chrome.service.Service(self.windows_ie_driver_path)
+                driver = webdriver.Ie(service=_service)
+                logger.info("Starting IE browser.")
         driver.get(get_browser_info.get_url())
         logger.info(f"Open url: {get_browser_info.get_url()}.")
         driver.maximize_window()

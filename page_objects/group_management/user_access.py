@@ -292,7 +292,7 @@ class User_Access_Page(BasePage):
         while True:
             self.click(*self.child_group1_element)
             self.sleep(2)
-            self.click(*self.role_group1_element)
+            self.execute_script_click(*self.role_group1_element)
             # noinspection PyBroadException
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.invite_to_group))
@@ -301,8 +301,14 @@ class User_Access_Page(BasePage):
                 logger.error("未出现 邀请用户入组 按钮,权限有问题!")
                 self.get_windows_img()
                 break
-            self.click(*self.invite_to_group)
+            self.execute_script_click(*self.invite_to_group)
             self.click(*self.choose_users)
+            # noinspection PyBroadException
+            try:
+                WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.first_user))
+            except Exception:
+                logger.info("该系统没有可邀请的账号")
+                return True
             self.sleep(2)
             self.click(*self.first_user)
             username = self.get_element(*self.first_user)
@@ -409,7 +415,7 @@ class User_Access_Page(BasePage):
             except Exception:
                 logger.warning("该用户组没有可以删除的子用户组")
                 self.get_windows_img()
-                break
+                return True
             self.click(*self.child_group2_element)
             group_name = self.get_element(*self.child_group2_element)
             # noinspection PyBroadException
@@ -457,7 +463,7 @@ class User_Access_Page(BasePage):
                 logger.error("该用户组不能增加子用户组,权限有问题!")
                 self.get_windows_img()
                 break
-            self.click(*self.add_child_group)
+            self.execute_script_click(*self.add_child_group)
             self.input(group_name, *self.child_name_input)
             self.input(code, *self.child_user_group_code)
             self.click(*self.group_region_code)
@@ -500,7 +506,7 @@ class User_Access_Page(BasePage):
                 logger.error("该用户组不能增加角色组,权限有问题!")
                 self.get_windows_img()
                 break
-            self.click(*self.add_role_group)
+            self.execute_script_click(*self.add_role_group)
             self.input(role_name, *self.child_name_input)
             self.click(*self.confirm_button)
             self.forced_wait(*self.reminder)

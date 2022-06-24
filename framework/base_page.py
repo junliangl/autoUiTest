@@ -259,7 +259,7 @@ class BasePage(object):
             element_name = self.get_element(*selector)
             ActionChains(self.driver).move_to_element(element).click(element).perform()
             logger.info(f"按钮 '{element_name}' 已被点击.")
-            self.sleep(2)
+            self.sleep(1.5)
         except Exception as e:
             logger.error("点击按失败")
             logger.error(e)
@@ -271,7 +271,7 @@ class BasePage(object):
         """
         self.forced_wait(*selector)
         try:
-            element = self.driver.find_element(*selector)
+            element = WebDriverWait(self.driver, 5, 1).until(EC.visibility_of_element_located(selector))
             element_name = self.get_element(*selector)
             self.driver.execute_script('arguments[0].click()', element)
             logger.info(f"按钮 '{element_name}' 已被点击.")
@@ -380,6 +380,19 @@ class BasePage(object):
         else:
             raise Exception('操作系统不为Windows或Mac.')
         pyautogui.press('enter', 1)
+
+    @staticmethod
+    def rename_file(old_name, new_name):
+        os.rename(old_name, new_name)
+
+    @staticmethod
+    def get_files_name(path):
+        os.listdir(path)
+
+    @staticmethod
+    def get_time():
+        date_time = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
+        return date_time
 
     @staticmethod
     def force_refresh():

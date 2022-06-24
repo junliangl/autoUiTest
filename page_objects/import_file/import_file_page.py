@@ -8,36 +8,30 @@ from page_objects.common_login.login import Login
 
 logger = Logger(logger='测试流程').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-json_file1 = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'import_file'), 'import_page.json')
-json_file2 = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'management'), 'import_management.json')
+json_file = os.path.join(os.path.join(os.path.join(project_path, 'config'), 'import_file'), 'import_page.json')
 menu_file = os.path.join(os.path.join(project_path, 'config'), 'menu_element.json')
 method_file = os.path.join(os.path.join(project_path, 'config'), 'method.json')
 
-with open(json_file1, encoding='utf-8') as file1:
+data_file = os.path.join(os.path.join(project_path, 'data'), 'bmp_data')
+
+with open(json_file, encoding='utf-8') as file1:
     import_page_json = json.load(file1)
 
-with open(json_file2, encoding='utf-8') as file2:
-    import_management_json = json.load(file2)
+with open(menu_file, encoding='utf-8') as file2:
+    menu_json = json.load(file2)
 
-with open(menu_file, encoding='utf-8') as file3:
-    menu_json = json.load(file3)
-
-with open(method_file, encoding='utf-8') as file4:
-    method_json = json.load(file4)
+with open(method_file, encoding='utf-8') as file3:
+    method_json = json.load(file3)
 
 result = None
-exist = None
-setting = None
+
 
 class Import_File_Page(BasePage):
     setting_button_element = (method_json["method"][0], menu_json["setting"]["button"][0])
     group_element = (method_json["method"][0], menu_json["setting"]["group"][0])
     cd1_import_management = (method_json["method"][0], menu_json["cd1_setting"]["import_management"][0])
     staging_import_management = (method_json["method"][0], menu_json["staging_setting"]["import_management"][0])
-    target_import_db = (method_json["method"][0], import_management_json["target_import_db"][0])
-    delete = (method_json["method"][0], import_management_json["action"]["delete"][0])
-    none_data = (method_json["method"][0], import_management_json["none_data"][0])
-    import_button = (method_json["method"][0], import_page_json["import"][0])
+    import_page_button = (method_json["method"][0], import_page_json["import"][0])
     upload = (method_json["method"][0], import_page_json["upload"]["button"][0])
     case_db = (method_json["method"][0], import_page_json["upload"]["case_database"][0])
     person_db = (method_json["method"][0], import_page_json["upload"]["person_database"][0])
@@ -50,7 +44,8 @@ class Import_File_Page(BasePage):
     not_auto_match = (method_json["method"][0], import_page_json["upload"]["not_auto_match"][0])
     change_auto_match = (method_json["method"][0], import_page_json["upload"]["change_auto_match"][0])
     disabled_change_auto_match = (method_json["method"][0], import_page_json["upload"]["disabled_change_auto_match"][0])
-    import_file = (method_json["method"][0], import_page_json["upload"]["upload"][0])
+    import_button = (method_json["method"][0], import_page_json["upload"]["import"][0])
+    import_files = (method_json["method"][0], import_page_json["upload"]["import_file"][0])
     disabled_import_file = (method_json["method"][0], import_page_json["upload"]["disabled_upload"][0])
     attribute_value = import_page_json["upload"]["attribute_value"][0]
 
@@ -66,32 +61,10 @@ class Import_File_Page(BasePage):
         else:
             raise Exception('登录账号为空!')
 
-    def check_import_setting_exist(self):
-        global setting
-        global exist
-        self.click(*self.setting_button_element)
-        self.click(*self.group_element)
-        if self.get_url() == 'http://10.1.1.80:7001/':
-            self.click(*self.cd1_import_management)
-        elif self.get_url() == 'http://staging.test.frontend.moqi.com.cn/shell':
-            self.click(*self.staging_import_management)
-        # noinspection PyBroadException
-        try:
-            WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.delete))
-            logger.info("该域有库设置.")
-            setting = self.get_element(*self.target_import_db)
-            exist = True
-            return True
-        except Exception:
-            logger.error("该域没有入库设置!")
-            self.get_windows_img()
-            exist = False
-            return False
-
     def enter_import_file_page(self):
         global result
         self.refresh_browser()
-        self.click(*self.import_button)
+        self.click(*self.import_page_button)
         self.click(*self.upload)
         try:
             WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.target_db))
@@ -215,74 +188,6 @@ class Import_File_Page(BasePage):
                 self.get_windows_img()
                 result = False
                 return result
-            # 如果存在入库设置
-            if exist:
-                # noinspection PyBroadException
-                try:
-                    WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.not_auto_match))
-                    # 如果上面查看到的自动入库设置目标库和当前统一就继续执行
-                    if setting == self.get_element(*self.target_db):
-                        if self.attribute_value in self.find_element_attribute('class', *self.not_auto_match):
-                            logger.info("自动类型默认选中不自动比对.")
-                        elif self.attribute_value in self.find_element_attribute('class', *self.auto_match):
-                            logger.error("自动比对类型默认选中自动比对!")
-                            self.get_windows_img()
-                            result = False
-                            return result
-                        else:
-                            logger.error("自动比对类型未被选中!")
-                            self.get_windows_img()
-                            result = False
-                            return result
-                    else:
-                        logger.error("自动入库设置目标库不一致却显示自动入库设置button!")
-                        self.get_windows_img()
-                        result = False
-                        return result
-                except Exception:
-                    if setting == self.get_element(*self.target_db):
-                        logger.error("该目标库有入库设置却不显示自动入库设置button!")
-                        self.get_windows_img()
-                        result = False
-                        return result
-                    else:
-                        logger.error("显示了非法目标库!")
-                        logger.error(self.get_element(*self.target_db))
-                        self.get_windows_img()
-                        result = False
-                        return result
-                try:
-                    WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.disabled_change_auto_match))
-                    logger.info("修改自动比对设置无法被点击.")
-                    try:
-                        WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.change_auto_match))
-                        logger.error("修改自动比对设置可以被点击!")
-                    except Exception as e:
-                        logger.error(e)
-                        self.get_windows_img()
-                        result = False
-                        return False
-                except Exception as e:
-                    logger.error(e)
-                    self.get_windows_img()
-                    result = False
-                    return False
-                self.click(*self.auto_match)
-                if self.attribute_value not in self.find_element_attribute('class', *self.not_auto_match):
-                    if self.attribute_value in self.find_element_attribute('class', *self.auto_match):
-                        try:
-                            WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.change_auto_match))
-                            logger.info('切换自动入库设置button成功.')
-                        except Exception as e:
-                            logger.error('切换按钮自动入库设置button失败!')
-                            logger.error(e)
-                            self.get_windows_img()
-                            return False
-                else:
-                    logger.error('切换按钮自动入库设置button失败!')
-                    self.get_windows_img()
-                    result = False
-                    return result
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.disabled_import_file))
                 logger.info("开始导入 button 当前无法点击.")
@@ -305,17 +210,37 @@ class Import_File_Page(BasePage):
             logger.error("上一个测试用例测试失败,当前测试用例当做失败处理!")
             return False
 
-
-
-
-    # def import_data_file(self):
-    #     if result:
-    #         self.refresh_browser()
-    #         self.click(*self.person_db)
-    #         self.click(*self.import_bmp)
-    #         self.click(*self.override)
-    #         self.click(*self.import_file)
-    #         self.click(*self.)
-    #     else:
-    #         logger.error("上一个测试用例测试失败,当前测试用例当做失败处理!")
-    #         return False
+    def import_data_file(self):
+        person_data = None
+        if result:
+            self.refresh_browser()
+            # 导入到人员库
+            self.click(*self.person_db)
+            self.click(*self.import_bmp)
+            self.click(*self.not_override)
+            try:
+                # 弹出之前测试用例创建的人员库就点击导入
+                WebDriverWait(self.driver, 5, 1).until(EC.text_to_be_present_in_element('test_', self.target_db))
+            except Exception as e:
+                logger.error("默认的人员库为加载成功!")
+                logger.error(e)
+                self.get_windows_img()
+                return False
+            self.click(*self.import_button)
+            self.click(*self.import_files)
+            for filename in range(self.get_files_name(data_file)):
+                if 'R' in filename:
+                    person_data = filename
+                    break
+            if not person_data:
+                logger.error("没找到人员bmp数据!")
+                return False
+            # 改成日期相关名字
+            new_name = f'R{self.get_time()}'
+            self.rename_file(person_data, new_name)
+            data_path = os.path.join(os.path.join(os.path.join(project_path, 'data'), 'bmp_data'), new_name)
+            self.import_file(data_path)
+            self.click(*self.import_files)
+        else:
+            logger.error("上一个测试用例测试失败,当前测试用例当做失败处理!")
+            return False

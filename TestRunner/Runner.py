@@ -3,7 +3,6 @@ import sys
 import os
 import unittest
 import time
-from selenium import webdriver
 
 
 # 找到根目录
@@ -26,18 +25,18 @@ if __name__ == '__main__':
             os.path.join(root_path, 'testsuites'))
         runner = HTMLTestReportCN.HTMLTestRunner(
             stream=file,
-            title=input('请输入测试报告名称：   '),
+            title='Ui_Auto_测试报告',
             description=u'执行情况',
-            tester=input('请输入测试人名字：     '),
+            tester='CI/CD',
         )
         runner.run(suites)
 
 
 # 测试结束后自动打开测试报告且不让它关闭
-def open_report_html():
-    global driver
-    driver = webdriver.Chrome(executable_path=chrome_driver_path)
-    driver.get(os.path.join('file://', HtmlFile))
-
-
-open_report_html()
+# def open_report_html():
+#     global driver
+#     driver = webdriver.Chrome(executable_path=chrome_driver_path)
+#     driver.get(os.path.join('file://', HtmlFile))
+#
+#
+# open_report_html()
