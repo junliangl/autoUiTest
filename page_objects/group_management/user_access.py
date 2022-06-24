@@ -356,8 +356,7 @@ class User_Access_Page(BasePage):
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.role_group2_element))
                 logger.info(f"该用户组有可以删除的 {self.get_element(*self.role_group2_element)} 角色组.")
             except Exception:
-                logger.warning("该用户组没有可以删除的角色组!")
-                self.get_windows_img()
+                logger.info("该用户组没有可以删除的角色组!")
                 return True
             self.click(*self.role_group2_element)
             role_name = self.get_element(*self.role_group2_element)
@@ -413,8 +412,7 @@ class User_Access_Page(BasePage):
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.child_group2_element))
                 logger.info(f"该用户有可以删除的 {self.get_element(*self.child_group2_element)} 子用户组.")
             except Exception:
-                logger.warning("该用户组没有可以删除的子用户组")
-                self.get_windows_img()
+                logger.info("该用户组没有可以删除的子用户组")
                 return True
             self.click(*self.child_group2_element)
             group_name = self.get_element(*self.child_group2_element)
@@ -478,7 +476,6 @@ class User_Access_Page(BasePage):
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.add_child_group_reminder))
                 logger.info(f"子用户组添加成功.")
-                self.get_windows_img()
                 return True
             except Exception:
                 # noinspection PyBroadException
@@ -515,7 +512,6 @@ class User_Access_Page(BasePage):
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.add_role_group_reminder))
                 logger.info(f"角色组添加成功.")
-                self.get_windows_img()
                 return True
             except Exception:
                 # noinspection PyBroadException
