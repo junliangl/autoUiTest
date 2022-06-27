@@ -48,6 +48,12 @@ class Register_Page(BasePage):
     register_reminder = (method_json["method"][0], reminder_json["register"][0])
 
     def register_account(self):
+        try:
+            WebDriverWait(self.driver, 10, 1).until(EC.presence_of_element_located(self.init_button_element))
+        except Exception as e:
+            logger.error("打开网页太慢!")
+            logger.error(e)
+            return False
         self.click(*self.init_button_element)
         self.input(self.get_random_account(), *self.account_element)
         # 设定好默认密码,当然也可以通过以下设置随机密码
