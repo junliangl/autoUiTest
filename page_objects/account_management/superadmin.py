@@ -134,7 +134,7 @@ class Superadmin_Page(BasePage):
         self.click(*self.create_db)
         date_time = time.strftime('%Y_%m_%d_%H_%M', time.localtime(time.time()))
         self.input(f'test_{date_time}', *self.db_name)
-        self.input(self.get_random_number(), *self.db_id)
+        self.input(self.get_random_number()+self.get_random_number(), *self.db_id)
         self.click(*self.private_db)
         self.input(group_name, *self.input_group)
         self.sleep(1)
