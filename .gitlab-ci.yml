@@ -13,4 +13,3 @@ test-job:
 #    - chmod 777 ./screenshots
 #    - chmod 777 ./test_report
     - python3 ./TestRunner/Runner.py
-
