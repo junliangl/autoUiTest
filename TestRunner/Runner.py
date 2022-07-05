@@ -10,6 +10,7 @@ root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_path)
 
 from framework.logger import Logger
+
 logger = Logger(logger="用例失败成功情况").get_log()
 from Python_HTMLTestReportCN import HTMLTestReportCN
 
@@ -23,7 +24,7 @@ if __name__ == '__main__':
     with open(HtmlFile, 'wb') as file:
         print(os.path.abspath(__file__))
         suites = unittest.TestLoader().discover(
-            os.path.join(os.path.join(root_path, 'testsuites'), 'test1_account'))
+            os.path.join(root_path, 'testsuites')),
         runner = HTMLTestReportCN.HTMLTestRunner(
             stream=file,
             title='Ui_Auto_测试报告',
@@ -36,4 +37,4 @@ if __name__ == '__main__':
     logger.info(f"成功的用例数: {test_count.get_count()[0]}")
     logger.error(f"失败的用例数: {test_count.get_count()[1]}")
     logger.error(f"错误的用例数：{test_count.get_count()[2]}")
-    logger.info(f"测试的用例总数：{test_count.get_count()[0]+test_count.get_count()[1]+test_count.get_count()[2]}")
+    logger.info(f"测试的用例总数：{test_count.get_count()[0] + test_count.get_count()[1] + test_count.get_count()[2]}")
