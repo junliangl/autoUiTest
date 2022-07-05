@@ -8,9 +8,9 @@ test-job:
   tags:
     - ui-auto_test
   script:
-    - chmod 777 ./tools/chromedriver
-    - chmod 777 ./logs
-    - chmod 777 ./screenshots
-    - chmod 777 ./test_report
+#    - chmod 777 ./tools/chromedriver
+#    - chmod 777 ./logs
+#    - chmod 777 ./screenshots
+#    - chmod 777 ./test_report
     - python3 ./TestRunner/Runner.py
 
