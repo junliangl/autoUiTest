@@ -33,7 +33,7 @@ if __name__ == '__main__':
         runner.run(suites)
 
     test_count = HTMLTestReportCN._TestResult()
-    logger.info(f"成功的用例数: {test_count.success_count}")
-    logger.error(f"失败的用例数: {test_count.failure_count}")
-    logger.error(f"错误的用例数：{test_count.error_count}")
-    logger.info(f"测试的用例总数：{test_count.error_count+test_count.success_count+test_count.error_count}")
+    logger.info(f"成功的用例数: {test_count.get_count()[0]}")
+    logger.error(f"失败的用例数: {test_count.get_count()[1]}")
+    logger.error(f"错误的用例数：{test_count.get_count()[2]}")
+    logger.info(f"测试的用例总数：{test_count.get_count()[0]+test_count.get_count()[1]+test_count.get_count()[2]}")

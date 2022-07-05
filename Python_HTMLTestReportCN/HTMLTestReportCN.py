@@ -118,6 +118,10 @@ import sys
 # e.g.
 #   >>> logging.basicConfig(stream=HTMLTestRunner.stdout_redirector)
 #   >>>
+success_count = 0
+fail_count = 0
+error_count = 0
+
 
 class OutputRedirector(object):
     """ Wrapper to redirect stdout or stderr """
@@ -505,7 +509,9 @@ class _TestResult(TestResult):
 
 
     def addSuccess(self, test):
+        global success_count
         self.success_count += 1
+        success_count += 1
         TestResult.addSuccess(self, test)
         output = self.complete_output()
         self.result.append((0, test, output, ''))
@@ -517,7 +523,9 @@ class _TestResult(TestResult):
             sys.stderr.write('.')
 
     def addError(self, test, err):
+        global error_count
         self.error_count += 1
+        error_count += 1
         TestResult.addError(self, test, err)
         _, _exc_str = self.errors[-1]
         output = self.complete_output()
@@ -530,7 +538,9 @@ class _TestResult(TestResult):
             sys.stderr.write('E')
 
     def addFailure(self, test, err):
+        global fail_count
         self.failure_count += 1
+        fail_count += 1
         TestResult.addFailure(self, test, err)
         _, _exc_str = self.failures[-1]
         output = self.complete_output()
@@ -541,6 +551,9 @@ class _TestResult(TestResult):
             sys.stderr.write('\n')
         else:
             sys.stderr.write('F')
+
+    def get_count(self):
+        return success_count, fail_count, error_count
 
 
 class HTMLTestRunner(Template_mixin):
