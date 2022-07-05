@@ -29,7 +29,7 @@ class BrowserEngine:
                 options = webdriver.chrome.options.Options()
                 options.add_argument('--headless')  # 使用无头模式执行
                 options.add_argument('--disable-gpu')
-                options.add_argument('disable-extensions')
+                options.add_argument('--disable-extensions')
                 options.add_argument('--no-sandbox')
                 driver = webdriver.Chrome(executable_path=self.linux_chrome_driver_path, options=options)# 给Chrome()指定驱动路径
                 logger.info("Starting Chrome browser.")
