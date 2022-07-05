@@ -24,7 +24,7 @@ if __name__ == '__main__':
     with open(HtmlFile, 'wb') as file:
         print(os.path.abspath(__file__))
         suites = unittest.TestLoader().discover(
-            os.path.join(root_path, 'testsuites')),
+            os.path.join(root_path, 'testsuites'))
         runner = HTMLTestReportCN.HTMLTestRunner(
             stream=file,
             title='Ui_Auto_测试报告',
