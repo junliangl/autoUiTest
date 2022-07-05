@@ -3,14 +3,14 @@ import sys
 import os
 import unittest
 import time
-from framework.logger import Logger
-logger = Logger(logger="用例失败成功情况").get_log()
 
 # 找到根目录
 root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 添加进根目录
 sys.path.append(root_path)
 
+from framework.logger import Logger
+logger = Logger(logger="用例失败成功情况").get_log()
 from Python_HTMLTestReportCN import HTMLTestReportCN
 
 chrome_driver_path = os.path.join(os.path.join(root_path, 'tools'), 'chromedriver.exe')
