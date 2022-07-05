@@ -31,8 +31,7 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('disable-extensions')
                 options.add_argument('--no-sandbox')
-                _service = webdriver.chrome.service.Service(self.linux_chrome_driver_path)  # 给Chrome()指定驱动路径
-                driver = webdriver.Chrome(service=_service, options=options)
+                driver = webdriver.Chrome(executable_path=self.linux_chrome_driver_path, options=options)# 给Chrome()指定驱动路径
                 logger.info("Starting Chrome browser.")
             elif get_browser_info.get_driver() == "Firefox":
                 options = webdriver.firefox.options.Options()
@@ -40,8 +39,7 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('disable-extensions')
                 options.add_argument('--no-sandbox')
-                _service = webdriver.chrome.service.Service(self.windows_geckodriver_driver_path)  # 给Firefox()指定驱动路径
-                driver = webdriver.Firefox(service=_service)
+                driver = webdriver.Firefox(executable_path=self.windows_geckodriver_driver_path)
                 logger.info("Starting firefox browser.")
             elif get_browser_info.get_driver() == "IE":
                 options = webdriver.firefox.options.Options()
@@ -49,8 +47,7 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('disable-extensions')
                 options.add_argument('--no-sandbox')
-                _service = webdriver.chrome.service.Service(self.windows_ie_driver_path)
-                driver = webdriver.Ie(service=_service)
+                driver = webdriver.Ie(executable_path=self.windows_geckodriver_driver_path)
                 logger.info("Starting IE browser.")
         elif platform.system() == 'Windows':
             if get_browser_info.get_driver() == "Chrome":
@@ -59,8 +56,7 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('disable-extensions')
                 options.add_argument('--no-sandbox')
-                _service = webdriver.chrome.service.Service(self.windows_chrome_driver_path)  # 给Chrome()指定驱动路径
-                driver = webdriver.Chrome(service=_service, options=options)
+                driver = webdriver.Chrome(executable_path=self.windows_geckodriver_driver_path, options=options)
                 logger.info("Starting Chrome browser.")
             elif get_browser_info.get_driver() == "Firefox":
                 options = webdriver.firefox.options.Options()
@@ -68,8 +64,7 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('disable-extensions')
                 options.add_argument('--no-sandbox')
-                _service = webdriver.chrome.service.Service(self.windows_geckodriver_driver_path)  # 给Firefox()指定驱动路径
-                driver = webdriver.Firefox(service=_service)
+                driver = webdriver.Firefox(executable_path=self.windows_geckodriver_driver_path)
                 logger.info("Starting firefox browser.")
             elif get_browser_info.get_driver() == "IE":
                 options = webdriver.firefox.options.Options()
@@ -77,8 +72,7 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('disable-extensions')
                 options.add_argument('--no-sandbox')
-                _service = webdriver.chrome.service.Service(self.windows_ie_driver_path)
-                driver = webdriver.Ie(service=_service)
+                driver = webdriver.Ie(executable_path=self.windows_geckodriver_driver_path)
                 logger.info("Starting IE browser.")
         driver.get(get_browser_info.get_url())
         logger.info(f"Open url: {get_browser_info.get_url()}.")
