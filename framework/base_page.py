@@ -3,7 +3,6 @@ import time
 import pandas
 import random
 import os.path
-import pyautogui
 import pyperclip
 import platform
 from selenium.webdriver import ActionChains
@@ -368,18 +367,18 @@ class BasePage(object):
         time.sleep(seconds)
         logger.info(f"强制等待了 {seconds} 秒")
 
-    @staticmethod
-    def import_file(path):
-        time.sleep(2)
-        pyperclip.copy(path)
-        # 判断操作系统
-        if platform.system() == 'Windows':
-            pyautogui.hotkey('ctrl', 'v')
-        elif platform.system() == 'Mac':
-            pyautogui.hotkey('command', 'v')
-        else:
-            raise Exception('操作系统不为Windows或Mac.')
-        pyautogui.press('enter', 1)
+    # @staticmethod
+    # def import_file(path):
+    #     time.sleep(2)
+    #     pyperclip.copy(path)
+    #     # 判断操作系统
+    #     if platform.system() == 'Windows':
+    #         pyautogui.hotkey('ctrl', 'v')
+    #     elif platform.system() == 'Mac':
+    #         pyautogui.hotkey('command', 'v')
+    #     else:
+    #         raise Exception('操作系统不为Windows或Mac.')
+    #     pyautogui.press('enter', 1)
 
     @staticmethod
     def rename_file(old_name, new_name):
@@ -394,13 +393,13 @@ class BasePage(object):
         date_time = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
         return date_time
 
-    @staticmethod
-    def force_refresh():
-        # 强制刷新
-        if platform.system() == 'Windows':
-            pyautogui.hotkey('ctrl', 'shift', 'r')
-        elif platform.system() == 'Mac':
-            pyautogui.hotkey('command', 'shift', 'r')
-        else:
-            raise Exception('操作系统不为Windows或Mac.')
-        time.sleep(2)
+    # @staticmethod
+    # def force_refresh()
+    #     # 强制刷新
+    #     if platform.system() == 'Windows':
+    #         pyautogui.hotkey('ctrl', 'shift', 'r')
+    #     elif platform.system() == 'Mac':
+    #         pyautogui.hotkey('command', 'shift', 'r')
+    #     else:
+    #         raise Exception('操作系统不为Windows或Mac.')
+    #     time.sleep(2)

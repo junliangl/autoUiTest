@@ -9,3 +9,4 @@ test-job:
     - ui-auto_test
   script:
     - python3 ./TestRunner/Runner.py
+
