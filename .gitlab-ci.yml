@@ -8,5 +8,6 @@ test-job:
   tags:
     - ui-auto_test
   script:
+    - sudo chmod 777 ./tools/chromedriver
     - python3 ./TestRunner/Runner.py
 
