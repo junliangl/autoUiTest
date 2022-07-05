@@ -1,18 +1,11 @@
-stages:          # List of stages for jobs, and their order of execution
+stages:
   - build
   - test
   - deploy
 
-build-job:   # This job runs in the test stage.
-  stage: build
-  tags:
-    - ui-auto_test    # It only starts when the job in the build stage completes successfully.
-  script:
-    - pwd
-
-test-job:   # This job runs in the test stage.
+test-job:
   stage: test
   tags:
-    - ui-auto_test    # It only starts when the job in the build stage completes successfully.
+    - ui-auto_test
   script:
     - python3 ./TestRunner/Runner.py
