@@ -1,5 +1,6 @@
 # _*_ coding:utf-8 _*_
 import sys
+import requests
 import os
 import unittest
 import time
@@ -34,7 +35,17 @@ if __name__ == '__main__':
         runner.run(suites)
 
     test_count = HTMLTestReportCN._TestResult()
-    logger.info(f"成功的用例数: {test_count.get_count()[0]}")
-    logger.error(f"失败的用例数: {test_count.get_count()[1]}")
-    logger.error(f"错误的用例数：{test_count.get_count()[2]}")
-    logger.info(f"测试的用例总数：{test_count.get_count()[0] + test_count.get_count()[1] + test_count.get_count()[2]}")
+    requests.post(
+        url='https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=020eb2a4-78a4-47f2-90c3-fb97da4f7f4c',
+        headers={'Content-Type': 'application/json;charset=UTF-8'},
+        json={
+            "msgtype": "text",
+            "text": {
+                "content": f"成功的用例数: {test_count.get_count()[0]}\n"
+                           f"失败的用例数: {test_count.get_count()[1]}\n"
+                           f"错误的用例数：{test_count.get_count()[2]}\n"
+                           f"测试的用例总数：{test_count.get_count()[0] + test_count.get_count()[1] + test_count.get_count()[2]}\n"
+                           f"测试报告地址: 10.1.1.156/ui-auto-test/{HtmlFile}"
+            }
+        }
+    )
