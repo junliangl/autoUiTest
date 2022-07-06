@@ -3,8 +3,8 @@ import time
 import pandas
 import random
 import os.path
-import pyperclip
-import platform
+# import pyperclip
+# import platform
 from selenium.webdriver import ActionChains
 from framework.logger import Logger
 from framework.browser_info import Browser_Info
@@ -232,21 +232,21 @@ class BasePage(object):
             logger.error(e)
             self.get_windows_img()
 
-    def create_csv(self, column, raw):
-        """
-        创建一个csv文件
-        """
-        csv_path = None
-        try:
-            random_name = self.get_random_name()
-            csv_path = os.path.join(os.path.join(os.path.join(project_path, 'data'), 'csv_data'), random_name + '.csv')
-            csv_file = pandas.DataFrame(columns=column, data=raw)
-            csv_file.to_csv(csv_path, mode='w', header=True, index=False, encoding='gbk')
-            logger.info(f"创建: {random_name} 文件成功.")
-        except Exception as e:
-            logger.error("创建 csv 文件失败!")
-            logger.error(e)
-        return csv_path
+    # def create_csv(self, column, raw):
+    #     """
+    #     创建一个csv文件
+    #     """
+    #     csv_path = None
+    #     try:
+    #         random_name = self.get_random_name()
+    #         csv_path = os.path.join(os.path.join(os.path.join(project_path, 'data'), 'csv_data'), random_name + '.csv')
+    #         csv_file = pandas.DataFrame(columns=column, data=raw)
+    #         csv_file.to_csv(csv_path, mode='w', header=True, index=False, encoding='gbk')
+    #         logger.info(f"创建: {random_name} 文件成功.")
+    #     except Exception as e:
+    #         logger.error("创建 csv 文件失败!")
+    #         logger.error(e)
+    #     return csv_path
 
     def actionchains_click(self, *selector):
         """
