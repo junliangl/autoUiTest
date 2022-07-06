@@ -45,7 +45,7 @@ if __name__ == '__main__':
                            f"失败的用例数: {test_count.get_count()[1]}\n"
                            f"错误的用例数：{test_count.get_count()[2]}\n"
                            f"测试的用例总数：{test_count.get_count()[0] + test_count.get_count()[1] + test_count.get_count()[2]}\n"
-                           f"测试报告地址: 10.1.1.156/ui-auto-test/{HtmlFile}"
+                           f"测试报告地址: 10.1.1.156/ui-auto-test/{now_time}-test.html"
             }
         }
     )
