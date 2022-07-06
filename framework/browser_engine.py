@@ -47,16 +47,16 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('disable-extensions')
                 options.add_argument('--no-sandbox')
-                driver = webdriver.Ie(executable_path=self.windows_geckodriver_driver_path)
+                driver = webdriver.Ie(executable_path=self.windows_ie_driver_path)
                 logger.info("Starting IE browser.")
         elif platform.system() == 'Windows':
             if get_browser_info.get_driver() == "Chrome":
                 options = webdriver.chrome.options.Options()
                 options.add_argument('--headless')  # 使用无头模式执行
                 options.add_argument('--disable-gpu')
-                options.add_argument('disable-extensions')
+                options.add_argument('--disable-extensions')
                 options.add_argument('--no-sandbox')
-                driver = webdriver.Chrome(executable_path=self.windows_geckodriver_driver_path, options=options)
+                driver = webdriver.Chrome(executable_path=self.windows_chrome_driver_path, options=options)
                 logger.info("Starting Chrome browser.")
             elif get_browser_info.get_driver() == "Firefox":
                 options = webdriver.firefox.options.Options()
