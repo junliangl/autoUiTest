@@ -13,3 +13,4 @@ test-job:
 #    - chmod 777 ./screenshots
 #    - chmod 777 ./test_report
     - python3 ./TestRunner/Runner.py
+    - cp ./test_report/*.html /usr/share/nginx/html #拷贝测试结果网页到nginx静态网页资源下进行访问
