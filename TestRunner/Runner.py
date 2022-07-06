@@ -36,12 +36,13 @@ if __name__ == '__main__':
 
     test_count = HTMLTestReportCN._TestResult()
     requests.post(
-        url='https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=020eb2a4-78a4-47f2-90c3-fb97da4f7f4c',
+        url='https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=78ba70fe-9f79-4158-9fa1-369e7f399129',
         headers={'Content-Type': 'application/json;charset=UTF-8'},
         json={
             "msgtype": "markdown",
             "markdown": {
-                "content": f"成功的用例数: {test_count.get_count()[0]}\n"
+                "content": f"UI自动化测试结果:\n"
+                           f"成功的用例数: {test_count.get_count()[0]}\n"
                            f"失败的用例数: {test_count.get_count()[1]}\n"
                            f"错误的用例数：{test_count.get_count()[2]}\n"
                            f"测试的用例总数：{test_count.get_count()[0] + test_count.get_count()[1] + test_count.get_count()[2]}\n"
