@@ -1,6 +1,6 @@
 # coding=utf-8
 import time
-import pandas
+# import pandas
 import random
 import os.path
 # import pyperclip
