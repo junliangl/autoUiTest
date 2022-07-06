@@ -8,7 +8,7 @@
     "password": "aA123456"
   },
   "superadmin": {
-    "account": "superadmin",
+    "account": "superadmin_ui-test",
     "password": "aA123456"
   },
   "change": {
