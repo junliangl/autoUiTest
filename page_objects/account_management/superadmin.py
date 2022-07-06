@@ -1,6 +1,8 @@
 import os
 import time
 import json
+
+from selenium.webdriver.common import action_chains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.logger import Logger
@@ -108,7 +110,7 @@ class Superadmin_Page(BasePage):
         self.input('2025-01-01', *self.group_expiration_time)
         self.input('100000', *self.available_quota)
         self.input('2025-01-01', *self.quota_expiration_time)
-        self.actionchains_click(*self.finger_palm)
+        action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()
         self.execute_script_click(*self.mobile_police)
         self.execute_script_click(*self.moqi_match)
         self.execute_script_click(*self.invite_match)
