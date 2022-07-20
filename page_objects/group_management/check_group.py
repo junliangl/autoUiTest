@@ -43,8 +43,6 @@ class Check_Group_Page(BasePage):
     def click_user_access(self):
         if self.get_url() == 'http://10.1.1.80:7001/':
             self.click(*self.cd1_user_access_element)
-        elif self.get_url() == 'http://staging.test.frontend.moqi.com.cn/shell':
-            self.click(*self.staging_user_access_element)
         else:
             self.click(*self.staging_user_access_element)
 

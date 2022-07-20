@@ -47,7 +47,7 @@ class User_Management_Page(BasePage):
         self.click(*self.group_element)
         if self.get_url() == 'http://10.1.1.80:7001/':
             self.click(*self.cd1_user_access_element)
-        elif self.get_url() == 'http://staging.test.frontend.moqi.com.cn/shell':
+        else:
             self.click(*self.staging_user_access_element)
         self.forced_wait(*self.package_expire_time)
         account_quota_available = int(self.get_element(*self.account_quota_available).replace(',', ''))
