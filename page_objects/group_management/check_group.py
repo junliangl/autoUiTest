@@ -45,6 +45,8 @@ class Check_Group_Page(BasePage):
             self.click(*self.cd1_user_access_element)
         elif self.get_url() == 'http://staging.test.frontend.moqi.com.cn/shell':
             self.click(*self.staging_user_access_element)
+        else:
+            self.click(*self.staging_user_access_element)
 
     def get_group_number(self):
         self.click(*self.setting_button_element)
