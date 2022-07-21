@@ -8,6 +8,7 @@ test-job:
   tags:
     - ui-auto_test
   script:
+    - echo ${ENVIRONMENT}
     - chmod 777 ./tools/chromedriver
 #    - chmod 777 ./logs
 #    - chmod 777 ./screenshots
