@@ -12,8 +12,10 @@ root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_path)
 
 from framework.logger import Logger
+from framework.browser_info import Browser_Info
 
 logger = Logger(logger="用例失败成功情况").get_log()
+get_browser_info = Browser_Info()
 from Python_HTMLTestReportCN import HTMLTestReportCN
 
 chrome_driver_path = os.path.join(os.path.join(root_path, 'tools'), 'chromedriver.exe')
@@ -53,8 +55,9 @@ if __name__ == '__main__':
                                f"成功的用例数: {test_count.get_count()[0]}\n"
                                f"失败的用例数: {test_count.get_count()[1]}\n"
                                f"错误的用例数：{test_count.get_count()[2]}\n"
-                               f"测试的用例总数：{test_count.get_count()[0] + test_count.get_count()[1] + test_count.get_count()[2]}\n"
-                               f"测试报告地址: [10.1.1.156/ui-auto-test/{now_time}-test.html](10.1.1.156/ui-auto-test/{now_time}-test.html)"
+                               f"ui测试的用例总数：{test_count.get_count()[0] + test_count.get_count()[1] + test_count.get_count()[2]}\n"
+                               f"ui测试地址：[{get_browser_info.get_url()}]({get_browser_info.get_url()})\n"
+                               f"ui测试报告地址: [10.1.1.156/ui-auto-test/{now_time}-test.html](10.1.1.156/ui-auto-test/{now_time}-test.html)"
                 }
             }
         )
