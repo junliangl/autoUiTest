@@ -1,20 +1,30 @@
 # -*- coding:utf-8 -*-
 import os
+import json
 import platform
 from selenium import webdriver
 from selenium.webdriver.chrome import service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from framework.logger import Logger
 from framework.browser_info import Browser_Info
 logger = Logger(logger="浏览器初始化配置").get_log()
 get_browser_info = Browser_Info()
 
+login_type = None
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+json_file = os.path.join(os.path.join(project_path, 'config'), 'login.json')
+
+with open(json_file, encoding='utf-8') as file1:
+    login_type_json = json.load(file1)
+
 
 class BrowserEngine:
-    dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    windows_geckodriver_driver_path = os.path.join(os.path.join(dir, 'tools'), 'geckodriver.exe')
-    windows_chrome_driver_path = os.path.join(os.path.join(dir, 'tools'), 'chromedriver.exe')
-    windows_ie_driver_path = os.path.join(os.path.join(dir, 'tools'), 'IEDriverServer.exe')
-    linux_chrome_driver_path = os.path.join(os.path.join(dir, 'tools'), 'chromedriver')
+    login_type_element = ('xpath', login_type_json["account"][0])
+    windows_geckodriver_driver_path = os.path.join(os.path.join(project_path, 'tools'), 'geckodriver.exe')
+    windows_chrome_driver_path = os.path.join(os.path.join(project_path, 'tools'), 'chromedriver.exe')
+    windows_ie_driver_path = os.path.join(os.path.join(project_path, 'tools'), 'IEDriverServer.exe')
+    linux_chrome_driver_path = os.path.join(os.path.join(project_path, 'tools'), 'chromedriver')
 
     def __init__(self, driver):
         self.driver = driver
@@ -83,3 +93,17 @@ class BrowserEngine:
     def quit_browser(self):
         logger.info("Now, Close and quit the browser.")
         self.driver.quit()
+    
+    def look_login_type(self):
+        global login_type
+        # noinspection PyBroadException
+        try:
+            WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.login_type_element))
+            login_type = True
+        except Exception:
+            login_type = False
+
+    @staticmethod
+    def get_login_type():
+        return login_type
+

@@ -40,29 +40,41 @@
       "/html/body/app-root/app-register/div/form/nz-form-item[7]/nz-form-control",
       ""
     ],
+    "tianjin_area1": [
+      "/html/body/app-root/app-login/div/div[2]/div[1]/app-register/div/form/nz-form-item[7]/nz-form-control",
+      ""
+    ],
     "area2": [
-      "/html/body/div[2]/div/div/div/ul[1]/li[1]",
+      "/html/body/div[2]/div[@dir]/div/div/ul[1]/li[1]",
       ""
     ],
     "area3": [
-      "/html/body/div[2]/div/div/div/ul[2]/li[23]",
+      "/html/body/div[2]/div[@dir]/div/div/ul[2]/li[23]",
       ""
     ],
     "area4": [
-      "/html/body/div[2]/div/div/div/ul[3]/li[1]",
+      "/html/body/div[2]/div[@dir]/div/div/ul[3]/li[1]",
       ""
     ],
     "area5": [
-      "/html/body/div[2]/div/div/div/ul[4]/li[5]",
+      "/html/body/div[2]/div[@dir]/div/div/ul[4]/li[5]",
       ""
     ]
   },
   "company": [
-    "/html/body/app-root/app-register/div/form/nz-form-item[8]/nz-form-control/div/div/input",
+    "//*[@id=\"workUnit\"]",
     ""
   ],
   "enter_button": [
     "/html/body/app-root/app-register/div/form/nz-form-item[9]/nz-form-control/div/div/div/button",
+    ""
+  ],
+  "tianjin_init": [
+    "/html/body/app-root/app-login/div/div[2]/div[1]/form/nz-form-item[4]/nz-form-control/div/div/div/a[contains(text(),\"注册新账号\")]",
+    ""
+  ],
+  "tianjin_enter": [
+    "/html/body/app-root/app-login/div/div[2]/div[1]/app-register/div/form/nz-form-item[9]/nz-form-control/div/div/div/button",
     ""
   ]
 }

@@ -10,5 +10,17 @@
   "login_button": [
     "/html/body/app-root/app-login/div/form/nz-form-item[3]/nz-form-control/div/div/button",
     ""
+  ],
+  "tianjin_account": [
+    "/html/body/app-root/app-login/div/div[2]/div[1]/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input",
+    ""
+  ],
+  "tianjin_password": [
+    "/html/body/app-root/app-login/div/div[2]/div[1]/form/nz-form-item[2]/nz-form-control/div/div/nz-input-group/input",
+    ""
+  ],
+  "tianjin_login": [
+    "/html/body/app-root/app-login/div/div[2]/div[1]/form/nz-form-item[3]/nz-form-control/div/div/button",
+    ""
   ]
 }

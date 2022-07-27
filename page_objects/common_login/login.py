@@ -1,6 +1,7 @@
 import os
 import json
 from framework.base_page import BasePage
+from framework.browser_engine import BrowserEngine
 from selenium.webdriver.common import action_chains
 
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -22,24 +23,46 @@ class Login(BasePage):
     input_username_element = (method_json["method"][0], login_json["account"][0])
     input_password_element = (method_json["method"][0], login_json["password"][0])
     login_button_element = (method_json["method"][0], login_json["login_button"][0])
+    tianjin_input_username_element = (method_json["method"][0], login_json["tianjin_account"][0])
+    tianjin_input_password_element = (method_json["method"][0], login_json["tianjin_password"][0])
+    tianjin_login_button_element = (method_json["method"][0], login_json["tianjin_login"][0])
     superadmin_account = account_json["superadmin"]["account"]
     superadmin_password = account_json["superadmin"]["password"]
     change_password = account_json["change"]["password"]
 
     def login(self, test):
-        if test == 'superadmin':
-            self.input(self.superadmin_account, *self.input_username_element)
-            self.input(self.superadmin_password, *self.input_password_element)
-        elif test == 'change_password':
-            # 静态账号调试使用
-            # self.input('test006', *self.input_username_element)
-            self.input(self.get_account(), *self.input_username_element)
-            self.input(self.change_password, *self.input_password_element)
+        get_login_type = BrowserEngine(self.driver)
+        if get_login_type.get_login_type():
+            if test == 'superadmin':
+                self.input(self.superadmin_account, *self.input_username_element)
+                self.input(self.superadmin_password, *self.input_password_element)
+            elif test == 'change_password':
+                # 静态账号调试使用
+                # self.input('test006', *self.input_username_element)
+                self.input(self.get_account(), *self.input_username_element)
+                self.input(self.change_password, *self.input_password_element)
+            else:
+                # 静态账号调试使用
+                # self.input('test006', *self.input_username_element)
+                self.input(self.get_account(), *self.input_username_element)
+                self.input('aA123456', *self.input_password_element)
+            action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()
+            self.click(*self.login_button_element)
+            self.sleep(1)
         else:
-            # 静态账号调试使用
-            # self.input('test006', *self.input_username_element)
-            self.input(self.get_account(), *self.input_username_element)
-            self.input('aA123456', *self.input_password_element)
-        action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()
-        self.click(*self.login_button_element)
-        self.sleep(1)
+            if test == 'superadmin':
+                self.input(self.superadmin_account, *self.tianjin_input_username_element)
+                self.input(self.superadmin_password, *self.tianjin_input_password_element)
+            elif test == 'change_password':
+                # 静态账号调试使用
+                # self.input('test006', *self.input_username_element)
+                self.input(self.get_account(), *self.tianjin_input_username_element)
+                self.input(self.change_password, *self.tianjin_input_password_element)
+            else:
+                # 静态账号调试使用
+                # self.input('test006', *self.input_username_element)
+                self.input(self.get_account(), *self.tianjin_input_username_element)
+                self.input('aA123456', *self.tianjin_input_password_element)
+            action_chains.ActionChains(self.driver).move_by_offset(0, 0).click().perform()
+            self.click(*self.tianjin_login_button_element)
+            self.sleep(1)
