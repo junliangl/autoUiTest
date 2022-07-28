@@ -130,7 +130,7 @@ class Register_Page(BasePage):
             # noinspection PyBroadException
             try:
                 WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.register_reminder))
-                WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.init_button_element))
+                WebDriverWait(self.driver, 5, 1).until(EC.presence_of_element_located(self.tianjin_init_button))
                 logger.info(self.get_element(*self.register_reminder))
                 self.get_windows_img()
                 return True

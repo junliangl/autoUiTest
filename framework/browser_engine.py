@@ -8,6 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.logger import Logger
 from framework.browser_info import Browser_Info
+
 logger = Logger(logger="浏览器初始化配置").get_log()
 get_browser_info = Browser_Info()
 
@@ -20,7 +21,7 @@ with open(json_file, encoding='utf-8') as file1:
 
 
 class BrowserEngine:
-    login_type_element = ('xpath', login_type_json["account"][0])
+    login_type_element = ('xpath', login_type_json["account"][0])  # 非天津私有化类型
     windows_geckodriver_driver_path = os.path.join(os.path.join(project_path, 'tools'), 'geckodriver.exe')
     windows_chrome_driver_path = os.path.join(os.path.join(project_path, 'tools'), 'chromedriver.exe')
     windows_ie_driver_path = os.path.join(os.path.join(project_path, 'tools'), 'IEDriverServer.exe')
@@ -41,7 +42,8 @@ class BrowserEngine:
                 options.add_argument('--disable-gpu')
                 options.add_argument('--disable-extensions')
                 options.add_argument('--no-sandbox')
-                driver = webdriver.Chrome(executable_path=self.linux_chrome_driver_path, options=options)# 给Chrome()指定驱动路径
+                driver = webdriver.Chrome(executable_path=self.linux_chrome_driver_path,
+                                          options=options)  # 给Chrome()指定驱动路径
                 logger.info("Starting Chrome browser.")
             elif get_browser_info.get_driver() == "Firefox":
                 options = webdriver.firefox.options.Options()
@@ -93,7 +95,7 @@ class BrowserEngine:
     def quit_browser(self):
         logger.info("Now, Close and quit the browser.")
         self.driver.quit()
-    
+
     def look_login_type(self):
         global login_type
         # noinspection PyBroadException
@@ -106,4 +108,3 @@ class BrowserEngine:
     @staticmethod
     def get_login_type():
         return login_type
-

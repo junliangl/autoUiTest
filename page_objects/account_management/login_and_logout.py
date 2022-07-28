@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from framework.logger import Logger
 from framework.base_page import BasePage
+from framework.browser_engine import BrowserEngine
 from page_objects.common_login.login import Login
 
 
@@ -33,6 +34,7 @@ with open(reminder_file, encoding='utf-8') as file5:
 
 class Login_And_Logout_Page(BasePage):
     login_button_element = (method_json["method"][0], login_json["login_button"][0])
+    tianjin_login_button_element = (method_json["method"][0], login_json["tianjin_login"][0])
     username_element = (method_json["method"][0], menu_json["user"]["button"][0])
     logout_button_element = (method_json["method"][0], menu_json["user"]["log_out"][0])
     cancel_button_element = (method_json["method"][0], login_and_logout_json["cancel_button"][0])
@@ -80,14 +82,24 @@ class Login_And_Logout_Page(BasePage):
             return False
 
     def get_logout_result(self):
+        get_login_type = BrowserEngine(self.driver)
         self.refresh_browser()
         self.click(*self.username_element)
         self.click(*self.logout_button_element)
         self.click(*self.confirm_button_element)
-        # noinspection PyBroadException
-        try:
-            # 判断是否能找到登录按钮，找到就视为注销成功
-            WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.login_button_element))
-            return True
-        except Exception:
-            return False
+        if get_login_type.get_login_type():
+            # noinspection PyBroadException
+            try:
+                # 判断是否能找到登录按钮，找到就视为注销成功
+                WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.login_button_element))
+                return True
+            except Exception:
+                return False
+        else:
+            # noinspection PyBroadException
+            try:
+                # 判断是否能找到登录按钮，找到就视为注销成功
+                WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located(self.tianjin_login_button_element))
+                return True
+            except Exception:
+                return False
