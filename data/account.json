@@ -1,18 +1,18 @@
 {
   "invited": {
     "account": "shenyang",
-    "password": "aA123456"
+    "password": ""
   },
   "uninvited": {
     "account": "testauto",
-    "password": "aA123456"
+    "password": ""
   },
   "superadmin": {
     "account": "superadmin",
-    "password": "aA123456"
+    "password": ""
   },
   "change": {
     "account": "",
-    "password": "Aa123456"
+    "password": ""
   }
 }
