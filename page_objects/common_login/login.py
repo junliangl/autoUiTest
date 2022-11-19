@@ -1,7 +1,7 @@
 import os
 import json
-from framework.base_page import BasePage
-from framework.browser_engine import BrowserEngine
+from common.base_page import BasePage
+from common.browser_engine import BrowserEngine
 from selenium.webdriver.common import action_chains
 
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

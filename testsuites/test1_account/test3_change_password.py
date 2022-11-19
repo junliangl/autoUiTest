@@ -1,9 +1,9 @@
 # coding=utf-8
 import os
 import unittest
-from framework.browser_engine import BrowserEngine
+from common.browser_engine import BrowserEngine
 from page_objects.account_management.change_password import Change_Password_Page
-from framework.logger import Logger
+from common.logger import Logger
 
 logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

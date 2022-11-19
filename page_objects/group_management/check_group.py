@@ -1,7 +1,7 @@
 import os
 import json
-from framework.base_page import BasePage
-from framework.logger import Logger
+from common.base_page import BasePage
+from common.logger import Logger
 from page_objects.common_login.login import Login
 
 logger = Logger(logger='测试流程').get_log()

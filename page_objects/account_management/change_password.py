@@ -2,8 +2,8 @@ import os
 import json
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from framework.logger import Logger
-from framework.base_page import BasePage
+from common.logger import Logger
+from common.base_page import BasePage
 from page_objects.common_login.login import Login
 
 logger = Logger(logger='测试流程').get_log()

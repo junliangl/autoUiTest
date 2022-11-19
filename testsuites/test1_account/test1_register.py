@@ -1,10 +1,10 @@
 # coding=utf-8
 import os
 import unittest
-from framework.browser_engine import BrowserEngine
-from framework.browser_info import Browser_Info
+from common.browser_engine import BrowserEngine
+from common.browser_info import Browser_Info
 from page_objects.account_management.register import Register_Page
-from framework.logger import Logger
+from common.logger import Logger
 
 logger = Logger(logger='测试结果').get_log()
 get_browser_info = Browser_Info()

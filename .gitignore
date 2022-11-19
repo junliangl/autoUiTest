@@ -1,6 +1,6 @@
 *.pyc
 *.log
-.idea/
+.idea
 *.html
 *.png
 *.ini

@@ -6,8 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome import service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from framework.logger import Logger
-from framework.browser_info import Browser_Info
+from common.logger import Logger
+from common.browser_info import Browser_Info
 
 logger = Logger(logger="浏览器初始化配置").get_log()
 get_browser_info = Browser_Info()

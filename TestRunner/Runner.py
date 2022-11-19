@@ -11,8 +11,8 @@ root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 添加进根目录
 sys.path.append(root_path)
 
-from framework.logger import Logger
-from framework.browser_info import Browser_Info
+from common.logger import Logger
+from common.browser_info import Browser_Info
 
 logger = Logger(logger="用例失败成功情况").get_log()
 get_browser_info = Browser_Info()

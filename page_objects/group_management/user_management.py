@@ -1,8 +1,8 @@
 import os
 import json
-from framework.base_page import BasePage
+from common.base_page import BasePage
 from page_objects.common_login.login import Login
-from framework.logger import Logger
+from common.logger import Logger
 
 logger = Logger(logger='测试流程').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

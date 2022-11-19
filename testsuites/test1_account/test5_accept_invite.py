@@ -3,9 +3,9 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import unittest
-from framework.browser_engine import BrowserEngine
+from common.browser_engine import BrowserEngine
 from page_objects.account_management.accept_invite import Accept_Invite_Page
-from framework.logger import Logger
+from common.logger import Logger
 
 logger = Logger(logger='测试结果').get_log()
 project_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

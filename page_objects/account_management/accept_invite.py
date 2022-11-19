@@ -2,9 +2,9 @@ import os
 import json
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from framework.logger import Logger
-from framework.browser_info import Browser_Info
-from framework.base_page import BasePage
+from common.logger import Logger
+from common.browser_info import Browser_Info
+from common.base_page import BasePage
 from page_objects.common_login.login import Login
 
 
